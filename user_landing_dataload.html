@@ -41,11 +41,12 @@ require(["dijit/form/CheckBox"]);
 require(["dijit/form/Form"]);
 require(["dijit/form/ToggleButton"]);
 require(["dojox/grid/TreeGrid"]);
-require(["dijit/form/NumberTextBox"]);</script>
+require(["dijit/form/NumberTextBox"]);
+require(["dijit/form/MultiSelect"]);</script>
 </head>
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" dvStates="{'_show:dijit_Dialog_0':{'origin':true},'_show:dijit_Dialog_1':{'origin':true},'_show:dijit_Dialog_2':{'origin':true},'_show:dijit_Dialog_3':{'origin':true},'_show:dijit_Dialog_4':{'origin':true},'Time_Series_Upload_Step_2':{'origin':true},'Sample_Upload_Step_2':{'origin':true}}" id="myapp">
  <div dojoType="dijit.layout.BorderContainer" persist="false" gutters="true" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" design="sidebar">
-<div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="bottom" splitter="true" style="height: 40px; width: 823px;">
+<div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="bottom" splitter="true" style="height: 40px; width: 827px;">
  <div style="position: absolute; left: 25%; width: 50%; height: 90%; top: 0%;">
    <img src="data/images/FLBS_logo.gif" style="margin: 0.25em; height: 90%;"></img>
    <img src="data/images/HBS_logo.jpg" style="margin: 0.25em; height: 90%;"></img>
@@ -58,7 +59,7 @@ require(["dijit/form/NumberTextBox"]);</script>
    <img src="data/images/YOGO_logo.png" style="margin: 0.25em; height: 90%;" class="HtmlWidget"></img>
  </div>
 </div>
-   <div dojoType="dijit.layout.ContentPane" id="auto_dijit.layout.ContentPane_0" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="center" splitter="false" style="height: 619px; width: 823px;">
+   <div dojoType="dijit.layout.ContentPane" id="auto_dijit.layout.ContentPane_0" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="center" splitter="false" style="height: 596px; width: 827px;">
 <div style="height: 26px; width: 85%; position: absolute; top: 0px; left: 0px;">
        <span dojoType="dijit.MenuBar" tabIndex="0"><span dojoType="dijit.PopupMenuBarItem" label="Data Hub" iconClass="dijitNoIcon">
   <span dojoType="dijit.Menu">
@@ -78,8 +79,8 @@ require(["dijit/form/NumberTextBox"]);</script>
       </span>
     </div>
     <div style="top: 40px; width: 95%; height: 90%; position: absolute;"><span dojoType="dijit.layout.TabContainer" tabPosition="left" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;">
-<div dojoType="dijit.layout.ContentPane" title="Tabular Entry" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="selected" closable="false" style="width: 704px; height: 569px;">
-  <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 704px; height: 569px; min-width: 1em; min-height: 1em;" nested="true">
+<div dojoType="dijit.layout.ContentPane" title="Tabular Entry" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="selected" closable="false" style="width: 686px; height: 532px;">
+  <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 686px; height: 532px; min-width: 1em; min-height: 1em;" nested="true">
 
 <div dojoType="dijit.layout.ContentPane" title="Field Observations" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 658px; height: 493px;">
     <h2>
@@ -299,7 +300,9 @@ Level 3</option>
  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Time Interval" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_4')"></input>
 </td>
 <td>
-</td>
+<span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Method" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="New Method" iconClass="dijitNoIcon"></span>
+ </span>
+ </span></td>
 </tr>
           <tr>
             <td>
@@ -317,7 +320,7 @@ Level 3</option>
                 <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
                     <span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span>
                     <span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_1')"></span>
-                </span>             
+                </span>
             </span></td>
             <td>
               <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
@@ -374,7 +377,9 @@ Level 3</option>
 </td>
 <td>
 
-</td>
+<span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Method" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="New Method" iconClass="dijitNoIcon"></span>
+ </span>
+ </span></td>
 </tr>
         </tbody>
       </table>
@@ -409,8 +414,8 @@ Level 3</option>
     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Upload Observations" iconClass="dijitNoIcon"></input>
     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
     </div>
-  <div dojoType="dijit.layout.ContentPane" title="Samples" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="selected" closable="false" style="width: 688px; height: 522px;">
-<span dojoType="dijit.layout.TabContainer" style="min-width: 1em; min-height: 1em; width: 688px; height: 522px;" controllerWidget="dijit.layout.TabController">
+  <div dojoType="dijit.layout.ContentPane" title="Samples" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="selected" closable="false" style="width: 670px; height: 485px;">
+<span dojoType="dijit.layout.TabContainer" style="min-width: 1em; min-height: 1em; width: 670px; height: 485px;" controllerWidget="dijit.layout.TabController">
 <div dojoType="dijit.layout.ContentPane" title="Create Sample ID Records" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" closable="false" style="width: 628px; height: 424px;">
 <div>
     <h2>
@@ -750,7 +755,7 @@ Level 3</option>
   <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Create Sample Records" iconClass="dijitNoIcon"></input>
   <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
 </div>
-<div dojoType="dijit.layout.ContentPane" title="Enter Sample Values" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="false" style="width: 628px; height: 424px;">
+<div dojoType="dijit.layout.ContentPane" title="Enter Sample Values" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="false" style="width: 652px; height: 434px;">
   <h2>
     Enter Measured Variable Values for Samples</h2>
   <div style="border: 1px solid gray; padding: 0.5em; border-radius: 6px; -moz-border-radius: 6px; background-color: #f3aaaa; color: black; margin-bottom: 1em;">
@@ -903,7 +908,7 @@ Level 3</option>
                     <span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_1')"></span>
             </span>
             </span>
-          </td>
+          <span>Display Selected Variable Here</span></td>
           <td>
             <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
               <option dvwidget="html.option" value="Level 1">
@@ -951,11 +956,11 @@ Level 3</option>
 </span></div>
   </span>
 </div>
-<div dojoType="dijit.layout.ContentPane" title="File Upload" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 683px; height: 553px;">
+<div dojoType="dijit.layout.ContentPane" title="File Upload" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 678px; height: 523px;">
 
-  <span dojoType="dijit.layout.TabContainer" nested="true" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 683px; height: 553px; min-width: 1em; min-height: 1em;">
-<div dojoType="dijit.layout.ContentPane" title="Time Series Data" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 688px; height: 522px;" doLayout="false" dvStates="{'Time_Series_Upload_Step_2':{'style':{}},'current':'Time_Series_Upload_Step_2'}">
-<div dvStates="{'Time_Series_Upload_Step_2':{'style':{'display':'none'}}}">
+  <span dojoType="dijit.layout.TabContainer" nested="true" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 678px; height: 523px; min-width: 1em; min-height: 1em;">
+<div dojoType="dijit.layout.ContentPane" title="Time Series Data" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 662px; height: 476px;" doLayout="false" dvStates="{'Time_Series_Upload_Step_2':{'style':{}},'current':'Time_Series_Upload_Step_2'}">
+<div dvStates="{'Time_Series_Upload_Step_2':{'style':{'display':'none'}}}" style="display: block;">
  <div dojoType="dijit.form.Form" encType="multipart/form-data" style="display: block; height: 100%; width: 100%;" title="Step 1" dvStates="{'Time_Series_Upload_Step_2':{'style':{'display':'none'}}}">
    <div>
      <h2>  
@@ -1103,8 +1108,8 @@ Level 3</option>
   </select>
 </div>
 </div>
-    
-<div dojoType="dijit.layout.ContentPane" title="Column 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="false" style="width: 620px; height: 224px;">
+
+<div dojoType="dijit.layout.ContentPane" title="Column 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="false" style="width: 636px; height: 224px;">
 <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
     <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
         <span dojoType="dijit.MenuItem" label="Select Existing Variable" iconClass="dijitNoIcon"></span>
@@ -1512,7 +1517,7 @@ Summary of Parsing Instructions:</h3>
 <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon" onclick="davinci.states.setState('Normal')"></input>
 </div>
   </div>
-<div dojoType="dijit.layout.ContentPane" title="Manage Templates" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 667px; height: 506px;"><span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 667px; height: 506px; min-width: 1em; min-height: 1em;"><div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 640px; height: 442px;">
+<div dojoType="dijit.layout.ContentPane" title="Manage Data Parsing Templates" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 667px; height: 506px;"><span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 667px; height: 506px; min-width: 1em; min-height: 1em;"><div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 640px; height: 442px;">
    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="New Template" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_2')"></input>
    <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_9" jsId="ItemFileReadStore_9" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;template_name&quot;:&quot;Template_1&quot;,&quot;_project&quot;:&quot; Project_1&quot;,&quot;_type&quot;:&quot; Time Series&quot;,&quot;_date_created&quot;:&quot; 12-09-11&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;template_name&quot;:&quot; Template_2&quot;,&quot;_project&quot;:&quot; Project_1&quot;,&quot;_type&quot;:&quot; Lab Sample Run&quot;,&quot;_date_created&quot;:&quot; 3-4-06&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Template Name&quot;,&quot;field&quot;:&quot;template_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Project&quot;,&quot;field&quot;:&quot;_project&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Date Created&quot;,&quot;field&quot;:&quot;_date_created&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="margin-top: 1em; height: 429px; width: 638px;" store="ItemFileReadStore_9" escapeHTMLInData="true"></span>
  </div>
@@ -2966,7 +2971,7 @@ Summary of Parsing Instructions:</h3>
 <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save Template" iconClass="dijitNoIcon"></input>
 <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
 </div>
-  
+
 </div>
  </span></div>
 </span>
@@ -3168,62 +3173,242 @@ Summary of Parsing Instructions:</h3>
   <h3 style="margin-bottom: 1em;">
     Record Field Actions:</h3><span dojoType="dijit.layout.AccordionContainer" persist="false" style="width: 95%; height: 100%; min-width: 1em; min-height: 1em;"><div dojoType="dijit.layout.ContentPane" title="Field Observations" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="height: auto; width: 398px;">
     <div style="border: 1px solid gray; background-color: #d9dadd; margin-bottom: 1em; margin-top: 1em;">
-      <table style="padding: 5px;">
+      <table style="padding: 5px; width: auto;">
         <tbody>
           <tr>
             <td style="width: 15px;"></td>
-            <td style="text-align: center; font-weight: bold; width: 70px;">
+            <td style="width: 70px; text-align: center; font-weight: bold;">
               Value</td>
-            <td style="width: 350px; text-align: center; font-weight: bold;">
+            <td style="width: 200px; font-weight: bold; text-align: center;">
+              Date/Time</td>
+            <td style="width: 150px; text-align: center; font-weight: bold;">
               Variable</td>
+            <td style="width: 150px; text-align: center; font-weight: bold;">
+              QAQC Level</td>
+            <td style="width: 150px; font-weight: bold; text-align: center;">
+              Spatial Offset</td>
+            <td style="font-weight: bold; text-align: center;">
+              Measurement Interval Support (Optional)</td>
+            <td style="font-weight: bold; text-align: center;">
+              Collection Method (Optional)</td>
           </tr>
           <tr>
             <td>
-              <img src="/data/images/Delete-icon.png" style="width: 10px;"></img>
+              <img src="http://localhost:50000/maqetta/user/undefined/ws/workspace/Refactored_UIs/data/images/Delete-icon.png" style="width: 15px;"></img>
             </td>
             <td>
               <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" style="width: 95%;"></input>
             </td>
             <td>
-              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon">
-                <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
-                    <span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span>
-                    <span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon"></span>
+              <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50%;"></input>
+              <input type="text" dojoType="dijit.form.TimeTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 45%;"></input>
+            </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_1')"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Variable"></span><span dojoType="dijit.MenuItem" label="Create New Variable"></span>
               </span>
-              </span><span>Display Selected Variable Here</span>
+              </span>
+            </td>
+            <td>
+              <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                <option dvwidget="html.option" value="Level 1">
+                  
+Level 1</option>
+                <option dvwidget="html.option" value="Level 2">
+                  
+Level 2</option>
+                <option dvwidget="html.option" value="Level 3">
+                  
+Level 3</option>
+              </select>
+            </td>
+            <td>
+              <div style="margin-left: 0.5em;">
+                <span style="margin-right: 0.5em;">Type:</span>
+                <select dojoType="dijit.form.Select" type="text" value="Item 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                  <option dvwidget="html.option" value="Item 1">
+                    
+  Item 1</option>
+                  <option dvwidget="html.option" value="Item 2">
+                    
+  Item 2</option>
+                  <option dvwidget="html.option" value="Item 3">
+                    
+  Item 3</option>
+                </select>
+              </div>
+              <div style="margin-left: 0.5em;">
+                <span style="margin-right: 0.5em;">Value:</span>
+                <input type="text" dojoType="dijit.form.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 60px;"></input>
+              </div>
+              <div style="margin-left: 0.5em;">
+                <span style="margin-right: 0.5em;">Units:</span>
+                <select dojoType="dijit.form.Select" type="text" value="Units 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                  <option dvwidget="html.option" value="Units 1">
+                    
+    Units 1</option>
+                  <option dvwidget="html.option" value="Units 2">
+                    
+    Units 2</option>
+                  <option dvwidget="html.option" value="Units 3">
+                    
+    Units 3</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Spatial Interval" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_3')"></input>
+              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Time Interval" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_4')"></input>
+            </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Method" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="New Method" iconClass="dijitNoIcon"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Method"></span><span dojoType="dijit.MenuItem" label="New Method"></span>
+              </span>
+              </span>
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/data/images/Delete-icon.png" style="width: 10px;"></img>
+              <img src="http://localhost:50000/maqetta/user/undefined/ws/workspace/Refactored_UIs/data/images/Delete-icon.png" style="width: 15px;"></img>
             </td>
             <td>
               <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" style="width: 95%;"></input>
             </td>
             <td>
-              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon">
-                <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
-                    <span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span>
-                    <span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon"></span>
-              </span>
-              </span><span>Display Selected Variable Here</span>
+              <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50%;"></input>
+              <input type="text" dojoType="dijit.form.TimeTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 45%;"></input>
             </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_1')"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Variable"></span><span dojoType="dijit.MenuItem" label="Create New Variable"></span>
+              </span>
+              </span>
+            </td>
+            <td>
+              <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                <option dvwidget="html.option" value="Level 1">
+                  
+Level 1</option>
+                <option dvwidget="html.option" value="Level 2">
+                  
+Level 2</option>
+                <option dvwidget="html.option" value="Level 3">
+                  
+Level 3</option>
+              </select>
+            </td>
+            <td>
+              <div style="margin-left: 0.5em;">
+                <span style="margin-right: 0.5em;">Type:</span>
+                <select dojoType="dijit.form.Select" type="text" value="Item 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                  <option dvwidget="html.option" value="Item 1">
+                    
+       Item 1</option>
+                  <option dvwidget="html.option" value="Item 2">
+                    
+       Item 2</option>
+                  <option dvwidget="html.option" value="Item 3">
+                    
+       Item 3</option>
+                </select>
+              </div>
+              <div style="margin-left: 0.5em;">
+                <span style="margin-right: 0.5em;">Value:</span>
+                <input type="text" dojoType="dijit.form.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 60px;"></input>
+              </div>
+              <div style="margin-left: 0.5em;">
+                <span style="margin-right: 0.5em;">Units:</span>
+                <select dojoType="dijit.form.Select" type="text" value="Units 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                  <option dvwidget="html.option" value="Units 1">
+                    
+       
+       Units 1</option>
+                  <option dvwidget="html.option" value="Units 2">
+                    
+       
+       Units 2</option>
+                  <option dvwidget="html.option" value="Units 3">
+                    
+       
+       Units 3</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Spatial Interval" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_3')"></input>
+              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Time Interval" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_4')"></input>
+            </td>
+            <td></td>
           </tr>
           <tr>
             <td>
-              <img src="/data/images/Delete-icon.png" style="width: 10px;"></img>
+              <img src="http://localhost:50000/maqetta/user/undefined/ws/workspace/Refactored_UIs/data/images/Delete-icon.png" style="width: 15px;"></img>
             </td>
             <td>
               <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" style="width: 95%;"></input>
             </td>
             <td>
-              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon">
-                <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
-                    <span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span>
-                    <span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon"></span>
-              </span>
-              </span><span>Display Selected Variable Here</span>
+              <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50%;"></input>
+              <input type="text" dojoType="dijit.form.TimeTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 45%;"></input>
             </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_1')"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Variable"></span><span dojoType="dijit.MenuItem" label="Create New Variable"></span>
+              </span>
+              </span>
+            </td>
+            <td>
+              <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                <option dvwidget="html.option" value="Level 1">
+                  
+Level 1</option>
+                <option dvwidget="html.option" value="Level 2">
+                  
+Level 2</option>
+                <option dvwidget="html.option" value="Level 3">
+                  
+Level 3</option>
+              </select>
+            </td>
+            <td>
+              <div style="margin-left: 0.5em;">
+                <span style="margin-right: 0.5em;">Type:</span>
+                <select dojoType="dijit.form.Select" type="text" value="Item 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                  <option dvwidget="html.option" value="Item 1">
+                    
+       Item 1</option>
+                  <option dvwidget="html.option" value="Item 2">
+                    
+       Item 2</option>
+                  <option dvwidget="html.option" value="Item 3">
+                    
+       Item 3</option>
+                </select>
+              </div>
+              <div style="margin-left: 0.5em;">
+                <span style="margin-right: 0.5em;">Value:</span>
+                <input type="text" dojoType="dijit.form.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 60px;"></input>
+              </div>
+              <div style="margin-left: 0.5em;">
+                <span style="margin-right: 0.5em;">Units:</span>
+                <select dojoType="dijit.form.Select" type="text" value="Units 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                  <option dvwidget="html.option" value="Units 1">
+                    
+       Units 1</option>
+                  <option dvwidget="html.option" value="Units 2">
+                    
+       Units 2</option>
+                  <option dvwidget="html.option" value="Units 3">
+                    
+       Units 3</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Spatial Interval" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_3')"></input>
+              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Time Interval" iconClass="dijitNoIcon"></input>
+            </td>
+            <td></td>
           </tr>
         </tbody>
       </table>
@@ -3259,255 +3444,149 @@ Summary of Parsing Instructions:</h3>
     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
   </div>
   <div dojoType="dijit.layout.ContentPane" title="Sample Collection" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="height: 267px; width: 563px;">
-    <div style="margin-top: 1em;">
-      <span style="margin-right: 1em; vertical-align: top;">Select the project(s) to save sample records to:</span>
-      <select multiple="multiple" dojoType="dojox.form.CheckedMultiSelect" intermediateChanges="false" scrollOnFocus="true" style="width: 200px;">
-        <option dvwidget="html.option" value="1">
-                                               Project 1</option>
-        <option dvwidget="html.option" value="2">
-                                               Project 2</option>
-        <option dvwidget="html.option" value="3">
-                                               Project 3</option>
-      </select>
-    </div>
     <div style="border: 1px solid gray; background-color: #d9dadd; margin-bottom: 1em; margin-top: 1em;">
       <table style="padding: 5px;">
         <tbody>
           <tr>
             <td style="width: 15px;"></td>
-            <td style="width: 100px; text-align: center; font-weight: bold;">
+            <td style="text-align: center; font-weight: bold; width: 70px;">
               Sample ID</td>
-            <td style="width: 110px; text-align: center; font-weight: bold;">
-              Sample Medium</td>
-            <td style="width: 100px; text-align: center; font-weight: bold;">
-              Sample Type</td>
+            <td style="width: 170px; font-weight: bold; text-align: center;">
+              Value</td>
+            <td style="text-align: center; font-weight: bold; width: 280px;">
+              Variable</td>
+            <td style="width: 170px; font-weight: bold; text-align: center;">
+              QAQC Level</td>
+            <td style="font-weight: bold; text-align: center;">
+              Lab Method (Optional)</td>
           </tr>
           <tr>
             <td>
-              <img src="/data/images/Delete-icon.png" style="width: 10px;"></img>
+              <img src="http://localhost:50000/maqetta/user/undefined/ws/workspace/Refactored_UIs/data/images/Delete-icon.png" style="width: 15px;"></img>
             </td>
             <td>
-              <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" style="width: 95%;"></input>
-            </td>
-            <td>
-              <select dojoType="dijit.form.Select" type="text" value="Unknown" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true" style="width: 95%;">
-                <option dvwidget="html.option" value="Unknown">
-                  
-                  
-                  
-      Unknown</option>
-                <option dvwidget="html.option" value="Air">
-                  
-                  
-                  
-      Air</option>
-                <option dvwidget="html.option" value="Surface Water">
-                  
-                  
-                  
-      Surface Water</option>
-                <option dvwidget="html.option" value="Soil">
-                  
-                  
-                  
-      Soil</option>
-                <option dvwidget="html.option" value="Ground Water">
-                  
-                  
-                  
-      Ground Water</option>
-                <option dvwidget="html.option" value="Snow">
-                  
-                  
-                  
-      Snow</option>
+              <select dojoType="dijit.form.FilteringSelect" value="Sample 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                <option dvwidget="html.option" value="Sample 1">
+                  Sample 1</option>
+                <option dvwidget="html.option" value="Sample 2">
+                  Sample 2</option>
+                <option dvwidget="html.option" value="Sample 3">
+                  Sample 3</option>
               </select>
             </td>
             <td>
-              <select dojoType="dijit.form.Select" type="text" value="Unknown" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true" style="width: 95%;">
-                <option dvwidget="html.option" value="Unknown">
+              <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
+            </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_1')"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Variable"></span><span dojoType="dijit.MenuItem" label="Create New Variable"></span>
+              </span>
+              </span><span>Display Selected Variable Here</span>
+            </td>
+            <td>
+              <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                <option dvwidget="html.option" value="Level 1">
                   
+                Level 1</option>
+                <option dvwidget="html.option" value="Level 2">
                   
+                Level 2</option>
+                <option dvwidget="html.option" value="Level 3">
                   
-      
-       Unknown</option>
-                <option dvwidget="html.option" value="Grab">
-                  
-                  
-                  
-      
-       Grab</option>
-                <option dvwidget="html.option" value="FF">
-                  
-                  
-                  
-      
-       FF</option>
-                <option dvwidget="html.option" value="FL">
-                  
-                  
-                  
-      
-       FL</option>
-                <option dvwidget="html.option" value="FB">
-                  
-                  
-                  
-      
-       FB</option>
+                Level 3</option>
               </select>
+            </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Method" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="New Method" iconClass="dijitNoIcon"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Method"></span><span dojoType="dijit.MenuItem" label="New Method"></span>
+              </span>
+              </span>
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/data/images/Delete-icon.png" style="width: 10px;"></img>
+              <img src="http://localhost:50000/maqetta/user/undefined/ws/workspace/Refactored_UIs/data/images/Delete-icon.png" style="width: 15px;"></img>
             </td>
             <td>
-              <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" style="width: 95%;"></input>
-            </td>
-            <td>
-              <select dojoType="dijit.form.Select" type="text" value="Unknown" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true" style="width: 95%;">
-                <option dvwidget="html.option" value="Unknown">
-                  
-                  
-                  
-      Unknown</option>
-                <option dvwidget="html.option" value="Air">
-                  
-                  
-                  
-      Air</option>
-                <option dvwidget="html.option" value="Surface Water">
-                  
-                  
-                  
-      Surface Water</option>
-                <option dvwidget="html.option" value="Soil">
-                  
-                  
-                  
-      Soil</option>
-                <option dvwidget="html.option" value="Ground Water">
-                  
-                  
-                  
-      Ground Water</option>
-                <option dvwidget="html.option" value="Snow">
-                  
-                  
-                  
-      Snow</option>
+              <select dojoType="dijit.form.FilteringSelect" value="Sample 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                <option dvwidget="html.option" value="Sample 1">
+                  Sample 1</option>
+                <option dvwidget="html.option" value="Sample 2">
+                  Sample 2</option>
+                <option dvwidget="html.option" value="Sample 3">
+                  Sample 3</option>
               </select>
             </td>
             <td>
-              <select dojoType="dijit.form.Select" type="text" value="Unknown" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true" style="width: 95%;">
-                <option dvwidget="html.option" value="Unknown">
+              <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
+            </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_1')"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Variable"></span><span dojoType="dijit.MenuItem" label="Create New Variable"></span>
+              </span>
+              </span><span>Display Selected Variable Here</span>
+            </td>
+            <td>
+              <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                <option dvwidget="html.option" value="Level 1">
                   
+                Level 1</option>
+                <option dvwidget="html.option" value="Level 2">
                   
+                Level 2</option>
+                <option dvwidget="html.option" value="Level 3">
                   
-      
-       Unknown</option>
-                <option dvwidget="html.option" value="Grab">
-                  
-                  
-                  
-      
-       Grab</option>
-                <option dvwidget="html.option" value="FF">
-                  
-                  
-                  
-      
-       FF</option>
-                <option dvwidget="html.option" value="FL">
-                  
-                  
-                  
-      
-       FL</option>
-                <option dvwidget="html.option" value="FB">
-                  
-                  
-                  
-      
-       FB</option>
+                Level 3</option>
               </select>
+            </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Method" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="New Method" iconClass="dijitNoIcon"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Method"></span><span dojoType="dijit.MenuItem" label="New Method"></span>
+              </span>
+              </span>
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/data/images/Delete-icon.png" style="width: 10px;"></img>
+              <img src="http://localhost:50000/maqetta/user/undefined/ws/workspace/Refactored_UIs/data/images/Delete-icon.png" style="width: 15px;"></img>
             </td>
             <td>
-              <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" style="width: 95%;"></input>
-            </td>
-            <td>
-              <select dojoType="dijit.form.Select" type="text" value="Unknown" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true" style="width: 95%;">
-                <option dvwidget="html.option" value="Unknown">
-                  
-                  
-                  
-      Unknown</option>
-                <option dvwidget="html.option" value="Air">
-                  
-                  
-                  
-      Air</option>
-                <option dvwidget="html.option" value="Surface Water">
-                  
-                  
-                  
-      Surface Water</option>
-                <option dvwidget="html.option" value="Soil">
-                  
-                  
-                  
-      Soil</option>
-                <option dvwidget="html.option" value="Ground Water">
-                  
-                  
-                  
-      Ground Water</option>
-                <option dvwidget="html.option" value="Snow">
-                  
-                  
-                  
-      Snow</option>
+              <select dojoType="dijit.form.FilteringSelect" value="Sample 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                <option dvwidget="html.option" value="Sample 1">
+                  Sample 1</option>
+                <option dvwidget="html.option" value="Sample 2">
+                  Sample 2</option>
+                <option dvwidget="html.option" value="Sample 3">
+                  Sample 3</option>
               </select>
             </td>
             <td>
-              <select dojoType="dijit.form.Select" type="text" value="Unknown" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true" style="width: 95%;">
-                <option dvwidget="html.option" value="Unknown">
+              <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
+            </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Variable" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Create New Variable" iconClass="dijitNoIcon" onclick="davinci.states.setState('_show:dijit_Dialog_1')"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Variable"></span><span dojoType="dijit.MenuItem" label="Create New Variable"></span>
+              </span>
+              </span>
+            </td>
+            <td>
+              <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                <option dvwidget="html.option" value="Level 1">
                   
+                Level 1</option>
+                <option dvwidget="html.option" value="Level 2">
                   
+                Level 2</option>
+                <option dvwidget="html.option" value="Level 3">
                   
-      
-       Unknown</option>
-                <option dvwidget="html.option" value="Grab">
-                  
-                  
-                  
-      
-       Grab</option>
-                <option dvwidget="html.option" value="FF">
-                  
-                  
-                  
-      
-       FF</option>
-                <option dvwidget="html.option" value="FL">
-                  
-                  
-                  
-      
-       FL</option>
-                <option dvwidget="html.option" value="FB">
-                  
-                  
-                  
-      
-       FB</option>
+                Level 3</option>
               </select>
+            </td>
+            <td>
+              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Existing Method" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="New Method" iconClass="dijitNoIcon"></span>
+              </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Existing Method"></span><span dojoType="dijit.MenuItem" label="New Method"></span>
+              </span>
+              </span>
             </td>
           </tr>
         </tbody>
@@ -3520,14 +3599,12 @@ Summary of Parsing Instructions:</h3>
   </div>
   <div dojoType="dijit.layout.ContentPane" title="Instrument Data Retrieval" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="height: auto; width: 398px;">
     <div style="margin-bottom: 1em;">
-      <span style="width: 60px; margin-right: 1em;">Project:</span>
-      <select dojoType="dijit.form.FilteringSelect" value="Project 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
-        <option dvwidget="html.option" value="Project 1">
-          Project 1</option>
-        <option dvwidget="html.option" value="Project 2">
-          Project 2</option>
-        <option dvwidget="html.option" value="Project 3">
-          Project 3</option>
+      <span style="width: 60px; margin-right: 1em;">Upload Type:</span>
+      <select dojoType="dijit.form.FilteringSelect" value="Time Series Data" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+        <option dvwidget="html.option" value="Time Series Data" selected="selected">
+          Time Series Data</option>
+        <option dvwidget="html.option" value="Laboratory Sample Run">
+          Laboratory Sample Run</option>
       </select>
     </div>
     <div style="border: 1px solid gray; padding: 0.5em; border-radius: 6px; -moz-border-radius: 6px; background-color: #e8ebf1; margin-top: 1em;">
@@ -3816,58 +3893,58 @@ Summary of Parsing Instructions:</h3>
     <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Job ID&quot;,&quot;field&quot;:&quot;job_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Project&quot;,&quot;field&quot;:&quot;_project&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Time Submitted&quot;,&quot;field&quot;:&quot;_time_submitted&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; User&quot;,&quot;field&quot;:&quot;_user&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Status&quot;,&quot;field&quot;:&quot;_status&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="width: 703px; height: 491px;" store="ItemFileReadStore_5" escapeHTMLInData="true"></span>
 </div>
 </span>
-        
+
    </div>
  </div>
 
 
-   <div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="left" splitter="true" style="width: 8%; height: 682px; overflow: auto;">
+   <div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="left" splitter="true" style="width: 8%; height: 659px; overflow: auto;">
      <div style="border: none; background-color: #e3e3eb; height: 100%; width: 100%; top: 0%; text-align: center; left: 0px; position: absolute;">
        <span dojoType="dijit.Toolbar">
        <input type="button" dojoType="dijit.form.Button" tabIndex="-1" disabled="disabled" intermediateChanges="false" label="Views" iconClass="dijitNoIcon" onclick="davinci.states.setState('Open_Views_Help')"></input>
        </span>
        <div style="height: 20px;"></div>
-       
+
        <div id="views_1" style="margin-bottom: 5%; width: 100%;">
         <a id="views_a_1" href="user_landing_browse.html">
             <img title="Data Browser" src="data/images/project_browse.png" style="width: 90%; cursor: pointer;"></img>
         </a>
        </div>
-   
+
        <div id="views_2" style="background-color: #5b9de4; margin-bottom: 5%;">
         <a id="views_a_2" href="user_landing_dataload.html">
             <img title="Lab Manager" src="data/images/data_loader.png" style="width: 90%; cursor: pointer;"></img>
         </a>
       </div>
-       
+
        <div id="views_3" style="margin-bottom: 5%;">
         <a id="views_a_3" href="user_landing_project.html">
             <img title="Project Warehouse" src="data/images/project_manager.png" style="width: 90%; cursor: pointer;"></img>
         </a>
        </div>
-       
+
        <div id="views_4" style="margin-bottom: 5%;">
         <a id="views_a_4" href="user_landing_datatools.html">
             <img title="Data Toolkit" src="data/images/data_toolkit.png" style="width: 90%; cursor: pointer;"></img>
         </a>
        </div>
-       
+
        <div id="views_5" style="margin-bottom: 5%;">
         <a id="views_a_5" href="user_landing_equipment.html">
             <img title="Data Toolkit" src="data/images/equipment_manager.png" style="width: 90%; cursor: pointer;"></img>
         </a>
        </div>
-       
+
        <div id="views_6" style="margin-bottom: 5%;">
         <a id="views_a_6" href="user_landing_lab.html">
             <img title="Data Toolkit" src="data/images/lab_manager.png" style="width: 90%; cursor: pointer;"></img>
         </a>
        </div>
-       
+
      </div>
    </div>
- </div>
- 
+</div>
+
 <span dojoType="dijit.Tooltip" id="project_browse_tooltip" connectId="views_a_1"><font size="2">
   <font size="3">
     <u>
@@ -3876,57 +3953,67 @@ Summary of Parsing Instructions:</h3>
   </font>
 </font>
 <br/>
-<font size="2">Investigate the projects stored in VOEIS. Examine maps of data collection site locations. View site details including the names of the variables collected and number of records stored.</font>
+<font size="2">
+  
+	       Investigate the projects stored in VOEIS. Examine maps of data collection site locations. View site details including the names of the variables collected and number of records stored.</font>
 <br/>
-</span>
-
-<span dojoType="dijit.Tooltip" id="data_loader_tooltip" connectId="views_a_2"><b><font size="2">
+</span><span dojoType="dijit.Tooltip" id="data_loader_tooltip" connectId="views_a_2"><b><font size="2">
   <u>
-    <font size="3">Data Loader:</font>
+    <font size="3">
+      
+Data Loader:</font>
   </u>
   <br/>
 </font>
 </b>
-<font size="2">Load time series data, sample data or field observations to VOEIS. Load data from .csv files, manually enter observations, or access the Field Notebook.<br/>
+<font size="2">
+  
+   Load time series data, sample data or field observations to VOEIS. Load data from .csv files, manually enter observations, or access the Field Notebook.<br/>
 </font>
-</span>
-
-<span dojoType="dijit.Tooltip" id="project_manager_tooltip" connectId="views_a_3"><u>
+</span><span dojoType="dijit.Tooltip" id="project_manager_tooltip" connectId="views_a_3"><u>
   <font size="3">
     <b>Project Manager:</b>
   </font>
 </u>
 <font size="3">
   <br/>
-  <font size="2">Manage your data warehouses and all of the projects contained within them. Create new warehouses, projects and sites. Make edits and view provenance information.</font>
+  <font size="2">
+    
+Manage your data warehouses and all of the projects contained within them. Create new warehouses, projects and sites. Make edits and view provenance information.</font>
 </font>
 <br/>
-</span>
-
-<span dojoType="dijit.Tooltip" id="data_toolkit_tooltip" connectId="views_a_4"><u>
-  <b><font size="3">Data Toolkit:</font>
+</span><span dojoType="dijit.Tooltip" id="data_toolkit_tooltip" connectId="views_a_4"><u>
+  <b><font size="3">
+    
+Data Toolkit:</font>
   <br/>
   </b>
 </u>
-<font size="2">Query and export data. Manage parsing templates and data sets. QAQC and visualize data.</font>
+<font size="2">
+  
+Query and export data. Manage parsing templates and data sets. QAQC and visualize data.</font>
 <br/>
-</span>
-
-<span dojoType="dijit.Tooltip" id="equipment_manager_tooltip" connectId="views_a_5"><u>
-  <b><font size="3">Equipment Manager:</font>
+</span><span dojoType="dijit.Tooltip" id="equipment_manager_tooltip" connectId="views_a_5"><u>
+  <b><font size="3">
+    
+Equipment Manager:</font>
   <br/>
   </b>
 </u>
-<font size="2">Inventory lab and field equipment. Track and manage deployments of field equipment.</font>
+<font size="2">
+  
+Inventory lab and field equipment. Track and manage deployments of field equipment.</font>
 <br/>
-</span>
-
-<span dojoType="dijit.Tooltip" id="lab_manager_tooltip" connectId="views_a_6"><u>
-   <b><font size="3">Lab Manager:</font>
+</span><span dojoType="dijit.Tooltip" id="lab_manager_tooltip" connectId="views_a_6"><u>
+   <b><font size="3">
+     
+Lab Manager:</font>
    <br/>
    </b>
  </u>
- <font size="2">Track laboratory sample runs and generate reports.</font>
+ <font size="2">
+   
+Track laboratory sample runs and generate reports.</font>
  <br/>
  </span>
 
@@ -4120,7 +4207,7 @@ Method_3</option>
  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon" onclick="davinci.states.setState('Normal')"></input>
 </span>
 
-<span dojoType="dijit.Dialog" id="dijit_Dialog_4" title="Time Interval Support" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" autofocus="true" draggable="true">
+<span dojoType="dijit.Dialog" id="dijit_Dialog_4" title="Time Interval Support" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" autofocus="true" draggable="true" style="position: absolute;">
 <div style="border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em;">
   <div style="margin-bottom: 1em;">
     <span style="vertical-align: middle; margin-left: 0.5em;">Data Measured Over Time Interval?:</span>
@@ -4152,4 +4239,4 @@ Method_3</option>
 <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
 </span>
 
-</body></html>
+</div></span></body></html>
