@@ -1,46 +1,11 @@
+@import url("../common/domButtons/DomButtonColorButtons-compat.css");
 
-.mblDomButtonBlueMinus {
-	background-image: url(../common/domButtons/compat/mblDomButtonBlueMinus.png);
-	background-repeat: no-repeat;
+/* dojox.mobile.IconItem */
+.mblIconArea div {
+	*font-size: 60px; /* IE 7 quirks */
 }
-.mblDomButtonBlueMinus DIV {
-	display: none;
-}
-.mblDomButtonBluePlus {
-	background-image: url(../common/domButtons/compat/mblDomButtonBluePlus.png);
-	background-repeat: no-repeat;
-}
-.mblDomButtonBluePlus DIV {
-	display: none;
-}
-.mblDomButtonDarkBlueMinus {
-	background-image: url(../common/domButtons/compat/mblDomButtonDarkBlueMinus.png);
-	background-repeat: no-repeat;
-}
-.mblDomButtonDarkBlueMinus DIV {
-	display: none;
-}
-.mblDomButtonDarkBluePlus {
-	background-image: url(../common/domButtons/compat/mblDomButtonDarkBluePlus.png);
-	background-repeat: no-repeat;
-}
-.mblDomButtonDarkBluePlus DIV {
-	display: none;
-}
-.mblDomButtonRedMinus {
-	background-image: url(../common/domButtons/compat/mblDomButtonRedMinus.png);
-	background-repeat: no-repeat;
-}
-.mblDomButtonRedMinus DIV {
-	display: none;
-}
-.mblDomButtonRedPlus {
-	background-image: url(../common/domButtons/compat/mblDomButtonRedPlus.png);
-	background-repeat: no-repeat;
-}
-.mblDomButtonRedPlus DIV {
-	display: none;
-}
+
+/* Icon Content Heading */
 .mblIconContentHeading {
 	background-image: url(compat/icon-content-heading-bg.png);
 }

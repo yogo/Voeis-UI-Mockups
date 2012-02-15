@@ -6,6 +6,8 @@
 <style>@import "themes/claro/claro.css";@import "app.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";@import "lib/dojo/dojox/layout/resources/FloatingPane.css";@import "lib/dojo/dojox/layout/resources/ResizeHandle.css";@import "lib/dojo/dojox/gauges/_Gauge.css";@import "lib/dojo/dojox/grid/resources/Grid.css";@import "lib/dojo/dojox/grid/resources/claroGrid.css";@import "lib/dojo/dojox/form/resources/FileInput.css";@import "lib/dojo/dojox/form/resources/CheckedMultiSelect.css";
 </style>
 <script type="text/javascript" djConfig="parseOnLoad: true" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js"></script>
+<script type="text/javascript" src="maqetta/maqetta.js"></script>
+<script type="text/javascript" src="maqetta/States.js"></script>
 <script type="text/javascript">
 require(["dijit/layout/BorderContainer"]);
 require(["dijit/layout/ContentPane"]);
@@ -4016,225 +4018,165 @@ Track laboratory sample runs and generate reports.</font>
  </span>
 
 <span dojoType="dijit.Dialog" id="dijit_Dialog_1" title="New Time Series Variable" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" autofocus="true" draggable="true" style="min-height: 400px; min-width: 400px; left: 20%; top: 15%; width: 70%; position: absolute;">
-<div style="overflow: scroll;">
-<div style="margin-bottom: 1em;"><span>Variable Name:</span><span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_10" jsId="ItemFileReadStore_10" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;variable_name&quot;:&quot;Variable_1&quot;,&quot;_definition&quot;:&quot; This is the definition&quot;},{&quot;uniqe_id&quot;:2,&quot;variable_name&quot;:&quot;Variable_2&quot;,&quot;_definition&quot;:&quot; This is also a definition&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Variable Name&quot;,&quot;field&quot;:&quot;variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Definition&quot;,&quot;field&quot;:&quot;_definition&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_10" escapeHTMLInData="true"></span></div>
- <div style="margin-bottom: 1em;">
-   <span style="margin-right: 1em;">Units:</span><span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_11" data="{&quot;identifier&quot;:&quot;id&quot;,&quot;label&quot;:&quot;label&quot;,&quot;items&quot;:[{&quot;label&quot;:&quot;Item 1&quot;,&quot;id&quot;:&quot;1&quot;,&quot;children&quot;:[{&quot;label&quot;:&quot;Sub item 1.1&quot;,&quot;id&quot;:&quot;1.1&quot;},{&quot;label&quot;:&quot;Sub item 1.2&quot;,&quot;id&quot;:&quot;1.2&quot;}]},{&quot;label&quot;:&quot;Item 2&quot;,&quot;id&quot;:&quot;2&quot;,&quot;children&quot;:[{&quot;id&quot;:&quot;2.1&quot;,&quot;label&quot;:&quot;Sub Item 2.1&quot;},{&quot;id&quot;:&quot;2.2&quot;,&quot;label&quot;:&quot;Sub Item 2.2&quot;},{&quot;id&quot;:&quot;2.3&quot;,&quot;label&quot;:&quot;Sub Item 2.3&quot;}]}]}" jsId="ItemFileReadStore_11"></span><span dojoType="dojox.grid.TreeGrid" structure="[{&quot;cells&quot;:[[{&quot;field&quot;:&quot;label&quot;,&quot;name&quot;:&quot;Label&quot;,&quot;width&quot;:&quot;20%&quot;},{&quot;field&quot;:&quot;children&quot;,&quot;children&quot;:[{&quot;field&quot;:&quot;id&quot;,&quot;name&quot;:&quot;Child ID&quot;},{&quot;field&quot;:&quot;label&quot;,&quot;name&quot;:&quot;Child Label&quot;}],&quot;level&quot;:0}]]}]" style="height: 100px;" store="ItemFileReadStore_11"></span></div>
- <div style="margin-bottom: 1em;">
-   <span style="vertical-align: middle;">General Category:</span>
-   <select dojoType="dijit.form.FilteringSelect" value="Biota" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
-     <option dvwidget="html.option" value="Biota" selected="selected">
-       
-  Biota</option>
-     <option dvwidget="html.option" value="Hydrology">
-       
-  Hydrology</option>
-     <option dvwidget="html.option" value="Water Quality">
-       
-  Water Quality</option>
-     <option dvwidget="html.option" value="Climate">
-       
-  Climate</option>
-     <option dvwidget="html.option" value="Geology">
-       
-  Geology</option>
-     <option dvwidget="html.option" value="Instrumentation">
-       
-  Instrumentation</option>
-     <option dvwidget="html.option" value="Unknown">
-       
-  Unknown</option>
-   </select>
- </div>
- <div style="margin-bottom: 1em;">
-   <span style="vertical-align: middle;">Measurement Medium:</span><select dojoType="dijit.form.FilteringSelect" value="Air" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
-     <option dvwidget="html.option" value="Air" selected="selected">
-       
-       Air</option>
-     <option dvwidget="html.option" value="Surface Water">
-       
-       Surface Water</option>
-     <option dvwidget="html.option" value="Groundwater">
-       
-       Groundwater</option>
-     <option dvwidget="html.option" value="Soil">
-       
-       Soil</option>
-   </select>
- </div>
- <div style="margin-bottom: 1em;">
-   <span style="vertical-align: middle;">Data Type:</span>
-   <select dojoType="dijit.form.FilteringSelect" value="Instantaneous" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
-     <option dvwidget="html.option" value="Instantaneous" selected="selected">
-       Instantaneous</option>
-     <option dvwidget="html.option" value="Average">
-       Average</option>
-     <option dvwidget="html.option" value="Maximum">
-       Maximum</option>
-     <option dvwidget="html.option" value="Minimum">
-       Minimum</option>
-     <option dvwidget="html.option" value="Sporadic">
-       Sporadic</option>
-   </select>
- </div>
- <div style="border: 1px solid gray; padding: 0.5em; border-radius: 6px; -moz-border-radius: 6px; width: 95%; background-color: #e8ebf1; display: inline-block; margin-right: 1em; margin-bottom: 1em;">
- <span style="font-weight: bold;">Data Measurement Support (Optional):</span><div style="margin-top: 0.5em;">
-     <span style="vertical-align: middle;">No Data Value:</span>
-     <input type="text" dojoType="dijit.form.TextBox"></input>
-   </div>
-   <div style="margin-top: 0.5em;">
-   <span style="vertical-align: middle;">Data Value Accuracy (must be in same units as above):</span>
-   <input type="text" dojoType="dijit.form.NumberTextBox"></input>
- </div>
-   <div style="margin-top: 0.5em;">
-     <span style="vertical-align: middle;">Field Collection/Measurement Method:</span><select dojoType="dijit.form.FilteringSelect" value="Method_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
-       <option dvwidget="html.option" value="Method_1">
-         Method_1</option>
-       <option dvwidget="html.option" value="Method_2">
-         Method_2</option>
-       <option dvwidget="html.option" value="Method_3">
-         Method_3</option>
-     </select>
-   </div>
- </div>
- <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
- <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
-</div>
+    <div style="overflow: scroll;">
+        <div style="margin-bottom: 1em;">
+            <span>Variable Name:</span>
+            <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_10" jsId="ItemFileReadStore_10" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;variable_name&quot;:&quot;Variable_1&quot;,&quot;_definition&quot;:&quot; This is the definition&quot;},{&quot;uniqe_id&quot;:2,&quot;variable_name&quot;:&quot;Variable_2&quot;,&quot;_definition&quot;:&quot; This is also a definition&quot;}]}"></span>
+            <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Variable Name&quot;,&quot;field&quot;:&quot;variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Definition&quot;,&quot;field&quot;:&quot;_definition&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_10" escapeHTMLInData="true"></span>
+        </div>
+        <div style="margin-bottom: 1em;">
+            <span style="margin-right: 1em;">Units:</span>
+            <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_11" data="{&quot;identifier&quot;:&quot;id&quot;,&quot;label&quot;:&quot;label&quot;,&quot;items&quot;:[{&quot;label&quot;:&quot;Item 1&quot;,&quot;id&quot;:&quot;1&quot;,&quot;children&quot;:[{&quot;label&quot;:&quot;Sub item 1.1&quot;,&quot;id&quot;:&quot;1.1&quot;},{&quot;label&quot;:&quot;Sub item 1.2&quot;,&quot;id&quot;:&quot;1.2&quot;}]},{&quot;label&quot;:&quot;Item 2&quot;,&quot;id&quot;:&quot;2&quot;,&quot;children&quot;:[{&quot;id&quot;:&quot;2.1&quot;,&quot;label&quot;:&quot;Sub Item 2.1&quot;},{&quot;id&quot;:&quot;2.2&quot;,&quot;label&quot;:&quot;Sub Item 2.2&quot;},{&quot;id&quot;:&quot;2.3&quot;,&quot;label&quot;:&quot;Sub Item 2.3&quot;}]}]}" jsId="ItemFileReadStore_11"></span>
+            <span dojoType="dojox.grid.TreeGrid" structure="[{&quot;cells&quot;:[[{&quot;field&quot;:&quot;label&quot;,&quot;name&quot;:&quot;Label&quot;,&quot;width&quot;:&quot;20%&quot;},{&quot;field&quot;:&quot;children&quot;,&quot;children&quot;:[{&quot;field&quot;:&quot;id&quot;,&quot;name&quot;:&quot;Child ID&quot;},{&quot;field&quot;:&quot;label&quot;,&quot;name&quot;:&quot;Child Label&quot;}],&quot;level&quot;:0}]]}]" style="height: 100px;" store="ItemFileReadStore_11"></span>
+        </div>
+        <div style="margin-bottom: 1em;">
+            <span style="vertical-align: middle;">General Category:</span>
+            <select dojoType="dijit.form.FilteringSelect" value="Biota" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                <option dvwidget="html.option" value="Biota" selected="selected">
+                    Biota</option>
+                <option dvwidget="html.option" value="Hydrology">
+                    Hydrology</option>
+                <option dvwidget="html.option" value="Water Quality">
+                    Water Quality</option>
+                <option dvwidget="html.option" value="Climate">
+                    Climate</option>
+                <option dvwidget="html.option" value="Geology">
+                    Geology</option>
+                <option dvwidget="html.option" value="Instrumentation">
+                    Instrumentation</option>
+                <option dvwidget="html.option" value="Unknown">
+                    Unknown</option>
+            </select>
+        </div>
+        <div style="margin-bottom: 1em;">
+            <span style="vertical-align: middle;">Measurement Medium:</span>
+            <select dojoType="dijit.form.FilteringSelect" value="Air" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                <option dvwidget="html.option" value="Air" selected="selected">
+                  
+                  Air</option>
+                <option dvwidget="html.option" value="Surface Water">
+                  
+                  Surface Water</option>
+                <option dvwidget="html.option" value="Groundwater">
+                  
+                  Groundwater</option>
+                <option dvwidget="html.option" value="Soil">
+                  
+                  Soil</option>
+            </select>
+        </div>
+        <div style="margin-bottom: 1em;">
+          <span style="vertical-align: middle;">Data Type:</span>
+          <select dojoType="dijit.form.FilteringSelect" value="Instantaneous" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+            <option dvwidget="html.option" value="Instantaneous" selected="selected">
+              Instantaneous</option>
+            <option dvwidget="html.option" value="Average">
+              Average</option>
+            <option dvwidget="html.option" value="Maximum">
+              Maximum</option>
+            <option dvwidget="html.option" value="Minimum">
+              Minimum</option>
+            <option dvwidget="html.option" value="Sporadic">
+              Sporadic</option>
+          </select>
+        </div>
+        <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
+        <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
+    </div>
 </span>
 
 <span dojoType="dijit.Dialog" id="dijit_Dialog_3" title="Spatial Interval Support" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" autofocus="true" draggable="true" style="top: 30%; left: 40%; min-width: 200px; position: absolute;">
-<div style="margin-bottom: 1em;">
-  <div style="margin-bottom: 1em;">
-    <span style="vertical-align: middle; margin-left: 0.5em;">Data Measured Over Spatial Interval?:</span>
-    <select dojoType="dijit.form.Select" type="text" value="False" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-      <option dvwidget="html.option" value="False">
-        
-             
-        False</option>
-      <option dvwidget="html.option" value="True">
-        
-             
-        True</option>
-    </select>
-  </div>
-  <div style="margin-bottom: 1em;">
-    <span style="vertical-align: middle; margin-left: 0.5em;">Interval Value:</span>
-    <input type="text" dojoType="dijit.form.NumberTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false"></input>
-  </div>
-  <div style="margin-bottom: 1em;">
-    <span style="vertical-align: middle; margin-left: 0.5em;">Units:</span>
-    <select dojoType="dijit.form.FilteringSelect" value="Units_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 70%;">
-      <option dvwidget="html.option" value="Units_1">
-        
-             Units_1</option>
-      <option dvwidget="html.option" value="Units_2">
-        
-             Units_2</option>
-      <option dvwidget="html.option" value="Units_3">
-        
-             Units_3</option>
-    </select>
-  </div>
-</div>
-<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
-<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
+    <div style="margin-bottom: 1em;">
+        <div style="margin-bottom: 1em;">
+            <span style="vertical-align: middle; margin-left: 0.5em;">Interval Value:</span>
+            <input type="text" dojoType="dijit.form.NumberTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false"></input>
+        </div>
+        <div style="margin-bottom: 1em;">
+            <span style="vertical-align: middle; margin-left: 0.5em;">Units:</span>
+            <select dojoType="dijit.form.FilteringSelect" value="Units_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 70%;">
+                <option dvwidget="html.option" value="Units_1">
+                    Units_1</option>
+                <option dvwidget="html.option" value="Units_2">
+                    Units_2</option>
+                <option dvwidget="html.option" value="Units_3">
+                    Units_3</option>
+            </select>
+        </div>
+    </div>
+    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
+    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
 </span>
 
 <span dojoType="dijit.Dialog" id="dijit_Dialog_0" title="New Lab Run Variable" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" autofocus="true" draggable="true" style="top: 10%; left: 15%; min-height: 400px; min-width: 400px; width: 70%; position: absolute;">
-<div style="overflow: scroll;">
-<div style="margin-bottom: 1em;"><span>Variable Name:</span><span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_12" jsId="ItemFileReadStore_12" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;variable_name&quot;:&quot;Variable_1&quot;,&quot;_definition&quot;:&quot; This is the definition&quot;},{&quot;uniqe_id&quot;:2,&quot;variable_name&quot;:&quot;Variable_2&quot;,&quot;_definition&quot;:&quot; This is also a definition&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Variable Name&quot;,&quot;field&quot;:&quot;variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Definition&quot;,&quot;field&quot;:&quot;_definition&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_12" escapeHTMLInData="true"></span></div>
- <div style="margin-bottom: 1em;">
-   <span style="margin-right: 1em;">Units:</span><span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_13" data="{&quot;identifier&quot;:&quot;id&quot;,&quot;label&quot;:&quot;label&quot;,&quot;items&quot;:[{&quot;label&quot;:&quot;Item 1&quot;,&quot;id&quot;:&quot;1&quot;,&quot;children&quot;:[{&quot;label&quot;:&quot;Sub item 1.1&quot;,&quot;id&quot;:&quot;1.1&quot;},{&quot;label&quot;:&quot;Sub item 1.2&quot;,&quot;id&quot;:&quot;1.2&quot;}]},{&quot;label&quot;:&quot;Item 2&quot;,&quot;id&quot;:&quot;2&quot;,&quot;children&quot;:[{&quot;id&quot;:&quot;2.1&quot;,&quot;label&quot;:&quot;Sub Item 2.1&quot;},{&quot;id&quot;:&quot;2.2&quot;,&quot;label&quot;:&quot;Sub Item 2.2&quot;},{&quot;id&quot;:&quot;2.3&quot;,&quot;label&quot;:&quot;Sub Item 2.3&quot;}]}]}" jsId="ItemFileReadStore_13"></span><span dojoType="dojox.grid.TreeGrid" structure="[{&quot;cells&quot;:[[{&quot;field&quot;:&quot;label&quot;,&quot;name&quot;:&quot;Label&quot;,&quot;width&quot;:&quot;20%&quot;},{&quot;field&quot;:&quot;children&quot;,&quot;children&quot;:[{&quot;field&quot;:&quot;id&quot;,&quot;name&quot;:&quot;Child ID&quot;},{&quot;field&quot;:&quot;label&quot;,&quot;name&quot;:&quot;Child Label&quot;}],&quot;level&quot;:0}]]}]" style="height: 100px;" store="ItemFileReadStore_13"></span></div>
- <div style="margin-bottom: 1em;">
-   <span style="vertical-align: middle;">General Category:</span>
-   <select dojoType="dijit.form.FilteringSelect" value="Biota" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
-     <option dvwidget="html.option" value="Biota">
-       Biota</option>
-     <option dvwidget="html.option" value="Hydrology">
-       Hydrology</option>
-     <option dvwidget="html.option" value="Water Quality">
-       Water Quality</option>
-     <option dvwidget="html.option" value="Climate">
-       Climate</option>
-     <option dvwidget="html.option" value="Geology">
-       Geology</option>
-     <option dvwidget="html.option" value="Instrumentation">
-       Instrumentation</option>
-     <option dvwidget="html.option" value="Unknown">
-       Unknown</option>
-   </select>
- </div>
- <div style="border: 1px solid gray; padding: 0.5em; border-radius: 6px; -moz-border-radius: 6px; width: 95%; background-color: #e8ebf1; display: inline-block; margin-right: 1em; margin-bottom: 1em;">
- <span style="font-weight: bold;">Data Measurement Support (Optional):</span><div style="margin-top: 0.5em;">
-   <span style="vertical-align: middle;">No Data Value:</span>
-     <input type="text" dojoType="dijit.form.TextBox"></input>
-   </div>
-<div style="margin-top: 0.5em;">
-<span style="vertical-align: middle;">Data Value Accuracy (must be in same units as above):</span>
-<input type="text" dojoType="dijit.form.NumberTextBox"></input>
-</div>
-<div style="margin-top: 0.5em;">
-<span style="vertical-align: middle;">Laboratory Measurement Method:</span>
-<select dojoType="dijit.form.FilteringSelect" value="Method_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
-<option dvwidget="html.option" value="Method_1">
-Method_1</option>
-<option dvwidget="html.option" value="Method_2">
-Method_2</option>
-<option dvwidget="html.option" value="Method_3">
-Method_3</option>
-</select>
-</div>
-<div>
- <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
- <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
-</div>
-</div>
+    <div style="overflow: scroll;">
+        <div style="margin-bottom: 1em;">
+            <span>Variable Name:</span>
+            <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_12" jsId="ItemFileReadStore_12" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;variable_name&quot;:&quot;Variable_1&quot;,&quot;_definition&quot;:&quot; This is the definition&quot;},{&quot;uniqe_id&quot;:2,&quot;variable_name&quot;:&quot;Variable_2&quot;,&quot;_definition&quot;:&quot; This is also a definition&quot;}]}"></span>
+            <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Variable Name&quot;,&quot;field&quot;:&quot;variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Definition&quot;,&quot;field&quot;:&quot;_definition&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_12" escapeHTMLInData="true"></span>
+        </div>
+        <div style="margin-bottom: 1em;">
+            <span style="margin-right: 1em;">Units:</span>
+            <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_13" data="{&quot;identifier&quot;:&quot;id&quot;,&quot;label&quot;:&quot;label&quot;,&quot;items&quot;:[{&quot;label&quot;:&quot;Item 1&quot;,&quot;id&quot;:&quot;1&quot;,&quot;children&quot;:[{&quot;label&quot;:&quot;Sub item 1.1&quot;,&quot;id&quot;:&quot;1.1&quot;},{&quot;label&quot;:&quot;Sub item 1.2&quot;,&quot;id&quot;:&quot;1.2&quot;}]},{&quot;label&quot;:&quot;Item 2&quot;,&quot;id&quot;:&quot;2&quot;,&quot;children&quot;:[{&quot;id&quot;:&quot;2.1&quot;,&quot;label&quot;:&quot;Sub Item 2.1&quot;},{&quot;id&quot;:&quot;2.2&quot;,&quot;label&quot;:&quot;Sub Item 2.2&quot;},{&quot;id&quot;:&quot;2.3&quot;,&quot;label&quot;:&quot;Sub Item 2.3&quot;}]}]}" jsId="ItemFileReadStore_13"></span>
+            <span dojoType="dojox.grid.TreeGrid" structure="[{&quot;cells&quot;:[[{&quot;field&quot;:&quot;label&quot;,&quot;name&quot;:&quot;Label&quot;,&quot;width&quot;:&quot;20%&quot;},{&quot;field&quot;:&quot;children&quot;,&quot;children&quot;:[{&quot;field&quot;:&quot;id&quot;,&quot;name&quot;:&quot;Child ID&quot;},{&quot;field&quot;:&quot;label&quot;,&quot;name&quot;:&quot;Child Label&quot;}],&quot;level&quot;:0}]]}]" style="height: 100px;" store="ItemFileReadStore_13"></span>
+        </div>
+        <div style="margin-bottom: 1em;">
+            <span style="vertical-align: middle;">General Category:</span>
+                <select dojoType="dijit.form.FilteringSelect" value="Biota" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                  <option dvwidget="html.option" value="Biota">
+                    Biota</option>
+                  <option dvwidget="html.option" value="Hydrology">
+                    Hydrology</option>
+                  <option dvwidget="html.option" value="Water Quality">
+                    Water Quality</option>
+                  <option dvwidget="html.option" value="Climate">
+                    Climate</option>
+                  <option dvwidget="html.option" value="Geology">
+                    Geology</option>
+                  <option dvwidget="html.option" value="Instrumentation">
+                    Instrumentation</option>
+                  <option dvwidget="html.option" value="Unknown">
+                    Unknown</option>
+                </select>
+        </div>  
+        <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
+        <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
+    </div>
+</span>
 
-<span dojoType="dijit.Dialog" id="dijit_Dialog_2" style="top: 40%; left: 40%; min-width: 200px; position: absolute;" title="Dialog">
-<div>
-<div style="margin-bottom: 1em;"><span style="font-weight: bold;">Select Parsing Template Type:</span>
-<div style="margin-top: 0.5em;">
-<input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
-<span style="margin-left: 0.5em; vertical-align: middle;">Time Series</span></div>
-<div style="margin-top: 0.5em;">
-<input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
-<span style="margin-left: 0.5em; vertical-align: middle;">Laboratory Sample Run</span></div>
-</div>
-</div>
- <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Select" iconClass="dijitNoIcon" onclick="davinci.states.setState('Normal')"></input>
- <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon" onclick="davinci.states.setState('Normal')"></input>
+<span dojoType="dijit.Dialog" id="dijit_Dialog_2" style="top: 40%; left: 40%; min-width: 200px; position: absolute;" title="Template Type">
+    <div style="margin-bottom: 1em;">
+        <span style="font-weight: bold;">Select Parsing Template Type:</span>
+        <div style="margin-top: 0.5em;">
+            <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
+            <span style="margin-left: 0.5em; vertical-align: middle;">Time Series</span>
+        </div>
+        <div style="margin-top: 0.5em;">
+            <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
+            <span style="margin-left: 0.5em; vertical-align: middle;">Laboratory Sample Run</span>
+        </div>
+    </div>
+    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Select" iconClass="dijitNoIcon" onclick="davinci.states.setState('Normal')"></input>
+    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon" onclick="davinci.states.setState('Normal')"></input>
 </span>
 
 <span dojoType="dijit.Dialog" id="dijit_Dialog_4" title="Time Interval Support" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" autofocus="true" draggable="true" style="position: absolute;">
-<div style="border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em;">
-  <div style="margin-bottom: 1em;">
-    <span style="vertical-align: middle; margin-left: 0.5em;">Data Measured Over Time Interval?:</span>
-    <select dojoType="dijit.form.Select" type="text" value="False" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-      <option dvwidget="html.option" value="False">
-        
-        False</option>
-      <option dvwidget="html.option" value="True">
-        
-        True</option>
-    </select>
-  </div>
-  <div style="margin-bottom: 1em;">
-    <span style="vertical-align: middle; margin-left: 0.5em;">Interval Value:</span>
-    <input type="text" dojoType="dijit.form.NumberTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false"></input>
-  </div>
-  <div style="margin-bottom: 1em;">
-    <span style="vertical-align: middle; margin-left: 0.5em;">Units:</span><select dojoType="dijit.form.FilteringSelect" value="Units_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 70%;">
-      <option dvwidget="html.option" value="Units_1">
-        Units_1</option>
-      <option dvwidget="html.option" value="Units_2">
-        Units_2</option>
-      <option dvwidget="html.option" value="Units_3">
-        Units_3</option>
-    </select>
-  </div>
-</div>
-<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
-<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
+    <div style="margin-bottom: 1em;">
+        <span style="vertical-align: middle; margin-left: 0.5em;">Interval Value:</span>
+        <input type="text" dojoType="dijit.form.NumberTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false"></input>
+    </div>
+    <div style="margin-bottom: 1em;">
+        <span style="vertical-align: middle; margin-left: 0.5em;">Units:</span>
+        <select dojoType="dijit.form.FilteringSelect" value="Units_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 70%;">
+            <option dvwidget="html.option" value="Units_1">
+                Units_1</option>
+            <option dvwidget="html.option" value="Units_2">
+                Units_2</option>
+            <option dvwidget="html.option" value="Units_3">
+                Units_3</option>
+        </select>
+    </div>
+    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
+    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
 </span>
 
-</div></span></body></html>
+</body></html>
