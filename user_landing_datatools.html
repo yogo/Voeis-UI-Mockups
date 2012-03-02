@@ -5,7 +5,7 @@
 <title>Untitled</title>
 <style>@import "themes/claro/claro.css";@import "app.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";@import "lib/dojo/dojox/layout/resources/FloatingPane.css";@import "lib/dojo/dojox/layout/resources/ResizeHandle.css";@import "lib/dojo/dojox/gauges/_Gauge.css";@import "lib/dojo/dojox/grid/resources/Grid.css";@import "lib/dojo/dojox/grid/resources/claroGrid.css";@import "lib/dojo/dojox/form/resources/FileInput.css";@import "lib/dojo/dojox/form/resources/CheckedMultiSelect.css";@import "lib/dojo/dojox/layout/resources/GridContainer.css";@import "lib/dojo/dojox/layout/resources/DndGridContainer.css";
 </style>
-<script type="text/javascript" djConfig="parseOnLoad: true" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js"></script>
+<script type="text/javascript" djConfig="parseOnLoad: true" src="lib/dojo/dojo/dojo.js"></script>
 <script type="text/javascript" src="maqetta/maqetta.js"></script>
 <script type="text/javascript" src="maqetta/States.js"></script>
 <script type="text/javascript">
@@ -271,27 +271,17 @@ My Saved Searches...</h2>
     Search Results</h2>
   <div style="overflow: auto; height: auto;"><span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_11" jsId="ItemFileReadStore_11" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;site&quot;:&quot;Site_1&quot;,&quot;_variable_name&quot;:&quot; Variable_1&quot;},{&quot;uniqe_id&quot;:2,&quot;site&quot;:&quot;Site_2&quot;,&quot;_variable_name&quot;:&quot; Variable 2&quot;},{&quot;uniqe_id&quot;:3,&quot;site&quot;:&quot;Site_3&quot;,&quot;_variable_name&quot;:&quot; Variable_1&quot;}]}"></span>
 <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site&quot;,&quot;field&quot;:&quot;site&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Variable Name&quot;,&quot;field&quot;:&quot;_variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Speciation&quot;,&quot;field&quot;:&quot;_speciation&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Units&quot;,&quot;field&quot;:&quot;_units&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Sample Medium&quot;,&quot;field&quot;:&quot;_sample_medium&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Category&quot;,&quot;field&quot;:&quot;_category&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Data Type&quot;,&quot;field&quot;:&quot;_data_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; QAQC Level&quot;,&quot;field&quot;:&quot;_qaqc_level&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Start Date&quot;,&quot;field&quot;:&quot;_start_date&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; End Date&quot;,&quot;field&quot;:&quot;_end_date&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 200px; width: auto;" store="ItemFileReadStore_11" rowSelector="15px"></span></div>
-  <div style="border: 1px solid black; border-radius: 6px; -moz-border-radius: 6px; background-color: #d9dadd; margin-bottom: 1em; width: 50%; margin-top: 1em;"><span style="margin: 0.5em; font-weight: bold;">Select metadata for export:</span>
+  <div style="border: 1px solid black; border-radius: 6px; -moz-border-radius: 6px; background-color: #d9dadd; margin-bottom: 1em; width: 50%; margin-top: 1em;"><span style="margin: 0.5em; font-weight: bold;">Select metadata export option:</span><div style="margin: 1em;">
+<input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon"></input>
+<span style="margin-left: 1em; vertical-align: middle;">Minimum</span></div>
 <div style="margin: 1em;">
-<input type="checkbox" dojoType="dijit.form.CheckBox"></input>
-<span style="margin-left: 1em; vertical-align: middle;">Time Attributes</span></div>
-<div style="margin: 1em;">
-<input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input><span style="margin-left: 1em; vertical-align: middle;">Site Attributes</span></div>
-<div style="margin: 1em;">
-<input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input><span style="margin-left: 1em; vertical-align: middle;">Variable Attributes</span></div>
-<div style="margin: 1em;">
-<input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input><span style="margin-left: 1em; vertical-align: middle;">Source Attributes</span></div>
-<div style="margin: 1em;">
-<input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input><span style="margin-left: 1em; vertical-align: middle;">QAQC Attributes</span></div>
-<div style="margin: 1em; padding-bottom: 1em;">
-<input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input><span style="margin-left: 1em; vertical-align: middle;">Equipment Set Attributes</span></div>
+<input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon"></input>
+<span style="margin-left: 1em; vertical-align: middle;">Complete</span></div>
 </div>
   <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
-  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Export Checked to .csv File" iconClass="dijitNoIcon"></input>
-  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="QAQC Data" iconClass="dijitNoIcon"></input>
-  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Derive New Values" iconClass="dijitNoIcon"></input>
-  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Visualize Data" iconClass="dijitNoIcon"></input>
-</div>
+  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Export .csv" iconClass="dijitNoIcon"></input>
+  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Publish to HIS" iconClass="dijitNoIcon"></input>
+  </div>
  </span></div>
 
 

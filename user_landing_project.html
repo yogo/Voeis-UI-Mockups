@@ -5,7 +5,7 @@
 <title>Untitled</title>
 <style>@import "themes/claro/claro.css";@import "app.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";@import "lib/dojo/dojox/layout/resources/FloatingPane.css";@import "lib/dojo/dojox/layout/resources/ResizeHandle.css";@import "lib/dojo/dojox/gauges/_Gauge.css";@import "lib/dojo/dojox/grid/resources/Grid.css";@import "lib/dojo/dojox/grid/resources/claroGrid.css";@import "lib/dojo/dojox/widget/SortList/SortList.css";@import "lib/dojo/dojox/form/resources/CheckedMultiSelect.css";
 </style>
-<script type="text/javascript" djConfig="parseOnLoad: true" src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js"></script>
+<script type="text/javascript" djConfig="parseOnLoad: true" src="lib/dojo/dojo/dojo.js"></script>
 <script type="text/javascript" src="maqetta/maqetta.js"></script>
 <script type="text/javascript" src="maqetta/States.js"></script>
 <script type="text/javascript">
@@ -25,7 +25,10 @@ require(["dojox/grid/DataGrid"]);
 require(["dojox/form/CheckedMultiSelect"]);
 require(["dijit/layout/AccordionContainer"]);
 require(["dijit/Toolbar"]);
-require(["dijit/Tooltip"]);</script>
+require(["dijit/Tooltip"]);
+require(["dijit/form/DateTextBox"]);
+require(["dijit/form/TimeTextBox"]);
+require(["dijit/form/SimpleTextarea"]);</script>
 </head>
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" dvStates="{'_show:dijit_Dialog_19':{'origin':true},'_show:dijit_Tooltip_133':{'origin':true},'_show:dijit_Tooltip_145':{'origin':true},'_show:dijit_Tooltip_146':{'origin':true},'_show:dijit_Tooltip_147':{'origin':true},'_show:dijit_Tooltip_148':{'origin':true}}" id="myapp">
  <div dojoType="dijit.layout.BorderContainer" persist="false" gutters="true" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" design="sidebar">
@@ -245,25 +248,86 @@ require(["dijit/Tooltip"]);</script>
 </div>
 </div>
 
+<div dojoType="dijit.layout.ContentPane" title="Activities Manager" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 649px; height: 484px;">
+  <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;">
+<div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 631px; height: 433px;">
+    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Create New Activity" iconClass="dijitNoIcon"></input>
+ <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_8" jsId="ItemFileReadStore_8" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;activity_name&quot;:&quot;Activity_1&quot;,&quot;_description&quot;:&quot; Description&quot;,&quot;_start_date&quot;:&quot; 1-11-11&quot;,&quot;_end_date&quot;:&quot; 2-28-12&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;activity_name&quot;:&quot;Activity_2&quot;,&quot;_description&quot;:&quot; Description&quot;,&quot;_start_date&quot;:&quot; 2-23-09&quot;,&quot;_end_date&quot;:&quot; 3-13-10&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Activity Name&quot;,&quot;field&quot;:&quot;activity_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Start Date&quot;,&quot;field&quot;:&quot;_start_date&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; End Date&quot;,&quot;field&quot;:&quot;_end_date&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="margin-top: 1em; width: 592px; height: 398px;" store="ItemFileReadStore_8" escapeHTMLInData="true"></span></div>
+  <div dojoType="dijit.layout.ContentPane" title="New" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="true" splitter="false" style="width: 631px; height: 452px;">
+    <h1>
+      
+      New Activity</h1>
+    <div style="margin-top: 1em;">
+      <span style="margin-right: 1em;">Activity Name:</span>
+      <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" style="width: 372px;"></input>
+    </div>
+    <div style="margin-bottom: 2em; margin-top: 1em;">
+      <span style="margin-right: 1em;">Start Date:</span>
+      <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 100px;"></input>
+      <input type="text" dojoType="dijit.form.TimeTextBox"></input>
+<span style="margin-left: 1em; margin-right: 1em;">End Date:</span>
+      <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 100px;"></input>
+      <input type="text" dojoType="dijit.form.TimeTextBox"></input>
+    </div>
+    <div style="border: 1px solid gray; padding: 0.5em; border-radius: 6px; -moz-border-radius: 6px; background-color: #e8ebf1; width: 45%;">
+      <div>
+        <span>Select User(s):</span>
+      </div>
+      <select multiple="multiple" dojoType="dojox.form.CheckedMultiSelect" intermediateChanges="false" scrollOnFocus="true" style="width: auto;">
+        <option dvwidget="html.option" value="1">
+          
+          
+         
+         User 1</option>
+        <option dvwidget="html.option" value="2">
+          
+          
+         
+         User 2</option>
+        <option dvwidget="html.option" value="3">
+          
+          
+         
+         User 3</option>
+      </select>
+    </div>
+    <div style="margin-top: 1em;">
+      <span>Notes:</span>
+    </div>
+    <textarea type="text" dojoType="dijit.form.SimpleTextarea" intermediateChanges="false" rows="10" cols="10" trim="false" uppercase="false" lowercase="false" propercase="false" style="width: 90%;"></textarea>
+    <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
+    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
+    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
+  </div>
+  <div dojoType="dijit.layout.ContentPane" title="Activity_1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="true" splitter="false" style="width: 631px; height: 433px;">
+    <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 631px; height: 433px; min-width: 1em; min-height: 1em;"><div dojoType="dijit.layout.ContentPane" title="Details" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="width: 615px; height: 386px;"></div>
+    <div dojoType="dijit.layout.ContentPane" title="Edit" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 318px; height: 308px;"></div>
+    <div dojoType="dijit.layout.ContentPane" title="History" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 318px; height: 308px;">
+      <span dojoType="dijit.layout.TabContainer" tabPosition="left" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 318px; height: 308px; min-width: 1em; min-height: 1em;"><div dojoType="dijit.layout.ContentPane" title="Versions" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="width: 234px; height: 290px;"></div>
+      <div dojoType="dijit.layout.ContentPane" title="Current" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="width: 597px; height: 352px;"></div>
+      </span>
+    </div>
+    </span>
+  </div>
+  </span>
+</div>
 <div dojoType="dijit.layout.ContentPane" title="Controlled Vocabularies" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="width: 404px; height: 470px;">
- <h2>
+<h2>
    Manage Data Warehouse Controlled Vocabularies</h2>
 <span dojoType="dijit.layout.AccordionContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;">
-<div dojoType="dijit.layout.ContentPane" title="Source" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 552px; height: 37px;" doLayout="false"></div>
-<div dojoType="dijit.layout.ContentPane" title="Variable" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 552px; height: 37px;" doLayout="false"></div>
+<div dojoType="dijit.layout.ContentPane" title="Methods" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 585px; height: 48px;"></div>
+<div dojoType="dijit.layout.ContentPane" title="Variables" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 585px; height: 48px;"></div>
 <div dojoType="dijit.layout.ContentPane" title="Units" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 552px; height: 64px;"></div>
-<div dojoType="dijit.layout.ContentPane" title="Category" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 552px; height: 64px;"></div>
-<div dojoType="dijit.layout.ContentPane" title="Speciation" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 552px; height: 64px;"></div>
-<div dojoType="dijit.layout.ContentPane" title="Data Type" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="width: 552px; height: 64px;"></div>
-<div dojoType="dijit.layout.ContentPane" title="Value Type" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
-<div dojoType="dijit.layout.ContentPane" title="QAQC Level" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
-<div dojoType="dijit.layout.ContentPane" title="Spatial Offset Type" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
-<div dojoType="dijit.layout.ContentPane" title="Field Collection Method" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
-<div dojoType="dijit.layout.ContentPane" title="Sample Medium" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
-<div dojoType="dijit.layout.ContentPane" title="Sample Type" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
-<div dojoType="dijit.layout.ContentPane" title="Lab Methods" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
-<div dojoType="dijit.layout.ContentPane" title="Sensor Type" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
+<div dojoType="dijit.layout.ContentPane" title="Categories" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 552px; height: 64px;"></div>
+<div dojoType="dijit.layout.ContentPane" title="Speciations" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 552px; height: 64px;"></div>
+<div dojoType="dijit.layout.ContentPane" title="Data Types" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="width: 552px; height: 64px;"></div>
+<div dojoType="dijit.layout.ContentPane" title="Value Types" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
+<div dojoType="dijit.layout.ContentPane" title="QAQC Levels" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
+<div dojoType="dijit.layout.ContentPane" title="Mediums" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
+<div dojoType="dijit.layout.ContentPane" title="Sample Types" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
+<div dojoType="dijit.layout.ContentPane" title="Sources" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
 </span></div>
+
 </span></div>
     </div>
    <div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="left" splitter="true" style="width: 8%; height: 558px; overflow: auto;">
