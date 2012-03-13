@@ -146,7 +146,7 @@ Select a Data Origin:</div>
    <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Date Range" iconClass="dijitCheckBoxIcon"></input>
    </div>
    <div style="margin-top: 1em; margin-bottom: 1em;">
-     <span style="font-weight: bold; vertical-align: middle; margin-right: 0..5em; margin-left: 1em;">Collected After:</span>
+     <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle; margin-left: 1em;">Collected After:</span>
     <input type="text" dojoType="dijit.form.DateTextBox" style="width: 130px;"></input>
     <span style="font-weight: bold; vertical-align: middle; margin-right: 0.5em; margin-left: 1em;">Collected Before:</span>
     <input type="text" dojoType="dijit.form.DateTextBox" style="width: 130px;"></input>
@@ -274,15 +274,16 @@ My Saved Searches...</h2>
 <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site&quot;,&quot;field&quot;:&quot;site&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Variable Name&quot;,&quot;field&quot;:&quot;_variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Speciation&quot;,&quot;field&quot;:&quot;_speciation&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Units&quot;,&quot;field&quot;:&quot;_units&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Sample Medium&quot;,&quot;field&quot;:&quot;_sample_medium&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Category&quot;,&quot;field&quot;:&quot;_category&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Data Type&quot;,&quot;field&quot;:&quot;_data_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; QAQC Level&quot;,&quot;field&quot;:&quot;_qaqc_level&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Start Date&quot;,&quot;field&quot;:&quot;_start_date&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; End Date&quot;,&quot;field&quot;:&quot;_end_date&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 200px; width: auto;" store="ItemFileReadStore_11" rowSelector="15px"></span></div>
   <div style="border: 1px solid black; border-radius: 6px; -moz-border-radius: 6px; background-color: #d9dadd; margin-bottom: 1em; width: 50%; margin-top: 1em;"><span style="margin: 0.5em; font-weight: bold;">Select metadata export option:</span><div style="margin: 1em;">
 <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon"></input>
-<span style="margin-left: 1em; vertical-align: middle;">Minimum</span></div>
+<span style="margin-left: 0.5em; vertical-align: middle;">Minimum</span></div>
 <div style="margin: 1em;">
 <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon"></input>
-<span style="margin-left: 1em; vertical-align: middle;">Complete</span></div>
+<span style="margin-left: 0.5em; vertical-align: middle;">Complete</span></div>
 </div>
   <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
   <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Export .csv" iconClass="dijitNoIcon"></input>
   <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Publish to HIS" iconClass="dijitNoIcon"></input>
-  </div>
+  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save Search" iconClass="dijitNoIcon"></input>
+</div>
  </span></div>
 
 
@@ -400,15 +401,15 @@ My Saved Searches...</h2>
        <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input><span style="vertical-align: middle; color: red; font-weight: bold; margin-left: 1em;">Deprecate This Template</span>
      </div>
      <div style="margin-top: 1em;">
-       <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Name:</span>
+       <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Name:</span>
        <input type="text" dojoType="dijit.form.TextBox" value="Set 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false"></input>
        </div>
      <div style="margin-top: 1em;">
-       <span style="font-weight: bold; vertical-align: middle; margin-right: 1em;">Data Set Description:</span>
+       <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Data Set Description:</span>
        <textarea type="text" dojoType="dijit.form.Textarea" style="width: 200px;"></textarea>
      </div>
      <div style="margin-top: 1em;">
-       <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Data Set Type:</span>
+       <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Data Set Type:</span>
        <select dojoType="dijit.form.Select" type="text" value="Observational Data" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
          <option dvwidget="html.option" value="Observational Data">
            
@@ -432,7 +433,7 @@ My Saved Searches...</h2>
        <span style="font-weight: bold; margin-right: 1em;">Is Public:</span>
        <div style="margin-bottom: 1em; margin-top: 1em;">
        <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" style="vertical-align: top;"></input>
-         <span style="font-weight: bold; vertical-align: top; margin-right: 1em;">Visible To:</span>
+         <span style="margin-right: 0.5em; font-weight: bold; vertical-align: top;">Visible To:</span>
          <select multiple="multiple" dojoType="dojox.form.CheckedMultiSelect" style="width: 200px;">
            <option dvwidget="html.option" value="1">
              
@@ -481,11 +482,9 @@ My Saved Searches...</h2>
  </div>
  <div style="font-weight: bold; margin-top: 1em;">
    Select a site:</div>
-<span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_1" jsId="ItemFileReadStore_1" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;site_name&quot;:&quot;Site 1&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;site_name&quot;:&quot;Site 2&quot;},{&quot;uniqe_id&quot;:3,&quot;id&quot;:&quot;3&quot;,&quot;site_name&quot;:&quot; Site 3&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site Name&quot;,&quot;field&quot;:&quot;site_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Code&quot;,&quot;field&quot;:&quot;_code&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Lat.&quot;,&quot;field&quot;:&quot;_lat.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Long.&quot;,&quot;field&quot;:&quot;_long.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; State&quot;,&quot;field&quot;:&quot;_state&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_1" escapeHTMLInData="true"></span>
-<div style="font-weight: bold; margin-top: 1em;">
+<span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_1" jsId="ItemFileReadStore_1" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;site_name&quot;:&quot;Site 1&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;site_name&quot;:&quot;Site 2&quot;},{&quot;uniqe_id&quot;:3,&quot;id&quot;:&quot;3&quot;,&quot;site_name&quot;:&quot; Site 3&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site Name&quot;,&quot;field&quot;:&quot;site_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Code&quot;,&quot;field&quot;:&quot;_code&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Lat.&quot;,&quot;field&quot;:&quot;_lat.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Long.&quot;,&quot;field&quot;:&quot;_long.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; State&quot;,&quot;field&quot;:&quot;_state&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_1" rowSelector="true"></span><div style="font-weight: bold; margin-top: 1em;">
   Select a Data Origin:</div>
-<span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_2" jsId="ItemFileReadStore_2" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;variable_name&quot;:&quot;Variable 1&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;variable_name&quot;:&quot;Variable 2&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Variable Name&quot;,&quot;field&quot;:&quot;variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Units&quot;,&quot;field&quot;:&quot;_units&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Category&quot;,&quot;field&quot;:&quot;_category&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Data Type&quot;,&quot;field&quot;:&quot;_data_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; QAQC Level&quot;,&quot;field&quot;:&quot;_qaqc_level&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_2" escapeHTMLInData="true"></span>
-<div style="font-weight: bold; margin-bottom: 0.5em; margin-top: 1em;">
+<span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_2" jsId="ItemFileReadStore_2" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;variable_name&quot;:&quot;Variable 1&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;variable_name&quot;:&quot;Variable 2&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Variable Name&quot;,&quot;field&quot;:&quot;variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Units&quot;,&quot;field&quot;:&quot;_units&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Category&quot;,&quot;field&quot;:&quot;_category&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Data Type&quot;,&quot;field&quot;:&quot;_data_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; QAQC Level&quot;,&quot;field&quot;:&quot;_qaqc_level&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" rowSelector="true" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_2"></span><div style="font-weight: bold; margin-bottom: 0.5em; margin-top: 1em;">
 Select a date range:</div>
 <div><span style="font-weight: bold; margin-left: 3em; margin-right: 1em;">Collected After:</span>
 <input type="text" dojoType="dijit.form.DateTextBox" style="width: 130px;"></input>
@@ -507,130 +506,127 @@ Select a date range:</div>
         </div>
  <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; width: 29%; overflow: scroll; background-color: #e8ebf1; display: inline-block; height: 100%;">
     <h3 style="border-bottom: 1px solid gray; text-align: center;">Batch Edit Tools</h3>
-    <div style="margin: 1em;">
+    <div style="border: 1px solid gray; padding: 0.5em; margin: 1em; border-radius: 6px; -moz-border-radius: 6px;">
         <span style="font-weight: bold;">Data Values:</span>
-    </div>
-    <div dojoType="dijit.form.Form" style="margin: 1em;">
-        <span>y=</span>
-        <input type="text" dojoType="dijit.form.TextBox"></input>
-        <div style="margin-top: 1em;">
+        <div dojoType="dijit.form.Form">
+        <div style="margin-bottom: 0.5em; margin-top: 1em;">
             <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
-            <span style="vertical-align: middle;">Degrees</span>
-        </div>
-        <div>
-            <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
-            <span style="vertical-align: middle;">Radians</span>
-        </div>
-        <div>
-            <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
-            <span style="vertical-align: middle;">Gradients</span>
-        </div>
-        <table style="border: 1px solid gray; background-color: #9a9ca0; margin-bottom: 0.5em; margin-top: 1em;">
-            <tbody>
-  <tr>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="(X)" iconClass="dijitNoIcon" class="calcButton"></input>
+            <span style="vertical-align: middle;">Calculator</span>
+          </div>
+          <div style="padding: 0.5em; background-color: #9a9ca0;"><span style="font-weight: bold;">Y=</span><input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
+<table style="border: 1px solid gray; margin-top: 0.5em; background-color: #9a9ca0; margin-bottom: 0.5em;">
+<tbody>
+<tr>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="(X)" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
    </td>
-    <td>
+<td>
    </td>
-    <td>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="&amp;lt;-" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="CE" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-  </tr>
-  <tr>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" label="log" intermediateChanges="false" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="sin" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="cos" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="tan" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="^" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    </tr>
-  <tr>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="ln" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="7" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="8" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="9" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="*" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    </tr>
-  <tr>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="sqrt" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="4" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="5" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="6" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="/" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-  </tr>
-  <tr>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="(" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="1" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="2" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="3" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="-" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-  </tr>
-  <tr>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label=")" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="0" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="." iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="+/-" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-    <td>
-     <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="+" iconClass="dijitNoIcon" class="calcButton"></input>
-   </td>
-  </tr>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="&amp;lt;-" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="CE" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" dojoType="dijit.form.Button" label="log" intermediateChanges="false" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="sin" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="cos" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="tan" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="^" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="ln" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="7" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="8" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="9" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="*" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="sqrt" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="4" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="5" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="6" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="/" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="(" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="1" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="2" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="3" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="-" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+</tr>
+<tr>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label=")" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="0" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="." iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="+/-" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+<td>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="+" iconClass="dijitNoIcon" class="calcButton"></input>
+</td>
+</tr>
 </tbody>
 </table>
 </div>
-  <div style="margin: 1em;">
+          <div style="margin-bottom: 0.5em; margin-top: 1em;">
+            <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
+            <span style="vertical-align: middle;">R Script</span>
+          </div>
+          <textarea type="text" dojoType="dijit.form.SimpleTextarea" rows="10" cols="10" style="width: 95%;"></textarea>
+        </div>
+        </div>
+    <div style="border: 1px solid gray; padding: 0.5em; margin: 1em; border-radius: 6px; -moz-border-radius: 6px;">
 <span style="vertical-align: middle; margin-right: 0.5em; font-weight: bold;">QAQC Level:</span><select dojoType="dijit.form.Select" type="text" value="0" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
   <option dvwidget="html.option" value="0" selected="selected">
     0</option>
@@ -644,7 +640,7 @@ Select a date range:</div>
     4</option>
 </select>
 </div>
-  <div style="margin: 1em;">
+  <div style="border: 1px solid gray; padding: 0.5em; margin: 1em; border-radius: 6px; -moz-border-radius: 6px;">
   <span style="vertical-align: middle; margin-right: 0.5em; font-weight: bold;">Offset Type:</span>
   <select dojoType="dijit.form.Select" type="text" value="None" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
     <option dvwidget="html.option" value="None" selected="selected">
@@ -659,17 +655,18 @@ Select a date range:</div>
       Easting:meter</option>
   </select>
 </div>
-  <div style="margin: 1em;">
+  <div style="border: 1px solid gray; padding: 0.5em; margin: 1em; border-radius: 6px; -moz-border-radius: 6px;">
   <span style="vertical-align: middle; margin-right: 0.5em; font-weight: bold;">Offset Value:</span>
   <input type="text" dojoType="dijit.form.NumberTextBox"></input>
 </div>
-  <div style="margin: 1em;">
+  <div style="border: 1px solid gray; padding: 0.5em; margin: 1em; border-radius: 6px; -moz-border-radius: 6px;">
 <span style="vertical-align: middle; margin-right: 0.5em; font-weight: bold;">Origin:</span>
 <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="From Existing" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="New" iconClass="dijitNoIcon"></span>
 </span>
 </span></div>
   <div style="margin: 1em;">
-   <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Apply Changes to Selected Rows" iconClass="dijitNoIcon"></input>
+   <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Apply Changes to Selected Row" iconClass="dijitNoIcon"></input>
+   <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Clear" iconClass="dijitNoIcon"></input>
  </div>
   </div>
  </div>
