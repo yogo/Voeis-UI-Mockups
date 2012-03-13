@@ -42,7 +42,8 @@ require(["dijit/form/Form"]);
 require(["dijit/form/ToggleButton"]);
 require(["dojox/grid/TreeGrid"]);
 require(["dijit/form/NumberTextBox"]);
-require(["dijit/form/MultiSelect"]);</script>
+require(["dijit/form/MultiSelect"]);
+require(["dijit/ProgressBar"]);</script>
 </head>
 
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" dvStates="{'Observation_File_Upload_Step_1':{'origin':true}}" id="myapp">
@@ -94,11 +95,11 @@ require(["dijit/form/MultiSelect"]);</script>
               <div dojoType="dijit.layout.ContentPane" title="Field Observations" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="selected" closable="false" style="width: 686px; height: 532px;">
                     <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 686px; height: 532px; min-width: 1em; min-height: 1em;" nested="true">
                         <div dojoType="dijit.layout.ContentPane" title="Tabular Entry" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 658px; height: 493px;">
-                            <div style="border: 1px solid gray; margin-bottom: 1em; background-color: #c9dff3;">
+                            <div style="border: 1px solid gray; margin-bottom: 2em; background-color: #c9dff3;">
                                 <img src="data/images/tabular_entry.png" style="margin: 0.5em; width: 5%; display: inline-block;"></img>
                                 <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">Tabular Entry Form: Use this form to load individual field observations collected at a single site.</span>
                             </div>
-                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
+                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
                                 <div style="margin: 1em; margin-top: 1em;">
                                     <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Project:</span>
                                     <select dojoType="dijit.form.Select" type="text" value="Project 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
@@ -119,7 +120,7 @@ require(["dijit/form/MultiSelect"]);</script>
                                     <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Origin Type&quot;,&quot;field&quot;:&quot;_origin_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Variable Name&quot;,&quot;field&quot;:&quot;_variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Units&quot;,&quot;field&quot;:&quot;_units&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Category&quot;,&quot;field&quot;:&quot;_category&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Data Type&quot;,&quot;field&quot;:&quot;_data_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Method ID&quot;,&quot;field&quot;:&quot;_method_id&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_7" rowSelector="true"></span>
                                 </div>
                             </div>
-                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1; width: 500px;">
+                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1; width: 500px;">
                                 <span style="font-weight: bold; margin-left: 1em; margin-top: 1em;">Identify the date/time format that this data was collected with:</span>
                                 <div style="border: 1px solid white; margin: 1em;">
                                     <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
@@ -134,7 +135,7 @@ require(["dijit/form/MultiSelect"]);</script>
                                     <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input>
                                 </div>
                             </div>
-                            <div style="border: 1px solid gray; background-color: #d9dadd; margin-bottom: 1em; margin-top: 1em;">
+                            <div style="margin-bottom: 2em;">
                                 <table style="padding: 5px; margin-bottom: 0.5em; width: auto;" border="1">
                                     <tbody>
                                         <tr>
@@ -260,190 +261,220 @@ require(["dijit/form/MultiSelect"]);</script>
                             <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Reset Form" iconClass="dijitNoIcon"></input>
                         </div>
                         <div dojoType="dijit.layout.ContentPane" title="File Upload" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 662px; height: 476px;" doLayout="false">
-                            <div>
-                                <div style="border: 1px solid gray; background-color: #c9dff3;">
-                                    <img src="data/images/text_file.png" style="margin: 0.5em; width: 5%; display: inline-block;"></img>
+                            <div style="border: 1px solid gray; background-color: #c9dff3;">
+                              <img src="data/images/text_file.png" style="margin: 0.5em; width: 5%; display: inline-block;"></img>
                                     <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">File Upload Wizard: Use this workflow to load data contained in a .csv file. File must include a column of timestamps and one or more columns of data values. The file may also include a column of vertical offset values. Data contained in a single file must represent values collected at a single X,Y location only.</span>
+                            </div>
+                            <div dojoType="dijit.form.Form" title="Field Observation File Step 1" accept-charset="UTF-8" action="pre_process_upload_file" enctype="multipart/form-data" method="post" style="width: auto; height: auto; overflow: scroll; display: block;">
+                              <div>
+                                <h2>
+                                  Upload Wizard: Step 1</h2>
+                              </div>
+                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
+                                <div style="margin: 1em;">
+                                  <span style="font-weight: bold; margin-right: 0.5em;">Select a file to upload:</span>
+                                  <input dojoType="dojox.form.FileInput" intermediateChanges="false" scrollOnFocus="true" style="display: inline-block;"></input>
                                 </div>
-                                <div dojoType="dijit.form.Form" title="Field Observation File Step 1" accept-charset="UTF-8" action="pre_process_upload_file" enctype="multipart/form-data" method="post" style="width: auto; height: auto; overflow: scroll; display: block;">
-                                    <div><h2>Upload Wizard: Step 1</h2>
-                                    </div>
-                                    <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
-                                        <div style="margin: 1em;">
-                                          <span style="font-weight: bold; margin-right: 0.5em;">Select a file to upload:</span>
-                                          <input dojoType="dojox.form.FileInput" intermediateChanges="false" scrollOnFocus="true" style="display: inline-block;"></input>
-                                        </div>
-                                        <div style="margin: 1em; vertical-align: middle;">
-                                          <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Indicate which row data begins on:</span>
-                                          <input type="text" dojoType="dijit.form.NumberSpinner" id="start_line" name="start_line" value="1" intermediateChanges="false" trim="false" required="true" style="width: 50px;"></input>
-                                        </div>
-                                    </div>
-                                    <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
-                                        <div style="margin: 1em;">
-                                          <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Select Project:</span>
-                                          <select dojoType="dijit.form.Select" type="text" id="project_id" name="project_id" required="true" autoWidth="true">
-                                          <option dvwidget="html.option" value="1">Project 1</option>
-                                          <option dvwidget="html.option" value="2">Project 2</option>
-                                          <option dvwidget="html.option" value="3">Project 3</option>
-                                          </select>
-                                        </div>
-                                        <div style="margin: 1em; height: 100px;">
-                                          <span style="margin-bottom: 0.5em; font-weight: bold;">Select a site:</span>
+                                <div style="margin: 1em; vertical-align: middle;">
+                                  <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Indicate which row data begins on:</span>
+                                  <input type="text" dojoType="dijit.form.NumberSpinner" id="start_line" name="start_line" value="1" intermediateChanges="false" trim="false" required="true" style="width: 50px;"></input>
+                                </div>
+                              </div>
+                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
+                                <div style="margin: 1em;">
+                                  <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Select Project:</span>
+                                  <select dojoType="dijit.form.Select" type="text" id="project_id" name="project_id" required="true" autoWidth="true">
+                                    <option dvwidget="html.option" value="1">
+                                      Project 1</option>
+                                    <option dvwidget="html.option" value="2">
+                                      Project 2</option>
+                                    <option dvwidget="html.option" value="3">
+                                      Project 3</option>
+                                  </select>
+                                </div>
+                                <div style="margin: 1em; height: 100px;">
+                                  <span style="margin-bottom: 0.5em; font-weight: bold;">Select a site:</span>
                                           <span dojoType="dojo.data.ItemFileReadStore" jsId="ItemFileReadStore_4" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;site_name&quot;:&quot;Site 1&quot;,&quot;_code&quot;:&quot; S_1&quot;,&quot;_lat.&quot;:&quot; ##&quot;,&quot;_long.&quot;:&quot; ##&quot;,&quot;_state&quot;:&quot; MT&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;site_name&quot;:&quot;Site 2&quot;,&quot;_code&quot;:&quot; S2&quot;,&quot;_lat.&quot;:&quot; ##&quot;,&quot;_long.&quot;:&quot; ##&quot;,&quot;_state&quot;:&quot; MT&quot;}]}"></span>
                                           <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site Name&quot;,&quot;field&quot;:&quot;site_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Code&quot;,&quot;field&quot;:&quot;_code&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Lat.&quot;,&quot;field&quot;:&quot;_lat.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Long.&quot;,&quot;field&quot;:&quot;_long.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; State&quot;,&quot;field&quot;:&quot;_state&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectionMode="single" rowSelector="20px" selectable="false" delayScroll="false" style="height: 80px;" store="ItemFileReadStore_4"></span>
-                                          <input id="site_id" name="site_id" type="hidden"></input>
-                                        </div>
-                                        <div style="margin: 1em;">
-                                          <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select a parsing template:</span>
-                                          <select dojoType="dijit.form.Select" type="text" name="data_template_id" value="None" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="true" scrollOnFocus="true" autoWidth="true">Create New</select>
-                                          <option dvwidget="html.option" value="1">Template 1</option>
-                                          <option dvwidget="html.option" value="2">Template 2</option>
-                                          <option dvwidget="html.option" value="3">Template 3</option>
-                                          </div>
-                                        </div>
-                                    </div>
-                                    <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
-                                        <div style="margin: 1em;">
-                                          <span style="margin-bottom: 0.5em; font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select Data Set (Optional):</span>
-                                          <img src="data/images/add-icon.png" style="margin-left: 0.5em; vertical-align: middle; height: 15px;"></img>
+                                  <input id="site_id" name="site_id" type="hidden"></input>
+                                </div>
+                                <div style="margin: 1em;">
+                                  <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select a parsing template:</span>
+                                  <select dojoType="dijit.form.Select" type="text" name="data_template_id" value="None" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="true" scrollOnFocus="true" autoWidth="true">
+                                    Create New</select>
+                                  <option dvwidget="html.option" value="1">
+                                    Template 1</option>
+                                  <option dvwidget="html.option" value="2">
+                                    Template 2</option>
+                                  <option dvwidget="html.option" value="3">
+                                    Template 3</option>
+                                </div>
+                              </div>
+                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
+                                <div style="margin: 1em;">
+                                  <span style="margin-bottom: 0.5em; font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select Data Set (Optional):</span>
+                                  <img src="data/images/add-icon.png" style="margin-left: 0.5em; vertical-align: middle; height: 15px;"></img>
                                           <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_1" jsId="ItemFileReadStore_1" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;DataSet_1&quot;,&quot;_type&quot;:&quot; observations&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;name&quot;:&quot;DataSet_2&quot;,&quot;_type&quot;:&quot; experiment&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;},{&quot;uniqe_id&quot;:3,&quot;id&quot;:&quot;3&quot;,&quot;name&quot;:&quot; DataSet_3&quot;,&quot;_type&quot;:&quot; simulation&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;}]}"></span>
                                           <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Name&quot;,&quot;field&quot;:&quot;name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="true" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_1" rowSelector="true"></span>
-                                        </div>
-                                    </div>
-                                    <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;">
-                                    </div>
-                                    <input type="submit" dojoType="dijit.form.Button" id="upload_button" label="Upload File" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
-                                    <input type="button" dojoType="dijit.form.Button" label="Cancel"></input>
                                 </div>
-                                <div dojoType="dijit.form.Form" accept-charset="UTF-8" action="upload" method="post" onSubmit="return validate();" style="height: auto; width: auto;">
-                                    <h2 style="width: auto; height: auto;">Upload Wizard: Step 2</h2>
-                                    <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
-                                        <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Save As New Parsing Template" iconClass="dijitCheckBoxIcon" style="margin: 1em;"></input>
-                                        <div style="margin: 1em;">
-                                          <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Template Name:</span>
-                                          <input type="text" dojoType="dijit.form.TextBox"></input>
-                                        </div>
-                                        <div style="margin: 1em;">
-                                          <span style="margin-right: 0.5em; vertical-align: top; font-weight: bold;">Template Description:</span>
-                                          <textarea type="text" dojoType="dijit.form.SimpleTextarea" rows="10" cols="10" style="width: 400px; height: 80px;"></textarea>
-                                        </div>
+                              </div>
+                              <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;">
                                     </div>
-                                    <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1; width: 500px;">
-                                        <span style="margin-top: 1em; margin-left: 1em; font-weight: bold;">Identify the date/time format that this data was collected with:</span>
-                                        <div style="margin: 1em;">
-                                          <span style="vertical-align: middle;">Timestamp Format:</span>
-                                          <select dojoType="dijit.form.Select" type="text" value="MM-DD-YYYY HH:MM" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                          <option dvwidget="html.option" value="MM-DD-YYYY HH:MM" selected="selected">MM-DD-YYYY HH:MM</option>
-                                          <option dvwidget="html.option" value="DD-MM-YYYY HH:MM">DD-MM-YYYY HH:MM</option>
-                                          <option dvwidget="html.option" value="YYYY-DD-MM HH:MM">YYYY-DD-MM HH:MM</option>
-                                          <option dvwidget="html.option" value="YYYY-MM-DD HH:MM">YYYY-MM-DD HH:MM</option>
-                                          </select>
-                                        </div>
-                                        <div style="border: 1px solid white; margin: 1em;">
-                                          <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
+                              <input type="submit" dojoType="dijit.form.Button" id="upload_button" label="Upload File" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
+                              <input type="button" dojoType="dijit.form.Button" label="Cancel"></input>
+                            </div>
+                            <div dojoType="dijit.form.Form" accept-charset="UTF-8" action="upload" method="post" onSubmit="return validate();" style="height: auto; width: auto;">
+                              <h2 style="width: auto; height: auto;">
+                                Upload Wizard: Step 2</h2>
+                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
+                                <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Save As New Parsing Template" iconClass="dijitCheckBoxIcon" style="margin: 1em;"></input>
+                                <div style="margin: 1em;">
+                                  <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Template Name:</span>
+                                  <input type="text" dojoType="dijit.form.TextBox"></input>
+                                </div>
+                                <div style="margin: 1em;">
+                                  <span style="margin-right: 0.5em; vertical-align: top; font-weight: bold;">Template Description:</span>
+                                  <textarea type="text" dojoType="dijit.form.SimpleTextarea" rows="10" cols="10" style="width: 400px; height: 80px;"></textarea>
+                                </div>
+                              </div>
+                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1; width: 500px;">
+                                <span style="margin-top: 1em; margin-left: 1em; font-weight: bold;">Identify the date/time format that this data was collected with:</span>
+                                <div style="margin: 1em;">
+                                  <span style="vertical-align: middle;">Timestamp Format:</span>
+                                  <select dojoType="dijit.form.Select" type="text" value="MM-DD-YYYY HH:MM" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                    <option dvwidget="html.option" value="MM-DD-YYYY HH:MM" selected="selected">
+                                      MM-DD-YYYY HH:MM</option>
+                                    <option dvwidget="html.option" value="DD-MM-YYYY HH:MM">
+                                      DD-MM-YYYY HH:MM</option>
+                                    <option dvwidget="html.option" value="YYYY-DD-MM HH:MM">
+                                      YYYY-DD-MM HH:MM</option>
+                                    <option dvwidget="html.option" value="YYYY-MM-DD HH:MM">
+                                      YYYY-MM-DD HH:MM</option>
+                                  </select>
+                                </div>
+                                <div style="border: 1px solid white; margin: 1em;">
+                                  <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
                                           <span style="vertical-align: middle; margin-left: 1em;">UTC Date/Time</span>
-                                        </div>
-                                        <div style="border: 1px solid white; margin: 1em;">
-                                          <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
+                                </div>
+                                <div style="border: 1px solid white; margin: 1em;">
+                                  <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
                                           <span style="vertical-align: middle; margin-left: 1em; margin-right: 1em;">Local Date/Time</span>
                                           <span style="margin-right: 0.5em; vertical-align: middle; margin-left: 1em;">Time Zone Offset:</span>
-                                          <input type="text" dojoType="dijit.form.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50px;"></input>
+                                  <input type="text" dojoType="dijit.form.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50px;"></input>
                                           <span style="margin-right: 0.5em; vertical-align: middle; margin-left: 1em;">Daylight Savings Time:</span>
-                                          <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input>
-                                        </div>
-                                    </div>
+                                  <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input>
+                                </div>
+                              </div>
                                     <span dojoType="dijit.layout.AccordionContainer" style="min-width: 1em; min-height: 1em;">
                                         <div dojoType="dijit.layout.ContentPane" title="Column 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="height: auto; width: 657px;" doLayout="false">
-                                          <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
+                                <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
                                           <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
                                           <span dojoType="dijit.MenuItem" label="Existing Data Origin" iconClass="dijitNoIcon"></span>
                                           <span dojoType="dijit.MenuItem" label="New Data Origin" iconClass="dijitNoIcon"></span>
                                           <span dojoType="dijit.MenuItem" label="Assign as Timestamp"></span>
                                           <span dojoType="dijit.MenuItem" label="Assign as Spatial Offset"></span>
                                           <span dojoType="dijit.MenuItem" label="Ignore Column"></span>
-                                          </span>
-                                          </span>
-                                          <div style="margin: 1em;">
-                                          <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
-                                          <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                          <option dvwidget="html.option" value="Level 1" selected="selected">Level 1</option>
-                                          <option dvwidget="html.option" value="Level 2">Level 2</option>
-                                          <option dvwidget="html.option" value="Level 3">Level 3</option>
-                                          </select>
-                                          </div>
-                                          <div style="margin: 1em;">
-                                          <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
-                                          <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                          <option dvwidget="html.option" value="Term 1" selected="selected">Term 1</option>
-                                          <option dvwidget="html.option" value="Term 2">Term 2</option>
-                                          <option dvwidget="html.option" value="Term 3">Term 3</option>
-                                          </select>
-                                          </div>
-                                          <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
-                                        </div>
-                                        <div dojoType="dijit.layout.ContentPane" title="Column 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 274px; height: 224px;" doLayout="false">
-                                          <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
-                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
-                                          <span dojoType="dijit.MenuItem" label="Existing Data Origin" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="New Data Origin" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="Assign as Timestamp" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="Assign as Spatial Offset" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="Ignore Column" iconClass="dijitNoIcon"></span>
-                                          </span>
-                                          </span>
-                                          <div style="margin: 1em;">
-                                          <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
-                                          <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                          <option dvwidget="html.option" value="Level 1">Level 1</option>
-                                          <option dvwidget="html.option" value="Level 2">Level 2</option>
-                                          <option dvwidget="html.option" value="Level 3">Level 3</option>
-                                          </select>
-                                          </div>
-                                          <div style="margin: 1em;">
-                                          <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
-                                          <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                          <option dvwidget="html.option" value="Term 1">Term 1</option>
-                                          <option dvwidget="html.option" value="Term 2">Term 2</option>
-                                          <option dvwidget="html.option" value="Term 3">Term 3</option>
-                                          </select>
-                                          </div>
-                                          <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
-                                        </div>
-                                        <div dojoType="dijit.layout.ContentPane" title="Column 3">
-                                          <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
-                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
-                                          <span dojoType="dijit.MenuItem" label="Existing Data Origin" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="New Data Origin" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="Assign as Timestamp" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="Assign as Spatial Offset" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="Ignore Column" iconClass="dijitNoIcon"></span>
-                                          </span>
-                                          </span>
-                                          <div style="margin: 1em;">
-                                          <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
-                                          <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                          <option dvwidget="html.option" value="Level 1">Level 1</option>
-                                          <option dvwidget="html.option" value="Level 2">Level 2</option>
-                                          <option dvwidget="html.option" value="Level 3">Level 3</option>
-                                          </select>
-                                          </div>
-                                          <div style="margin: 1em;">
-                                          <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
-                                          <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                          <option dvwidget="html.option" value="Term 1">Term 1</option>
-                                          <option dvwidget="html.option" value="Term 2">Term 2</option>
-                                          <option dvwidget="html.option" value="Term 3">Term 3</option>
-                                          </select>
-                                          </div>
-                                          <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
-                                        </div>
-                                    </span>
-                                    <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;">
-                                    </div>
-                                    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
-                                    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
+                                </span>
+                                </span>
+                                <div style="margin: 1em;">
+                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
+                                  <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                    <option dvwidget="html.option" value="Level 1" selected="selected">
+                                      Level 1</option>
+                                    <option dvwidget="html.option" value="Level 2">
+                                      Level 2</option>
+                                    <option dvwidget="html.option" value="Level 3">
+                                      Level 3</option>
+                                  </select>
                                 </div>
+                                <div style="margin: 1em;">
+                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
+                                  <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                    <option dvwidget="html.option" value="Term 1" selected="selected">
+                                      Term 1</option>
+                                    <option dvwidget="html.option" value="Term 2">
+                                      Term 2</option>
+                                    <option dvwidget="html.option" value="Term 3">
+                                      Term 3</option>
+                                  </select>
+                                </div>
+                                <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
+                              </div>
+                              <div dojoType="dijit.layout.ContentPane" title="Column 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 274px; height: 224px;" doLayout="false">
+                                <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
+                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
+                                          <span dojoType="dijit.MenuItem" label="Existing Data Origin" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="New Data Origin" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="Assign as Timestamp" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="Assign as Spatial Offset" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="Ignore Column" iconClass="dijitNoIcon"></span>
+                                </span>
+                                </span>
+                                <div style="margin: 1em;">
+                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
+                                  <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                    <option dvwidget="html.option" value="Level 1">
+                                      Level 1</option>
+                                    <option dvwidget="html.option" value="Level 2">
+                                      Level 2</option>
+                                    <option dvwidget="html.option" value="Level 3">
+                                      Level 3</option>
+                                  </select>
+                                </div>
+                                <div style="margin: 1em;">
+                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
+                                  <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                    <option dvwidget="html.option" value="Term 1">
+                                      Term 1</option>
+                                    <option dvwidget="html.option" value="Term 2">
+                                      Term 2</option>
+                                    <option dvwidget="html.option" value="Term 3">
+                                      Term 3</option>
+                                  </select>
+                                </div>
+                                <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
+                              </div>
+                              <div dojoType="dijit.layout.ContentPane" title="Column 3">
+                                <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
+                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
+                                          <span dojoType="dijit.MenuItem" label="Existing Data Origin" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="New Data Origin" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="Assign as Timestamp" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="Assign as Spatial Offset" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="Ignore Column" iconClass="dijitNoIcon"></span>
+                                </span>
+                                </span>
+                                <div style="margin: 1em;">
+                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
+                                  <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                    <option dvwidget="html.option" value="Level 1">
+                                      Level 1</option>
+                                    <option dvwidget="html.option" value="Level 2">
+                                      Level 2</option>
+                                    <option dvwidget="html.option" value="Level 3">
+                                      Level 3</option>
+                                  </select>
+                                </div>
+                                <div style="margin: 1em;">
+                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
+                                  <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                    <option dvwidget="html.option" value="Term 1">
+                                      Term 1</option>
+                                    <option dvwidget="html.option" value="Term 2">
+                                      Term 2</option>
+                                    <option dvwidget="html.option" value="Term 3">
+                                      Term 3</option>
+                                  </select>
+                                </div>
+                                <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
+                              </div>
+                              </span>
+                              <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;">
+                                    </div>
+                              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
+                              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
                             </div>
+                          </div>
                         </span>
                     </div>
               <div dojoType="dijit.layout.ContentPane" title="Samples" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 678px; height: 523px;">
@@ -451,11 +482,11 @@ require(["dijit/form/MultiSelect"]);</script>
                       <div dojoType="dijit.layout.ContentPane" title="Sample Records" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="selected" closable="false" style="width: 670px; height: 485px;">
                   <span dojoType="dijit.layout.TabContainer" style="min-width: 1em; min-height: 1em; width: 670px; height: 485px;" controllerWidget="dijit.layout.TabController">
                               <div dojoType="dijit.layout.ContentPane" title="Tabular Entry" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" closable="false" style="width: 628px; height: 424px;">
-                    <div style="border: 1px solid gray; margin-bottom: 1em; background-color: #c9dff3;">
+                    <div style="border: 1px solid gray; margin-bottom: 2em; background-color: #c9dff3;">
                       <img src="data/images/tabular_entry.png" style="margin: 0.5em; width: 5%; display: inline-block;"></img>
                                         <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">Tabular Entry Form: Use this form to create a record of unique sample IDs.</span>
                     </div>
-                    <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
+                    <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
                       <div style="margin: 1em; margin-top: 1em;">
                         <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Project:</span>
                         <select dojoType="dijit.form.Select" type="text" value="Project 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
@@ -545,7 +576,7 @@ require(["dijit/form/MultiSelect"]);</script>
                                           <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Name&quot;,&quot;field&quot;:&quot;name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Accuracy&quot;,&quot;field&quot;:&quot;_accuracy&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Detection Limit&quot;,&quot;field&quot;:&quot;_detection_limit&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Link&quot;,&quot;field&quot;:&quot;_link&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_8" rowSelector="true"></span>
                       </div>
                     </div>
-                    <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1; width: 500px;">
+                    <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1; width: 500px;">
                       <span style="margin-top: 1em; margin-left: 1em; font-weight: bold;">Identify the date/time format that this data was collected with:</span>
                       <div style="border: 1px solid white; margin: 1em;">
                         <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
@@ -560,7 +591,7 @@ require(["dijit/form/MultiSelect"]);</script>
                         <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input>
                       </div>
                     </div>
-                    <div style="border: 1px solid gray; background-color: #d9dadd; margin-bottom: 1em; margin-top: 1em;">
+                    <div style="margin-bottom: 1em; margin-top: 1em;">
                       <table style="padding: 5px;" border="1">
                         <tbody>
                           <tr>
@@ -716,40 +747,74 @@ require(["dijit/form/MultiSelect"]);</script>
                           </select>
                         </div>
                         <div style="margin: 1em; vertical-align: middle;">
-                          <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Site:</span>
+                        <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Site:</span>
                                           <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_24" jsId="ItemFileReadStore_24" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;site&quot;:&quot; Site 1&quot;,&quot;_code&quot;:&quot; S_1&quot;,&quot;_lat.&quot;:&quot;...&quot;,&quot;_long.&quot;:&quot;...&quot;,&quot;_state&quot;:&quot;...&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;site&quot;:&quot; Site 2&quot;,&quot;_code&quot;:&quot; S_2&quot;,&quot;_lat.&quot;:&quot;...&quot;,&quot;_long.&quot;:&quot;...&quot;,&quot;_state&quot;:&quot;...&quot;},{&quot;uniqe_id&quot;:3,&quot;id&quot;:&quot;3&quot;,&quot;site&quot;:&quot;Site 3&quot;,&quot;_code&quot;:&quot; S_3&quot;,&quot;_lat.&quot;:&quot;...&quot;,&quot;_long.&quot;:&quot;...&quot;,&quot;_state&quot;:&quot;...&quot;}]}"></span>
                                           <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site&quot;,&quot;field&quot;:&quot;site&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Code&quot;,&quot;field&quot;:&quot;_code&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Lat.&quot;,&quot;field&quot;:&quot;_lat.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Long.&quot;,&quot;field&quot;:&quot;_long.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; State&quot;,&quot;field&quot;:&quot;_state&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px; width: 100%;" store="ItemFileReadStore_24" escapeHTMLInData="true" rowSelector="true"></span>
                         </div>
-                        <div style="margin: 1em;">
-                          <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select a parsing template:</span>
-                          <select dojoType="dijit.form.Select" type="text" name="data_template_id" value="None" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="true" scrollOnFocus="true" autoWidth="true">
-                            <option dvwidget="html.option" value="None">
-                              Create New</option>
-                            <option dvwidget="html.option" value="1">
-                              Template 1</option>
-                            <option dvwidget="html.option" value="2">
-                              Template 2</option>
-                            <option dvwidget="html.option" value="3">
-                              Template 3</option>
-                          </select>
                         </div>
-                      </div>
                       <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;">
                                     </div>
                       <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Upload File" iconClass="dijitNoIcon"></input>
                       <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
-                    </div>
+                      </div>
+                    <div dojoType="dijit.form.Form" encType="multipart/form-data">
+                     <h2 style="margin-bottom: 2em;">
+                       Upload Wizard: Step 2</h2>
+                     <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1; width: 500px;">
+                       <span style="margin-top: 1em; margin-left: 1em; font-weight: bold;">Identify the date/time format that these samples were collected with:</span><div style="margin: 1em;">
+                         <span style="vertical-align: middle;">Timestamp Format:</span>
+                         <select dojoType="dijit.form.Select" type="text" value="MM-DD-YYYY HH:MM" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                           <option dvwidget="html.option" value="MM-DD-YYYY HH:MM">
+                             
+                                      MM-DD-YYYY HH:MM</option>
+                           <option dvwidget="html.option" value="DD-MM-YYYY HH:MM">
+                             
+                                      DD-MM-YYYY HH:MM</option>
+                           <option dvwidget="html.option" value="YYYY-DD-MM HH:MM">
+                             
+                                      YYYY-DD-MM HH:MM</option>
+                           <option dvwidget="html.option" value="YYYY-MM-DD HH:MM">
+                             
+                                      YYYY-MM-DD HH:MM</option>
+                         </select>
+                       </div>
+                       <div style="border: 1px solid white; margin: 1em;">
+                         <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input><span style="vertical-align: middle; margin-left: 1em;">UTC Date/Time</span>
+                       </div>
+                       <div style="border: 1px solid white; margin: 1em;">
+                         <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input><span style="vertical-align: middle; margin-left: 1em; margin-right: 1em;">Local Date/Time</span><span style="margin-right: 0.5em; vertical-align: middle; margin-left: 1em;">Time Zone Offset:</span>
+                         <input type="text" dojoType="dijit.form.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50px;"></input><span style="margin-right: 0.5em; vertical-align: middle; margin-left: 1em;">Daylight Savings Time:</span>
+                         <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input>
+                       </div>
+                     </div>
+                     <span dojoType="dijit.layout.AccordionContainer" style="height: auto; min-width: 1em; min-height: 1em;">
+<div dojoType="dijit.layout.ContentPane" title="Column 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="height: auto; width: 580px;" doLayout="false"><span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Assign Sample ID" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Sample Type"></span><span dojoType="dijit.MenuItem" label="Assign Sample Medium"></span>
+ </span>
+ </span>
+</div>
+                     <div dojoType="dijit.layout.ContentPane" title="Column 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 274px; height: 224px;" doLayout="false"><span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Assign Sample ID" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Sample Type" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Sample Medium" iconClass="dijitNoIcon"></span>
+                      </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Assign Sample ID"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp"></span><span dojoType="dijit.MenuItem" label="Assign Sample Type"></span><span dojoType="dijit.MenuItem" label="Assign Sample Medium"></span>
+                      </span>
+                      </span></div>
+                     <div dojoType="dijit.layout.ContentPane" title="Column 3"><span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Assign Sample ID" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Sample Type" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Sample Medium" iconClass="dijitNoIcon"></span>
+                      </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Assign Sample ID"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp"></span><span dojoType="dijit.MenuItem" label="Assign Sample Type"></span><span dojoType="dijit.MenuItem" label="Assign Sample Medium"></span>
+                      </span>
+                      </span></div>
+                     </span><div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
+<input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
+</div>
                   </div>
                   </span>
                   </div>
                       <div dojoType="dijit.layout.ContentPane" title="Laboratory Analyses" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 688px; height: 522px;" doLayout="false">
                         <span dojoType="dijit.layout.TabContainer" style="min-width: 1em; min-height: 1em; width: 100%; height: 100%;" controllerWidget="dijit.layout.TabController">
                                 <div dojoType="dijit.layout.ContentPane" title="Tabular Entry" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="false" style="width: 652px; height: 434px;">
-                          <div style="border: 1px solid gray; margin-bottom: 1em; background-color: #c9dff3;">
+                          <div style="border: 1px solid gray; margin-bottom: 2em; background-color: #c9dff3;">
                             <img src="data/images/tabular_entry.png" style="margin: 0.5em; width: 5%; display: inline-block;"></img>
                                         <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">Tabular Entry Form: Use this form to load individual lab analysis results. You must create a corresponding record of sample IDs before you can enter variable values!</span>
                           </div>
-                          <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
+                          <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
                             <div style="margin: 1em; margin-top: 1em;">
                               <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Project:</span>
                               <select dojoType="dijit.form.Select" type="text" value="Project 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
@@ -768,7 +833,7 @@ require(["dijit/form/MultiSelect"]);</script>
                                           <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Variable Name&quot;,&quot;field&quot;:&quot;variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Units&quot;,&quot;field&quot;:&quot;_units&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;    Speciation&quot;,&quot;field&quot;:&quot;_speciation&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Method Name&quot;,&quot;field&quot;:&quot;_method_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Source ID&quot;,&quot;field&quot;:&quot;_source_id&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_19" rowSelector="true"></span>
                             </div>
                           </div>
-                          <div style="border: 1px solid gray; background-color: #d9dadd; margin-bottom: 1em; margin-top: 1em;">
+                          <div style="margin-bottom: 2em;">
                             <table style="padding: 5px;" border="1">
                               <tbody>
                                 <tr>
@@ -836,7 +901,7 @@ require(["dijit/form/MultiSelect"]);</script>
                             </table>
                             <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Add Row" iconClass="dijitNoIcon"></input>
                           </div>
-                          <div style="border: 1px solid gray; padding: 0.5em; border-radius: 6px; -moz-border-radius: 6px; background-color: #e8ebf1; margin-top: 1em;">
+                          <div style="border: 1px solid gray; padding: 0.5em; border-radius: 6px; -moz-border-radius: 6px; background-color: #e8ebf1;">
                             <span style="margin-bottom: 0.5em; font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select Data Set:</span>
                             <img src="data/images/add-icon.png" style="margin-left: 0.5em; vertical-align: middle; height: 15px;"></img>
                                         <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_18" jsId="ItemFileReadStore_18" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;data_set&quot;:&quot;DataSet 1&quot;,&quot;_type&quot;:&quot; Observation&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;data_set&quot;:&quot;DataSet 2&quot;,&quot;_type&quot;:&quot; Experiment&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;}]}"></span>
@@ -848,263 +913,61 @@ require(["dijit/form/MultiSelect"]);</script>
                           <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
                         </div>
                         <div dojoType="dijit.layout.ContentPane" title="File Upload" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 688px; height: 522px;" doLayout="false">
-                          <div>
-                            <div style="border: 1px solid gray; background-color: #c9dff3;">
-                              <img src="data/images/text_file.png" style="margin: 0.5em; width: 5%; display: inline-block;"></img>
-                                          <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">File Upload Wizard: Use this workflow to load data contained in a .csv file. File must include a column of Sample IDs and one or more columns of data values. Data representing unique variables must be oriented in columns. You must create a record of sample IDs before you can load a file containing laboratory sample variable data!</span>
-                            </div>
-                            <div dojoType="dijit.form.Form" title="Field Observation File Step 1" action="pre_process_upload_file" method="post" encType="multipart/form-data" accept-charset="UTF-8" style="width: auto; height: auto; overflow: scroll; display: block;">
-                              <div>
-                                <h2>
-                                  Upload Wizard: Step 1</h2>
-                              </div>
-                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
-                                <div style="margin: 1em;">
-                                  <span style="margin-right: 0.5em; font-weight: bold;">Select a file to upload:</span>
-                                  <input dojoType="dojox.form.FileInput" intermediateChanges="false" scrollOnFocus="true" style="display: inline-block;"></input>
-                                </div>
-                                <div style="margin: 1em; vertical-align: middle;">
-                                  <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Indicate which row data begins on:</span>
-                                  <input type="text" dojoType="dijit.form.NumberSpinner" name="start_line" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" style="width: 50px;"></input>
-                                </div>
-                              </div>
-                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
-                                <div style="margin: 1em;">
-                                  <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Project:</span>
-                                  <select dojoType="dijit.form.Select" type="text" name="project_id" value="1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="true" scrollOnFocus="true" autoWidth="true">
-                                    <option dvwidget="html.option" value="1">
-                                      Project 1</option>
-                                    <option dvwidget="html.option" value="2">
-                                      Project 2</option>
-                                    <option dvwidget="html.option" value="3">
-                                      Project 3</option>
-                                  </select>
-                                </div>
-                                <div style="margin: 1em; overflow: visible; height: 100px;">
-                                  <span style="margin-bottom: 0.5em; font-weight: bold;">Site:</span>
-                                          <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_20" jsId="ItemFileReadStore_20" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;site&quot;:&quot;Site 1&quot;,&quot;_code&quot;:&quot; S_1&quot;,&quot;_lat.&quot;:&quot;...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;site&quot;:&quot;Site 2&quot;,&quot;_code&quot;:&quot; S_2&quot;,&quot;_lat.&quot;:&quot;...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;},{&quot;uniqe_id&quot;:3,&quot;id&quot;:&quot;3&quot;,&quot;site&quot;:&quot;Site 3&quot;,&quot;_code&quot;:&quot; S_3&quot;,&quot;_lat.&quot;:&quot;...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;}]}"></span>
-                                          <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site&quot;,&quot;field&quot;:&quot;site&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Code&quot;,&quot;field&quot;:&quot;_code&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Lat.&quot;,&quot;field&quot;:&quot;_lat.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Long.&quot;,&quot;field&quot;:&quot;long.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;State&quot;,&quot;field&quot;:&quot;state&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 90px;" store="ItemFileReadStore_20" rowSelector="true"></span>
-                                </div>
-                                <div style="margin: 1em;">
-                                  <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select a parsing template:</span>
-                                  <select dojoType="dijit.form.Select" type="text" name="data_template_id" value="None" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="true" scrollOnFocus="true" autoWidth="true">
-                                    <option dvwidget="html.option" value="None">
-                                      Create New</option>
-                                    <option dvwidget="html.option" value="1">
-                                      Template 1</option>
-                                    <option dvwidget="html.option" value="2">
-                                      Template 2</option>
-                                    <option dvwidget="html.option" value="3">
-                                      Template 3</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
-                                <div style="margin: 1em;">
-                                  <span style="margin-bottom: 0.5em; font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select Data Set (Optional):</span>
-                                  <img src="data/images/add-icon.png" style="margin-left: 0.5em; vertical-align: middle; height: 15px;"></img>
-                                          <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_21" jsId="ItemFileReadStore_21" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;data_set&quot;:&quot;Data Set 1&quot;,&quot;_type&quot;:&quot; Observation&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;data_set&quot;:&quot;Data Set 2&quot;,&quot;_type&quot;:&quot; Experiment&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;}]}"></span>
-                                          <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Data Set&quot;,&quot;field&quot;:&quot;data_set&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" rowSelector="true" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_21"></span>
-                                </div>
-                              </div>
-                              <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
-                              <input type="submit" dojoType="dijit.form.Button" intermediateChanges="false" label="Upload File" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
-                              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
-                            </div>
-                            <div dojoType="dijit.form.Form" action="upload" method="post" accept-charset="UTF-8" style="height: auto; width: auto;" onSubmit="return validate();">
-                              <h2 style="width: auto; height: auto;">
-                                Upload Wizard: Step 2</h2>
-                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
-                                <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Save As New Parsing Template" iconClass="dijitCheckBoxIcon" style="margin: 1em;"></input>
-                                <div style="margin: 1em;">
-                                  <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Template Name:</span>
-                                  <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
-                                </div>
-                                <div style="margin: 1em;">
-                                  <span style="margin-right: 0.5em; vertical-align: top; font-weight: bold;">Template Description:</span>
-                                  <textarea type="text" dojoType="dijit.form.SimpleTextarea" intermediateChanges="false" rows="10" cols="10" trim="false" uppercase="false" lowercase="false" propercase="false" style="width: 400px; height: 80px;"></textarea>
-                                </div>
-                              </div>
-                              <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1; width: 500px;">
-                                <span style="margin-left: 1em; margin-top: 1em; font-weight: bold;">Identify the date/time format that this data was collected with:</span>
-                                <div style="margin: 1em;">
-                                  <span style="vertical-align: middle;">Timestamp Format:</span>
-                                  <select dojoType="dijit.form.Select" type="text" value="MM-DD-YYYY HH:MM" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                    <option dvwidget="html.option" value="MM-DD-YYYY HH:MM">
-                                      MM-DD-YYYY HH:MM</option>
-                                    <option dvwidget="html.option" value="DD-MM-YYYY HH:MM">
-                                      DD-MM-YYYY HH:MM</option>
-                                    <option dvwidget="html.option" value="YYYY-DD-MM HH:MM">
-                                      YYYY-DD-MM HH:MM</option>
-                                    <option dvwidget="html.option" value="YYYY-MM-DD HH:MM">
-                                      YYYY-MM-DD HH:MM</option>
-                                  </select>
-                                </div>
-                                <div style="border: 1px solid white; margin: 1em;">
-                                  <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
-                                          <span style="vertical-align: middle; margin-left: 1em;">UTC Date/Time</span>
-                                </div>
-                                <div style="border: 1px solid white; margin: 1em;">
-                                  <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
-                                          <span style="vertical-align: middle; margin-left: 1em; margin-right: 1em;">Local Date/Time</span>
-                                          <span style="margin-right: 0.5em; vertical-align: middle; margin-left: 1em;">Time Zone Offset:</span>
-                                  <input type="text" dojoType="dijit.form.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50px;"></input>
-                                          <span style="margin-right: 0.5em; vertical-align: middle; margin-left: 1em;">Daylight Savings Time:</span>
-                                  <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input>
-                                </div>
-                              </div>
-                                          <span dojoType="dijit.layout.AccordionContainer" style="height: auto; width: auto; min-width: 1em; min-height: 1em;">
-                                          <div dojoType="dijit.layout.ContentPane" title="Column 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="height: auto; width: 607px;" doLayout="false">
-                                <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
-                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
-                                          <span dojoType="dijit.MenuItem" label="Existing Metadata Set" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="New Metadata Set" iconClass="dijitNoIcon"></span>
-                                </span>
-                                </span>
-                                <div style="margin: 1em;">
-                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
-                                  <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                    <option dvwidget="html.option" value="Level 1">
-                                      Level 1</option>
-                                    <option dvwidget="html.option" value="Level 2">
-                                      Level 2</option>
-                                    <option dvwidget="html.option" value="Level 3">
-                                      Level 3</option>
-                                  </select>
-                                </div>
-                                <div style="margin: 1em;">
-                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
-                                  <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                    <option dvwidget="html.option" value="Term 1">
-                                      Term 1</option>
-                                    <option dvwidget="html.option" value="Term 2">
-                                      Term 2</option>
-                                    <option dvwidget="html.option" value="Term 3">
-                                      Term 3</option>
-                                  </select>
-                                </div>
-                                <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
-                              </div>
-                              <div dojoType="dijit.layout.ContentPane" title="Column 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 274px; height: 224px;" doLayout="false">
-                                <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
-                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
-                                          <span dojoType="dijit.MenuItem" label="Existing Metadata Set" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="New Metadata Set" iconClass="dijitNoIcon"></span>
-                                </span>
-                                </span>
-                                <div style="margin: 1em;">
-                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
-                                  <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                    <option dvwidget="html.option" value="Level 1">
-                                      Level 1</option>
-                                    <option dvwidget="html.option" value="Level 2">
-                                      Level 2</option>
-                                    <option dvwidget="html.option" value="Level 3">
-                                      Level 3</option>
-                                  </select>
-                                </div>
-                                <div style="margin: 1em;">
-                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
-                                  <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                    <option dvwidget="html.option" value="Term 1">
-                                      Term 1</option>
-                                    <option dvwidget="html.option" value="Term 2">
-                                      Term 2</option>
-                                    <option dvwidget="html.option" value="Term 3">
-                                      Term 3</option>
-                                  </select>
-                                </div>
-                                <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
-                              </div>
-                              <div dojoType="dijit.layout.ContentPane" title="Column 3">
-                                <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
-                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
-                                          <span dojoType="dijit.MenuItem" label="Existing Metadata Set" iconClass="dijitNoIcon"></span>
-                                          <span dojoType="dijit.MenuItem" label="New Metadata Set" iconClass="dijitNoIcon"></span>
-                                </span>
-                                </span>
-                                <div style="margin: 1em;">
-                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
-                                  <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                    <option dvwidget="html.option" value="Level 1">
-                                      Level 1</option>
-                                    <option dvwidget="html.option" value="Level 2">
-                                      Level 2</option>
-                                    <option dvwidget="html.option" value="Level 3">
-                                      Level 3</option>
-                                  </select>
-                                </div>
-                                <div style="margin: 1em;">
-                                  <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
-                                  <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
-                                    <option dvwidget="html.option" value="Term 1">
-                                      Term 1</option>
-                                    <option dvwidget="html.option" value="Term 2">
-                                      Term 2</option>
-                                    <option dvwidget="html.option" value="Term 3">
-                                      Term 3</option>
-                                  </select>
-                                </div>
-                                <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
-                              </div>
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                        </span>
-                      </div>
-                      <div dojoType="dijit.layout.ContentPane" title="Simultaneous Upload" doLayout="false" style="width: 250px; height: 250px;">
-                        <div>
                           <div style="border: 1px solid gray; background-color: #c9dff3;">
                             <img src="data/images/text_file.png" style="margin: 0.5em; width: 5%; display: inline-block;"></img>
-                                    <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">Simultaneous Sample/Lab Analysis File Upload Wizard: Use this workflow to load data contained in a .csv file. File must include a column of Sample IDs, a column of timestamps (date/time that the sample was collected), and one or more columns of data values. Data representing unique variables must be oriented in columns. You do not need to create a record of sample IDs before you load laboratory analysis data using this workflow. Note: you will be unable to save sample-related metadata (sample_type, sample_medium, etc.) but you will be able to save metadata related to the particular lab analysis used to derive data values. Data contained in the uploaded file may only be from a single X,Y location.</span>
+                                          <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">File Upload Wizard: Use this workflow to load data contained in a .csv file. File must include a column of Sample IDs and one or more columns of data values. Data representing unique variables must be oriented in columns. You must create a record of sample IDs before you can load a file containing laboratory sample variable data!</span>
                           </div>
                           <div dojoType="dijit.form.Form" title="Field Observation File Step 1" action="pre_process_upload_file" method="post" encType="multipart/form-data" accept-charset="UTF-8" style="width: auto; height: auto; overflow: scroll; display: block;">
                             <div>
                               <h2>
-                                Upload Wizard: Step 1</h2>
+                                
+                                  Upload Wizard: Step 1</h2>
                             </div>
-                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
+                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
                               <div style="margin: 1em;">
-                                <span style="font-weight: bold; margin-right: 0.5em;">Select a file to upload:</span>
+                                <span style="margin-right: 0.5em; font-weight: bold;">Select a file to upload:</span>
                                 <input dojoType="dojox.form.FileInput" intermediateChanges="false" scrollOnFocus="true" style="display: inline-block;"></input>
                               </div>
                               <div style="margin: 1em; vertical-align: middle;">
                                 <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Indicate which row data begins on:</span>
-                                <input type="text" dojoType="dijit.form.NumberSpinner" name="start_line" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50px;"></input>
+                                <input type="text" dojoType="dijit.form.NumberSpinner" name="start_line" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" style="width: 50px;"></input>
                               </div>
                             </div>
-                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
+                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
                               <div style="margin: 1em;">
                                 <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Project:</span>
                                 <select dojoType="dijit.form.Select" type="text" name="project_id" value="1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="true" scrollOnFocus="true" autoWidth="true">
                                   <option dvwidget="html.option" value="1">
                                     
-                                        Project 1</option>
+                                      Project 1</option>
                                   <option dvwidget="html.option" value="2">
                                     
-                                        Project 2</option>
+                                      Project 2</option>
                                   <option dvwidget="html.option" value="3">
                                     
-                                        Project 3</option>
+                                      Project 3</option>
                                 </select>
                               </div>
-                              <div style="margin: 1em; height: 100px;">
-                                <span style="margin-bottom: 0.5em; font-weight: bold;">Select a site:</span>
-                                        <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_22" jsId="ItemFileReadStore_22" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;site&quot;:&quot;Site 1&quot;,&quot;_code&quot;:&quot; S_1&quot;,&quot;_lat.&quot;:&quot; ...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;site&quot;:&quot;Site 2&quot;,&quot;_code&quot;:&quot; S_2&quot;,&quot;_lat.&quot;:&quot; ...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;}]}"></span>
-                                        <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site&quot;,&quot;field&quot;:&quot;site&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Code&quot;,&quot;field&quot;:&quot;_code&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Lat.&quot;,&quot;field&quot;:&quot;_lat.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Long.&quot;,&quot;field&quot;:&quot;long.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;State&quot;,&quot;field&quot;:&quot;state&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 90px;" store="ItemFileReadStore_22" rowSelector="true"></span>
+                              <div style="margin: 1em; overflow: visible; height: 100px;">
+                                <span style="margin-bottom: 0.5em; font-weight: bold;">Site:</span>
+                                          <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_20" jsId="ItemFileReadStore_20" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;site&quot;:&quot;Site 1&quot;,&quot;_code&quot;:&quot; S_1&quot;,&quot;_lat.&quot;:&quot;...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;site&quot;:&quot;Site 2&quot;,&quot;_code&quot;:&quot; S_2&quot;,&quot;_lat.&quot;:&quot;...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;},{&quot;uniqe_id&quot;:3,&quot;id&quot;:&quot;3&quot;,&quot;site&quot;:&quot;Site 3&quot;,&quot;_code&quot;:&quot; S_3&quot;,&quot;_lat.&quot;:&quot;...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;}]}"></span>
+                                          <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site&quot;,&quot;field&quot;:&quot;site&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Code&quot;,&quot;field&quot;:&quot;_code&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Lat.&quot;,&quot;field&quot;:&quot;_lat.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Long.&quot;,&quot;field&quot;:&quot;long.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;State&quot;,&quot;field&quot;:&quot;state&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 90px;" store="ItemFileReadStore_20" rowSelector="true"></span>
                               </div>
                               <div style="margin: 1em;">
                                 <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select a parsing template:</span>
                                 <select dojoType="dijit.form.Select" type="text" name="data_template_id" value="None" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="true" scrollOnFocus="true" autoWidth="true">
                                   <option dvwidget="html.option" value="None">
-                                    Create New</option>
+                                    
+                                      Create New</option>
                                   <option dvwidget="html.option" value="1">
-                                    Template 1</option>
+                                    
+                                      Template 1</option>
                                   <option dvwidget="html.option" value="2">
-                                    Template 2</option>
+                                    
+                                      Template 2</option>
                                   <option dvwidget="html.option" value="3">
-                                    Template 3</option>
+                                    
+                                      Template 3</option>
                                 </select>
                               </div>
                             </div>
@@ -1112,19 +975,19 @@ require(["dijit/form/MultiSelect"]);</script>
                               <div style="margin: 1em;">
                                 <span style="margin-bottom: 0.5em; font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select Data Set (Optional):</span>
                                 <img src="data/images/add-icon.png" style="margin-left: 0.5em; vertical-align: middle; height: 15px;"></img>
-                                        <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_23" jsId="ItemFileReadStore_23" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;data_set&quot;:&quot;Data Set 1&quot;,&quot;_type&quot;:&quot; Observation&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;data_set&quot;:&quot;Data Set 2&quot;,&quot;_type&quot;:&quot; Observation&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;}]}"></span>
-                                        <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Data Set&quot;,&quot;field&quot;:&quot;data_set&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_23" rowSelector="true"></span>
+                                          <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_21" jsId="ItemFileReadStore_21" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;data_set&quot;:&quot;Data Set 1&quot;,&quot;_type&quot;:&quot; Observation&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;data_set&quot;:&quot;Data Set 2&quot;,&quot;_type&quot;:&quot; Experiment&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;}]}"></span>
+                                          <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Data Set&quot;,&quot;field&quot;:&quot;data_set&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" rowSelector="true" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_21"></span>
                               </div>
                             </div>
-                            <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;">
-                                </div>
+                            <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
                             <input type="submit" dojoType="dijit.form.Button" intermediateChanges="false" label="Upload File" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
                             <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
                           </div>
                           <div dojoType="dijit.form.Form" action="upload" method="post" accept-charset="UTF-8" style="height: auto; width: auto;" onSubmit="return validate();">
-                            <h2 style="width: auto; height: auto;">
-                              Upload Wizard: Step 2</h2>
-                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
+                          <h2 style="width: auto; height: auto;">
+                              
+                                Upload Wizard: Step 2</h2>
+                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
                               <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Save As New Parsing Template" iconClass="dijitCheckBoxIcon" style="margin: 1em;"></input>
                               <div style="margin: 1em;">
                                 <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Template Name:</span>
@@ -1135,23 +998,23 @@ require(["dijit/form/MultiSelect"]);</script>
                                 <textarea type="text" dojoType="dijit.form.SimpleTextarea" intermediateChanges="false" rows="10" cols="10" trim="false" uppercase="false" lowercase="false" propercase="false" style="width: 400px; height: 80px;"></textarea>
                               </div>
                             </div>
-                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1; width: 500px;">
-                              <span style="margin: 1em; font-weight: bold;">Identify the date/time format that this data was collected with:</span>
+                            <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1; width: 500px;">
+                              <span style="margin-left: 1em; margin-top: 1em; font-weight: bold;">Identify the date/time format that this data was collected with:</span>
                               <div style="margin: 1em;">
                                 <span style="vertical-align: middle;">Timestamp Format:</span>
                                 <select dojoType="dijit.form.Select" type="text" value="MM-DD-YYYY HH:MM" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
                                   <option dvwidget="html.option" value="MM-DD-YYYY HH:MM">
                                     
-                                                MM-DD-YYYY HH:MM</option>
+                                      MM-DD-YYYY HH:MM</option>
                                   <option dvwidget="html.option" value="DD-MM-YYYY HH:MM">
                                     
-                                                DD-MM-YYYY HH:MM</option>
+                                      DD-MM-YYYY HH:MM</option>
                                   <option dvwidget="html.option" value="YYYY-DD-MM HH:MM">
                                     
-                                                YYYY-DD-MM HH:MM</option>
+                                      YYYY-DD-MM HH:MM</option>
                                   <option dvwidget="html.option" value="YYYY-MM-DD HH:MM">
                                     
-                                                YYYY-MM-DD HH:MM</option>
+                                      YYYY-MM-DD HH:MM</option>
                                 </select>
                               </div>
                               <div style="border: 1px solid white; margin: 1em;">
@@ -1167,7 +1030,361 @@ require(["dijit/form/MultiSelect"]);</script>
                                 <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input>
                               </div>
                             </div>
+                                          <span dojoType="dijit.layout.AccordionContainer" style="height: auto; width: auto; min-width: 1em; min-height: 1em;">
+                                          <div dojoType="dijit.layout.ContentPane" title="Column 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="height: auto; width: 607px;" doLayout="false">
+                              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
+                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
+                                          <span dojoType="dijit.MenuItem" label="Existing Metadata Set" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="New Metadata Set" iconClass="dijitNoIcon"></span>
+                              </span>
+                              </span>
+                              <div style="margin: 1em;">
+                                <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
+                                <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                  <option dvwidget="html.option" value="Level 1">
+                                    
+                                      Level 1</option>
+                                  <option dvwidget="html.option" value="Level 2">
+                                    
+                                      Level 2</option>
+                                  <option dvwidget="html.option" value="Level 3">
+                                    
+                                      Level 3</option>
+                                </select>
+                              </div>
+                              <div style="margin: 1em;">
+                                <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
+                                <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                  <option dvwidget="html.option" value="Term 1">
+                                    
+                                      Term 1</option>
+                                  <option dvwidget="html.option" value="Term 2">
+                                    
+                                      Term 2</option>
+                                  <option dvwidget="html.option" value="Term 3">
+                                    
+                                      Term 3</option>
+                                </select>
+                              </div>
+                              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
+                            </div>
+                            <div dojoType="dijit.layout.ContentPane" title="Column 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 274px; height: 224px;" doLayout="false">
+                              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
+                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
+                                          <span dojoType="dijit.MenuItem" label="Existing Metadata Set" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="New Metadata Set" iconClass="dijitNoIcon"></span>
+                              </span>
+                              </span>
+                              <div style="margin: 1em;">
+                                <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
+                                <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                  <option dvwidget="html.option" value="Level 1">
+                                    
+                                      Level 1</option>
+                                  <option dvwidget="html.option" value="Level 2">
+                                    
+                                      Level 2</option>
+                                  <option dvwidget="html.option" value="Level 3">
+                                    
+                                      Level 3</option>
+                                </select>
+                              </div>
+                              <div style="margin: 1em;">
+                                <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
+                                <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                  <option dvwidget="html.option" value="Term 1">
+                                    
+                                      Term 1</option>
+                                  <option dvwidget="html.option" value="Term 2">
+                                    
+                                      Term 2</option>
+                                  <option dvwidget="html.option" value="Term 3">
+                                    
+                                      Term 3</option>
+                                </select>
+                              </div>
+                              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
+                            </div>
+                            <div dojoType="dijit.layout.ContentPane" title="Column 3">
+                              <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon">
+                                          <span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0">
+                                          <span dojoType="dijit.MenuItem" label="Existing Metadata Set" iconClass="dijitNoIcon"></span>
+                                          <span dojoType="dijit.MenuItem" label="New Metadata Set" iconClass="dijitNoIcon"></span>
+                              </span>
+                              </span>
+                              <div style="margin: 1em;">
+                                <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
+                                <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                  <option dvwidget="html.option" value="Level 1">
+                                    
+                                      Level 1</option>
+                                  <option dvwidget="html.option" value="Level 2">
+                                    
+                                      Level 2</option>
+                                  <option dvwidget="html.option" value="Level 3">
+                                    
+                                      Level 3</option>
+                                </select>
+                              </div>
+                              <div style="margin: 1em;">
+                                <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
+                                <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                  <option dvwidget="html.option" value="Term 1">
+                                    
+                                      Term 1</option>
+                                  <option dvwidget="html.option" value="Term 2">
+                                    
+                                      Term 2</option>
+                                  <option dvwidget="html.option" value="Term 3">
+                                    
+                                      Term 3</option>
+                                </select>
+                              </div>
+                              <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
+                            </div>
+                            </span>
+                                          <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
+                                        </div>
+                          <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
+                          <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
                           </div>
+                        </span>
+                      </div>
+                      <div dojoType="dijit.layout.ContentPane" title="Simultaneous Upload" doLayout="false" style="width: 250px; height: 250px;">
+                        <div style="border: 1px solid gray; background-color: #c9dff3;">
+                          <img src="data/images/text_file.png" style="margin: 0.5em; width: 5%; display: inline-block;"></img>
+                                    <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">Simultaneous Sample/Lab Analysis File Upload Wizard: Use this workflow to load data contained in a .csv file. File must include a column of Sample IDs, a column of timestamps (date/time that the sample was collected), and one or more columns of data values. Data representing unique variables must be oriented in columns. You do not need to create a record of sample IDs before you load laboratory analysis data using this workflow. Note: you will be unable to save sample-related metadata (sample_type, sample_medium, etc.) but you will be able to save metadata related to the particular lab analysis used to derive data values. Data contained in the uploaded file may only be from a single X,Y location.</span>
+                        </div>
+                        <div dojoType="dijit.form.Form" title="Field Observation File Step 1" action="pre_process_upload_file" method="post" encType="multipart/form-data" accept-charset="UTF-8" style="width: auto; height: auto; overflow: scroll; display: block;">
+                          <div>
+                            <h2>
+                              
+                                Upload Wizard: Step 1</h2>
+                          </div>
+                          <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
+                            <div style="margin: 1em;">
+                              <span style="font-weight: bold; margin-right: 0.5em;">Select a file to upload:</span>
+                              <input dojoType="dojox.form.FileInput" intermediateChanges="false" scrollOnFocus="true" style="display: inline-block;"></input>
+                            </div>
+                            <div style="margin: 1em; vertical-align: middle;">
+                              <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Indicate which row data begins on:</span>
+                              <input type="text" dojoType="dijit.form.NumberSpinner" name="start_line" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50px;"></input>
+                            </div>
+                          </div>
+                          <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
+                            <div style="margin: 1em;">
+                              <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Project:</span>
+                              <select dojoType="dijit.form.Select" type="text" name="project_id" value="1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="true" scrollOnFocus="true" autoWidth="true">
+                                <option dvwidget="html.option" value="1">
+                                  
+                                    
+                                        Project 1</option>
+                                <option dvwidget="html.option" value="2">
+                                  
+                                    
+                                        Project 2</option>
+                                <option dvwidget="html.option" value="3">
+                                  
+                                    
+                                        Project 3</option>
+                              </select>
+                            </div>
+                            <div style="margin: 1em; height: 100px;">
+                              <span style="margin-bottom: 0.5em; font-weight: bold;">Select a site:</span>
+                                        <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_22" jsId="ItemFileReadStore_22" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;site&quot;:&quot;Site 1&quot;,&quot;_code&quot;:&quot; S_1&quot;,&quot;_lat.&quot;:&quot; ...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;site&quot;:&quot;Site 2&quot;,&quot;_code&quot;:&quot; S_2&quot;,&quot;_lat.&quot;:&quot; ...&quot;,&quot;long.&quot;:&quot;...&quot;,&quot;state&quot;:&quot;...&quot;}]}"></span>
+                                        <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site&quot;,&quot;field&quot;:&quot;site&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Code&quot;,&quot;field&quot;:&quot;_code&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Lat.&quot;,&quot;field&quot;:&quot;_lat.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Long.&quot;,&quot;field&quot;:&quot;long.&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;State&quot;,&quot;field&quot;:&quot;state&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 90px;" store="ItemFileReadStore_22" rowSelector="true"></span>
+                            </div>
+                            <div style="margin: 1em;">
+                              <span style="font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select a parsing template:</span>
+                              <select dojoType="dijit.form.Select" type="text" name="data_template_id" value="None" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="true" scrollOnFocus="true" autoWidth="true">
+                                <option dvwidget="html.option" value="None">
+                                  
+                                    Create New</option>
+                                <option dvwidget="html.option" value="1">
+                                  
+                                    Template 1</option>
+                                <option dvwidget="html.option" value="2">
+                                  
+                                    Template 2</option>
+                                <option dvwidget="html.option" value="3">
+                                  
+                                    Template 3</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1;">
+                            <div style="margin: 1em;">
+                              <span style="margin-bottom: 0.5em; font-weight: bold; margin-right: 0.5em; vertical-align: middle;">Select Data Set (Optional):</span>
+                              <img src="data/images/add-icon.png" style="margin-left: 0.5em; vertical-align: middle; height: 15px;"></img>
+                                        <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_23" jsId="ItemFileReadStore_23" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;data_set&quot;:&quot;Data Set 1&quot;,&quot;_type&quot;:&quot; Observation&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;data_set&quot;:&quot;Data Set 2&quot;,&quot;_type&quot;:&quot; Observation&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;}]}"></span>
+                                        <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Data Set&quot;,&quot;field&quot;:&quot;data_set&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_23" rowSelector="true"></span>
+                            </div>
+                          </div>
+                          <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;">
+                                </div>
+                          <input type="submit" dojoType="dijit.form.Button" intermediateChanges="false" label="Upload File" iconClass="dijitNoIcon" onclick="davinci.states.setState('Time_Series_Upload_Step_2')"></input>
+                          <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
+                        </div>
+                        <div dojoType="dijit.form.Form" action="upload" method="post" accept-charset="UTF-8" style="height: auto; width: auto;" onSubmit="return validate();">
+                          <h2 style="width: auto; height: auto;">
+                            
+                              Upload Wizard: Step 2</h2>
+                          <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1;">
+                            <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Save As New Parsing Template" iconClass="dijitCheckBoxIcon" style="margin: 1em;"></input>
+                            <div style="margin: 1em;">
+                              <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Template Name:</span>
+                              <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
+                            </div>
+                            <div style="margin: 1em;">
+                              <span style="margin-right: 0.5em; vertical-align: top; font-weight: bold;">Template Description:</span>
+                              <textarea type="text" dojoType="dijit.form.SimpleTextarea" intermediateChanges="false" rows="10" cols="10" trim="false" uppercase="false" lowercase="false" propercase="false" style="width: 400px; height: 80px;"></textarea>
+                            </div>
+                          </div>
+                          <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1; width: 500px;">
+                            <span style="margin: 1em; font-weight: bold;">Identify the date/time format that this data was collected with:</span>
+                            <div style="margin: 1em;">
+                              <span style="vertical-align: middle;">Timestamp Format:</span>
+                              <select dojoType="dijit.form.Select" type="text" value="MM-DD-YYYY HH:MM" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                <option dvwidget="html.option" value="MM-DD-YYYY HH:MM">
+                                  
+                                    
+                                                MM-DD-YYYY HH:MM</option>
+                                <option dvwidget="html.option" value="DD-MM-YYYY HH:MM">
+                                  
+                                    
+                                                DD-MM-YYYY HH:MM</option>
+                                <option dvwidget="html.option" value="YYYY-DD-MM HH:MM">
+                                  
+                                    
+                                                YYYY-DD-MM HH:MM</option>
+                                <option dvwidget="html.option" value="YYYY-MM-DD HH:MM">
+                                  
+                                    
+                                                YYYY-MM-DD HH:MM</option>
+                              </select>
+                            </div>
+                            <div style="border: 1px solid white; margin: 1em;">
+                              <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
+                                          <span style="vertical-align: middle; margin-left: 1em;">UTC Date/Time</span>
+                            </div>
+                            <div style="border: 1px solid white; margin: 1em;">
+                              <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 0.5em;"></input>
+                                          <span style="vertical-align: middle; margin-left: 1em; margin-right: 1em;">Local Date/Time</span>
+                                          <span style="margin-right: 0.5em; vertical-align: middle; margin-left: 1em;">Time Zone Offset:</span>
+                              <input type="text" dojoType="dijit.form.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 50px;"></input>
+                                          <span style="margin-right: 0.5em; vertical-align: middle; margin-left: 1em;">Daylight Savings Time:</span>
+                              <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon"></input>
+                            </div>
+                          </div>
+                          <span dojoType="dijit.layout.AccordionContainer" style="height: auto; min-width: 1em; min-height: 1em;">
+<div dojoType="dijit.layout.ContentPane" title="Column 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 637px;" doLayout="false">
+                            <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Assign Sample IDs" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign New Data Origin"></span><span dojoType="dijit.MenuItem" label="Assign Existing Data Origin"></span><span dojoType="dijit.MenuItem" label="Ignore Column"></span>
+                            </span>
+                            </span>
+                            <div style="margin: 1em;">
+                              <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
+                              <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                <option dvwidget="html.option" value="Level 1">
+                                  
+                                      Level 1</option>
+                                <option dvwidget="html.option" value="Level 2">
+                                  
+                                      Level 2</option>
+                                <option dvwidget="html.option" value="Level 3">
+                                  
+                                      Level 3</option>
+                              </select>
+                            </div>
+                            <div style="margin: 1em;">
+                              <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
+                              <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                <option dvwidget="html.option" value="Term 1">
+                                  
+                                      Term 1</option>
+                                <option dvwidget="html.option" value="Term 2">
+                                  
+                                      Term 2</option>
+                                <option dvwidget="html.option" value="Term 3">
+                                  
+                                      Term 3</option>
+                              </select>
+                            </div>
+                            <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
+                          </div>
+                          <div dojoType="dijit.layout.ContentPane" title="Column 2" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 274px; height: 224px;" doLayout="false">
+                            <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Assign Sample IDs" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign New Data Origin" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Existing Data Origin" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Ignore Column" iconClass="dijitNoIcon"></span>
+                            </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Assign Sample IDs"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp"></span><span dojoType="dijit.MenuItem" label="Assign New Data Origin"></span><span dojoType="dijit.MenuItem" label="Assign Existing Data Origin"></span><span dojoType="dijit.MenuItem" label="Ignore Column"></span>
+                            </span>
+                            </span>
+                            <div style="margin: 1em;">
+                              <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
+                              <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                <option dvwidget="html.option" value="Level 1">
+                                  
+                                      Level 1</option>
+                                <option dvwidget="html.option" value="Level 2">
+                                  
+                                      Level 2</option>
+                                <option dvwidget="html.option" value="Level 3">
+                                  
+                                      Level 3</option>
+                              </select>
+                            </div>
+                            <div style="margin: 1em;">
+                              <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
+                              <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                <option dvwidget="html.option" value="Term 1">
+                                  
+                                      Term 1</option>
+                                <option dvwidget="html.option" value="Term 2">
+                                  
+                                      Term 2</option>
+                                <option dvwidget="html.option" value="Term 3">
+                                  
+                                      Term 3</option>
+                              </select>
+                            </div>
+                            <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
+                          </div>
+                          <div dojoType="dijit.layout.ContentPane" title="Column 3">
+                            <span dojoType="dijit.form.DropDownButton" intermediateChanges="false" label="Select Column Assignment" iconClass="dijitNoIcon"><span dojoType="dijit.Menu" contextMenuForWindow="false" leftClickToOpen="false" tabIndex="0"><span dojoType="dijit.MenuItem" label="Assign Sample IDs" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign New Data Origin" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Assign Existing Data Origin" iconClass="dijitNoIcon"></span><span dojoType="dijit.MenuItem" label="Ignore Column" iconClass="dijitNoIcon"></span>
+                            </span><span dojoType="dijit.Menu"><span dojoType="dijit.MenuItem" label="Assign Sample IDs"></span><span dojoType="dijit.MenuItem" label="Assign Timestamp"></span><span dojoType="dijit.MenuItem" label="Assign New Data Origin"></span><span dojoType="dijit.MenuItem" label="Assign Existing Data Origin"></span><span dojoType="dijit.MenuItem" label="Ignore Column"></span>
+                            </span>
+                            </span>
+                            <div style="margin: 1em;">
+                              <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">QAQC Level:</span>
+                              <select dojoType="dijit.form.Select" type="text" value="Level 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                <option dvwidget="html.option" value="Level 1">
+                                  
+                                      Level 1</option>
+                                <option dvwidget="html.option" value="Level 2">
+                                  
+                                      Level 2</option>
+                                <option dvwidget="html.option" value="Level 3">
+                                  
+                                      Level 3</option>
+                              </select>
+                            </div>
+                            <div style="margin: 1em;">
+                              <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Qualifier (Optional):</span>
+                              <select dojoType="dijit.form.Select" type="text" value="Term 1" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+                                <option dvwidget="html.option" value="Term 1">
+                                  
+                                      Term 1</option>
+                                <option dvwidget="html.option" value="Term 2">
+                                  
+                                      Term 2</option>
+                                <option dvwidget="html.option" value="Term 3">
+                                  
+                                      Term 3</option>
+                              </select>
+                            </div>
+                            <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Next" iconClass="dijitNoIcon"></input>
+                          </div>
+                          </span>
+                          <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
+                          <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save" iconClass="dijitNoIcon"></input>
+                          <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
                         </div>
                       </div>
                     </span>
@@ -1351,12 +1568,12 @@ require(["dijit/form/MultiSelect"]);</script>
                       <span style="vertical-align: middle; font-weight: bold; margin-right: 1em;">Template Name:</span>
                       <input type="text" dojoType="dijit.form.TextBox" value="Template_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
                     </div>
-                    <div style="margin-bottom: 1em;">
+                    <div style="margin-bottom: 2em;">
                       <span style="font-weight: bold; margin-right: 1em;">Template Description:</span>
                       <textarea type="text" dojoType="dijit.form.SimpleTextarea" intermediateChanges="false" rows="10" cols="10" trim="false" uppercase="false" lowercase="false" propercase="false" style="height: 60px; width: 100%;"></textarea>
                     </div>
                     <div>
-                      <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; background-color: #e8ebf1; width: 500px;">
+                      <div style="border: 1px solid gray; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 2em; background-color: #e8ebf1; width: 500px;">
                         <span style="margin-top: 1em; margin-left: 1em; font-weight: bold;">Identify the date/time format that this data was collected with:</span>
                         <div style="margin: 1em;">
                           <span style="vertical-align: middle;">Timestamp Format:</span>
