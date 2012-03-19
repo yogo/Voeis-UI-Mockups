@@ -1391,21 +1391,24 @@ require(["dijit/ProgressBar"]);</script>
                     </span>
                 </div>
               <div dojoType="dijit.layout.ContentPane" title="Parsing Templates" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 667px; height: 506px;">
+                <div style="border: 1px solid gray; padding: 0.5em; margin: 0; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; margin-top: 1em; background-color: #e8ebf1; width: 500px;">
+                  <span style="margin: 1em; vertical-align: middle; font-weight: bold;">Select a Project:</span>
+                  <select dojoType="dijit.form.FilteringSelect" value="Project 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="margin-right: 1em;">
+                    <option dvwidget="html.option" value="Project 1" selected="selected">
+                      
+                        Project 1</option>
+                    <option dvwidget="html.option" value="Project 2">
+                      
+                        Project 2</option>
+                    <option dvwidget="html.option" value="Project 3">
+                      
+                        Project 3</option>
+                  </select>
+                  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Refresh Template List" iconClass="dijitNoIcon"></input>
+                </div>
                 <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 667px; height: 506px; min-width: 1em; min-height: 1em;">
                         <div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 640px; height: 442px;">
-                  <div style="border: 1px solid gray; margin: 0; border-radius: 6px; -moz-border-radius: 6px; margin-bottom: 1em; margin-top: 1em; background-color: #e8ebf1; width: 500px;">
-                    <span style="margin: 1em; vertical-align: middle; font-weight: bold;">Select a Project:</span>
-                    <select dojoType="dijit.form.FilteringSelect" value="Project 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="margin-right: 0.5em;">
-                      <option dvwidget="html.option" value="Project 1" selected="selected">
-                        Project 1</option>
-                      <option dvwidget="html.option" value="Project 2">
-                        Project 2</option>
-                      <option dvwidget="html.option" value="Project 3">
-                        Project 3</option>
-                    </select>
-                    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Refresh Template List" iconClass="dijitNoIcon"></input>
-                  </div>
-                            <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_9" jsId="ItemFileReadStore_9" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;template_name&quot;:&quot;Template_1&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;,&quot;_type&quot;:&quot; Field Observations&quot;,&quot;_date_created&quot;:&quot; 12-09-11&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;template_name&quot;:&quot; Template_2&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;,&quot;_type&quot;:&quot; Lab Analysis&quot;,&quot;_date_created&quot;:&quot; 3-4-06&quot;}]}"></span>
+                  <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_9" jsId="ItemFileReadStore_9" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;id&quot;:&quot;1&quot;,&quot;template_name&quot;:&quot;Template_1&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;,&quot;_type&quot;:&quot; Field Observations&quot;,&quot;_date_created&quot;:&quot; 12-09-11&quot;},{&quot;uniqe_id&quot;:2,&quot;id&quot;:&quot;2&quot;,&quot;template_name&quot;:&quot; Template_2&quot;,&quot;_description&quot;:&quot; blah blah blah&quot;,&quot;_type&quot;:&quot; Lab Analysis&quot;,&quot;_date_created&quot;:&quot; 3-4-06&quot;}]}"></span>
                             <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;ID&quot;,&quot;field&quot;:&quot;id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Template Name&quot;,&quot;field&quot;:&quot;template_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Date Created&quot;,&quot;field&quot;:&quot;_date_created&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="margin-top: 1em; height: 473px; width: 647px;" store="ItemFileReadStore_9" escapeHTMLInData="true"></span>
                 </div>
                 <div dojoType="dijit.layout.ContentPane" title="Template_1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="true" splitter="false" style="width: 640px; height: 442px;">
@@ -1479,84 +1482,14 @@ require(["dijit/ProgressBar"]);</script>
                             <td></td>
                           </tr>
                           <tr style="background-color: #d9dadd;">
-                            <td>
+                          <td>
                               
                                                 Source ID</td>
                             <td></td>
                             <td></td>
                             <td></td>
                           </tr>
-                          <tr>
-                            <td>
-                              
-                                                Method Name:</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr style="background-color: #d9dadd;">
-                            <td>
-                              
-                                                 Data Type:</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              
-                                                General Category:</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr style="background-color: #d9dadd;">
-                            <td>
-                              
-                                                Time Interval?</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              
-                                                Interval Value:</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr style="background-color: #d9dadd;">
-                            <td>
-                              
-                                                Interval Units:</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td>
-                              
-                                                No Data Value:</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr style="background-color: #d9dadd;">
-                            <td>
-                              
-                                                Deployment ID:</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                          </tr>
-                        </tbody>
+                          </tbody>
                       </table>
                     </div>
                   </div>
@@ -1747,7 +1680,7 @@ require(["dijit/ProgressBar"]);</script>
                 </a>
             </div>
 
-            <div id="views_2" style="margin-bottom: 5%;">
+            <div id="views_2" style="background-color: #5b9de4; margin-bottom: 5%;">
                 <a id="views_a_2" href="user_landing_dataload.html">
                     <img title="Lab Manager" src="data/images/data_loader.png" style="width: 90%; cursor: pointer;"></img>
                 </a>
