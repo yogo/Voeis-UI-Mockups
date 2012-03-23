@@ -24,8 +24,8 @@ require(["dijit/form/Button"]);
 require(["dijit/Tooltip"]);</script>
 </head>
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" dvStates="{'_show:dijit_Dialog_19':{'origin':true},'_show:dijit_Tooltip_133':{'origin':true},'Open_Views_Help':{'origin':true},'_show:dijit_Tooltip_134':{'origin':true},'_show:dijit_Tooltip_135':{'origin':true},'_show:dijit_Tooltip_136':{'origin':true}}" id="myapp">
- <div dojoType="dijit.layout.BorderContainer" persist="false" gutters="true" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" design="sidebar">
-<div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="bottom" splitter="true" style="height: 40px; width: 722px;">
+ <div dojoType="dijit.layout.BorderContainer" persist="false" gutters="true" style="width: 100%; height: 100%; min-width: 1200px; min-height: 700px;" design="sidebar">
+<div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="bottom" splitter="true" style="height: 30px; width: auto">
  <div style="position: absolute; left: 25%; width: 50%; height: 90%; top: 0%;">
    <img src="data/images/FLBS_logo.gif" style="margin: 0.25em; height: 90%;"></img>
    <img src="data/images/HBS_logo.jpg" style="margin: 0.25em; height: 90%;"></img>
@@ -39,10 +39,10 @@ require(["dijit/Tooltip"]);</script>
  </div>
 </div>
    <div dojoType="dijit.layout.ContentPane" id="auto_dijit.layout.ContentPane_0" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="center" splitter="false" style="height: 489px; width: 766px;">
-   <div style="height: 26px; width: 85%; position: absolute; top: 0px; left: 0px;">
+<div style="height: 26px; width: 85%; position: absolute; top: 0px; left: 0px;">
        <span dojoType="dijit.MenuBar" tabIndex="0"><span dojoType="dijit.PopupMenuBarItem" label="Data Hub" iconClass="dijitNoIcon">
          <span dojoType="dijit.Menu">
-    <span onClick="location.href='data_hub_home.html'" dojoType="dijit.MenuItem" label="Home"></span>
+    <span onClick="location.href='VOEIS_Splash_Page.html'" dojoType="dijit.MenuItem" label="Home"></span>
     <span onClick="location.href='about.html'" dojoType="dijit.MenuItem" label="About"></span>
     <span onClick="location.href='dev_activity.html'" dojoType="dijit.MenuItem" label="Development Activity"></span>
     <span onClick="location.href='dev_roadmap.html'" dojoType="dijit.MenuItem" label="Development Roadmap"></span>
@@ -72,46 +72,46 @@ require(["dijit/Tooltip"]);</script>
      <div dojoType="dijit.layout.ContentPane" title="Site B" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="true" splitter="false" style="width: 351px; height: 423px;"></div>
      </span></div>
     </div>
-   <div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="left" splitter="true" style="width: 8%; height: 558px; overflow: auto;">
+   <div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" region="left" splitter="true" style="width: 80px; height: auto; overflow: auto;">
     <div style="border: none; background-color: #e3e3eb; height: 100%; width: 100%; top: 0%; text-align: center; left: 0px; position: absolute;">
       <span dojoType="dijit.Toolbar">
-       <input type="button" dojoType="dijit.form.Button" tabIndex="-1" disabled="disabled" intermediateChanges="false" label="Views" iconClass="dijitNoIcon" onclick="davinci.states.setState('Open_Views_Help')"></input>
+       <input type="button" dojoType="dijit.form.Button" tabIndex="-1" disabled="disabled" intermediateChanges="false" label="Modules" iconClass="dijitNoIcon" ></input>
      </span>
 <div style="height: 20px;"></div>
-<div id="views_1" style="background-color: #5b9de4; margin-bottom: 5%; width: 100%;">
- <a id="views_a_1" href="guest_landing_browse.html">
-   <img title="Data Browser" src="data/images/project_browse.png" style="width: 90%; cursor: pointer;"></img>
+<div  style="background-color: #5b9de4; margin-bottom: 5%; width: 100%;">
+ <a id="Project_Browse_Module" href='Project_Browse_Module.html'>
+  <img  src="data/images/project_browse.png" style="width: 90%; cursor: pointer;"></img>
+</a>
+</div>
+<div  style="margin-bottom: 5%;">
+ <a id="Data_Load_Module" href="Data_Upload_Module.html">
+   <img  src="data/images/data_loader.png" style="width: 90%; cursor: pointer;"></img>
  </a>
 </div>
-<div id="views_2" style="opacity: 0.5; margin-bottom: 5%;">
- <a id="views_a_2">
-   <img title="Lab Manager" src="data/images/data_loader.png" style="width: 90%; cursor: pointer;"></img>
+<div  style="margin-bottom: 5%;">
+ <a id="Project_Manager_Module" href="Project_Manager_Module.html">
+  <img  src="data/images/project_manager.png" style="width: 90%; cursor: pointer;"></img>
+</a>
+</div>
+<div  style="margin-bottom: 5%;">
+ <a id="Data_Toolkit_Module" href="Data_Toolkit_Module.html">
+  <img  src="data/images/data_toolkit.png" style="width: 90%; cursor: pointer;"></img>
+</a>
+</div>
+<div  style="margin-bottom: 5%;">
+ <a id="Equipment_Manager_Module" href="Equipment_Manager_Module.html">
+   <img  src="data/images/equipment_manager.png" style="width: 90%; cursor: pointer;"></img>
  </a>
 </div>
-<div id="views_3" style="opacity: 0.5; margin-bottom: 5%;">
- <a id="views_a_3">
-   <img title="Project Warehouse" src="data/images/project_manager.png" style="width: 90%; cursor: pointer;"></img>
- </a>
-</div>
-<div id="views_4" style="margin-bottom: 5%;">
- <a id="views_a_4" href="guest_landing_data.html">
-   <img title="Data Toolkit" src="data/images/data_toolkit.png" style="width: 90%; cursor: pointer;"></img>
- </a>
-</div>
-<div id="views_5" style="opacity: 0.5; margin-bottom: 5%;">
- <a id="views_a_5">
-   <img title="Data Toolkit" src="data/images/equipment_manager.png" style="width: 90%; cursor: pointer;"></img>
- </a>
-</div>
-<div id="views_6" style="opacity: 0.5; margin-bottom: 5%;">
- <a id="views_a_6">
-   <img title="Data Toolkit" src="data/images/lab_manager.png" style="width: 90%; cursor: pointer;"></img>
+<div  style="margin-bottom: 5%;">
+ <a id="Lab_Manager_Module" href="Lab_Manager_Module.html">
+   <img  src="data/images/lab_manager.png" style="width: 90%; cursor: pointer;"></img>
  </a>
 </div>
 </div>
   </div>
  </div>
- <span dojoType="dijit.Tooltip" id="project_browse_tooltip" connectId="views_a_1"><font size="2">
+ <span dojoType="dijit.Tooltip" id="project_browse_tooltip" connectId="Project_Browse_Module"><font size="2">
    <font size="3">
      <u>
        <b>Project Browser:</b>
@@ -122,7 +122,7 @@ require(["dijit/Tooltip"]);</script>
  <font size="2">
                Investigate the projects stored in VOEIS. Examine maps of data collection site locations. View site details including the names of the variables collected and number of records stored.</font>
  <br/>
- </span><span dojoType="dijit.Tooltip" id="data_loader_tooltip" connectId="views_a_2"><b><font size="2">
+ </span><span dojoType="dijit.Tooltip" id="data_loader_tooltip" connectId="Data_Load_Module"><b><font size="2">
 <u>
 <font size="3">
 Data Loader:</font>
@@ -133,7 +133,7 @@ Data Loader:</font>
 <font size="2">
    Load time series data, sample data or field observations to VOEIS. Load data from .csv files, manually enter observations, or access the Field Notebook.<br/>
 </font>
-</span><span dojoType="dijit.Tooltip" id="project_manager_tooltip" connectId="views_a_3"><u>
+</span><span dojoType="dijit.Tooltip" id="project_manager_tooltip" connectId="Project_Manager_Module"><u>
 <font size="3">
 <b>Project Manager:</b>
 </font>
@@ -144,7 +144,7 @@ Data Loader:</font>
 Manage your data warehouses and all of the projects contained within them. Create new warehouses, projects and sites. Make edits and view provenance information.</font>
 </font>
 <br/>
-</span><span dojoType="dijit.Tooltip" id="data_toolkit_tooltip" connectId="views_a_4"><u>
+</span><span dojoType="dijit.Tooltip" id="data_toolkit_tooltip" connectId="Data_Toolkit_Module"><u>
 <b><font size="3">
 Data Toolkit:</font>
 <br/>
@@ -153,7 +153,7 @@ Data Toolkit:</font>
 <font size="2">
 Query and export data. Manage parsing templates and data sets. QAQC and visualize data.</font>
 <br/>
-</span><span dojoType="dijit.Tooltip" id="equipment_manager_tooltip" connectId="views_a_5"><u>
+</span><span dojoType="dijit.Tooltip" id="equipment_manager_tooltip" connectId="Equipment_Manager_Module"><u>
 <b><font size="3">
 Equipment Manager:</font>
 <br/>
@@ -162,7 +162,7 @@ Equipment Manager:</font>
 <font size="2">
 Inventory lab and field equipment. Track and manage deployments of field equipment.</font>
 <br/>
-</span><span dojoType="dijit.Tooltip" id="lab_manager_tooltip" connectId="views_a_6"><u>
+</span><span dojoType="dijit.Tooltip" id="lab_manager_tooltip" connectId="Lab_Manager_Module"><u>
 <b><font size="3">
 Lab Manager:</font>
 <br/>
