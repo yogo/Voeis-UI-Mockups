@@ -22,62 +22,51 @@ require(["dijit/MenuBar"]);
 require(["dijit/layout/TabContainer"]);
 require(["dijit/form/Button"]);</script>
 <style type="text/css">
-    .footerIcon{
-        margin-right : 1em;
-        margin-left : 1em;
-        height : 35px;
-    }
-    .moduleIcon{ 
-        background-repeat : no-repeat;
-        height : 73px;
-        width : 78px;
-        }
-    .projectBrowse{
-        background-image : url('data/images/project_browse.png');
-        }
-    .dataUpload{
-        background-image : url('data/images/data_loader.png');
-        }
-    .projectManager{
-        background-image : url('data/images/project_manager.png');
-        }
-    .dataToolkit{
-        background-image : url('data/images/data_toolkit.png');
-        }
-    .labManager{
-        background-image : url('data/images/lab_manager.png');
-        }
-    .equipmentManager{
-        background-image : url('data/images/equipment_manager.png');
-        }
-    .simulationManager{
-        background-image : url('data/images/simulation_manager.png');
-        }
+    .footerIcon {
+    margin-right : 1em;
+    margin-left : 1em;
+    height : 35px;
+}
+
+    .moduleIcon {
+    background-repeat : no-repeat;
+    height : 73px;
+    width : 78px;
+}
+
+    .projectBrowse {
+    background-image : url('data/images/project_browse.png');
+}
+
+    .dataUpload {
+    background-image : url('data/images/data_loader.png');
+}
+
+    .projectManager {
+    background-image : url('data/images/project_manager.png');
+}
+
+    .dataToolkit {
+    background-image : url('data/images/data_toolkit.png');
+}
+
+    .labManager {
+    background-image : url('data/images/lab_manager.png');
+}
+
+    .equipmentManager {
+    background-image : url('data/images/equipment_manager.png');
+}
+
+    .simulationManager {
+    background-image : url('data/images/simulation_manager.png');
+}
+
 </style>
 </head>
 
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
-<div id="Main_App_View" dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="false" style="min-width: 1100px; min-height: 600px; z-index: 0; width: 100%; height: 100%;">
-
-<div id="HeaderBar" dojoType="dijit.layout.ContentPane" region="top" splitter="true" style="height: 20px; width: auto;" doLayout="false">
-    <span dojoType="dijit.MenuBar" tabIndex="0">
-        <span dojoType="dijit.PopupMenuBarItem" label="VOEIS Data Hub">
-            <span dojoType="dijit.Menu">
-                <span onClick="location.href='VOEIS_Splash_Page.html'" dojoType="dijit.MenuItem" label="Home"></span>
-                <span onClick="location.href='about.html'" dojoType="dijit.MenuItem" label="About"></span>
-                <span onClick="location.href='dev_activity.html'" dojoType="dijit.MenuItem" label="Development Activity"></span>
-                <span onClick="location.href='dev_roadmap.html'" dojoType="dijit.MenuItem" label="Development Roadmap"></span>
-                <span onClick="location.href='https://voeis.msu.montana.edu/doc/yard/'" dojoType="dijit.MenuItem" label="For Developers..."></span>
-            </span>
-        </span>
-        <span dojoType="dijit.PopupMenuBarItem" label="User" style="float:right;">
-            <span dojoType="dijit.Menu">
-                <span dojoType="dijit.MenuItem" label="Account Settings"></span>
-                <span dojoType="dijit.MenuItem" label="Log Out"></span>
-            </span>
-        </span>
-    </span>      
-</div>
+<div id="Main_App_View" dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="true" style="min-width: 1100px; min-height: 600px; z-index: 0; width: 100%; height: 100%;">
 
 <div id="Footer" dojoType="dijit.layout.ContentPane" region="bottom" text-align="center" style="width: 100%; height: 30px;">
     <center>
@@ -94,17 +83,35 @@ require(["dijit/form/Button"]);</script>
 </div>
 
 <div id="Center" dojoType="dijit.layout.ContentPane" region="center" doLayout="false">
-    <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%;" tabPosition="left-h">   
-        <div id="Project_Browser" href="Project_Browse_Module.html" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon projectBrowse"></div>
-        <div id="Data_Loader" href="Data_Upload_Module.html" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon dataUpload"></div>
-        <div id="Project_Manager" href="Project_Manager_Module.html" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon projectManager"></div>
-        <div id="Data_Toolkit" href="Data_Tookit_Module.html" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon dataToolkit"></div>
-        <div id="Equipment_Manager" href="Equipment_Manager_Module.html" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon equipmentManager"></div>
-        <div id="Lab_Manager" href="Lab_Manager_Module.html" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon labManager"></div>
-        <div id="Simulation_Manager" href="Simulation_Manager_Module.html" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon simulationManager"></div>   
+    <span dojoType="dijit.MenuBar" tabIndex="0">
+        <span dojoType="dijit.PopupMenuBarItem" label="VOEIS Data Hub">
+            <span dojoType="dijit.Menu">
+                <span onClick="location.href='VOEIS_Splash_Page.html'" dojoType="dijit.MenuItem" label="Home"></span>
+                <span onClick="location.href='about.html'" dojoType="dijit.MenuItem" label="About"></span>
+                <span onClick="location.href='dev_activity.html'" dojoType="dijit.MenuItem" label="Development Activity"></span>
+                <span onClick="location.href='dev_roadmap.html'" dojoType="dijit.MenuItem" label="Development Roadmap"></span>
+                <span onClick="location.href='https://voeis.msu.montana.edu/doc/yard/'" dojoType="dijit.MenuItem" label="For Developers..."></span>
+            </span>
+        </span>
+        <span dojoType="dijit.PopupMenuBarItem" label="User" style="float:right;">
+            <span dojoType="dijit.Menu">
+                <span dojoType="dijit.MenuItem" label="Account Settings"></span>
+                <span dojoType="dijit.MenuItem" label="Log Out"></span>
+            </span>
+        </span>
+    </span>
+    <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%;" tabPosition="left-h">
+        <div id="Project_Browser" href="Project_Browse_Module.html" parseOnLoad="true" selected="selected" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon projectBrowse"></div>
+        <div id="Data_Loader" href="Data_Upload_Module.html" parseOnLoad="true" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon dataUpload"></div>
+        <div id="Project_Manager" href="Project_Manager_Module.html" parseOnLoad="true" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon projectManager"></div>
+        <div id="Data_Toolkit" href="Data_Toolkit_Module.html" parseOnLoad="true" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon dataToolkit"></div>
+        <div id="Equipment_Manager" href="Equipment_Manager_Module.html" parseOnLoad="true" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon equipmentManager"></div>
+        <div id="Lab_Manager" href="Lab_Manager_Module.html" parseOnLoad="true" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon labManager"></div>
+        <div id="Simulation_Manager" href="Simulation_Manager_Module.html" parseOnLoad="true" dojoType="dijit.layout.ContentPane" iconClass="moduleIcon simulationManager"></div>
     </span>
 </div>
 
 </div>
+
 </body>
 </html>
