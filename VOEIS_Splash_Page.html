@@ -11,12 +11,18 @@
 <script type="text/javascript">
 require(["dijit/layout/BorderContainer"]);
 require(["dijit/layout/ContentPane"]);
+require(["dojox/layout/ContentPane"]);
 require(["dijit/MenuBar"]);
 require(["dijit/PopupMenuBarItem"]);
 require(["dijit/MenuItem"]);
 require(["dijit/Menu"]);
 require(["dijit/form/Button"]);
-require(["dijit/form/ValidationTextBox"]);</script>
+require(["dijit/form/ValidationTextBox"]);
+require(["dijit/Toolbar"]);
+require(["dijit/form/DropDownButton"]);
+require(["dijit/Dialog"]);
+require(["dijit/form/TextBox"]);
+require(["dijit/layout/TabContainer"]);</script>
 <style type="text/css">
     .footerIcon {
     margin-right : 1em;
@@ -24,144 +30,84 @@ require(["dijit/form/ValidationTextBox"]);</script>
     height : 35px;
 }
 
+    .splashElement {
+    text-align : left;
+    font-weight : normal;
+    font-size : 12pt;
+}
+
 </style>
 </head>
 
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
-    <span dojoType="dijit.MenuBar" tabIndex="0">
-        <span dojoType="dijit.PopupMenuBarItem" label="VOEIS Data Hub">
-            <span dojoType="dijit.Menu">
-                <span onClick="location.href='VOEIS_Splash_Page.html'" dojoType="dijit.MenuItem" label="Home"></span>
-                <span onClick="location.href='about.html'" dojoType="dijit.MenuItem" label="About"></span>
-                <span onClick="location.href='dev_activity.html'" dojoType="dijit.MenuItem" label="Development Activity"></span>
-                <span onClick="location.href='dev_roadmap.html'" dojoType="dijit.MenuItem" label="Development Roadmap"></span>
-                <span onClick="location.href='https://voeis.msu.montana.edu/doc/yard/'" dojoType="dijit.MenuItem" label="For Developers..."></span>
-            </span>
-        </span>
-        <span dojoType="dijit.PopupMenuBarItem" label="User" style="float:right;">
-            <span dojoType="dijit.Menu">
-                <span dojoType="dijit.MenuItem" label="Account Settings"></span>
-                <span dojoType="dijit.MenuItem" label="Log Out"></span>
-            </span>
-        </span>
-    </span>
-    
-<div id="Main_App_View" dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="false" style="min-width: 1100px; min-height: 600px; z-index: 0; width: 100%; height: 98%;">
 
-<div id="Center" dojoType="dijit.layout.ContentPane" region="center" doLayout="false" style="background-image: url('data/images/VOEIS_home_background.png'); background-size: cover; background-repeat: no-repeat;">
+<div id="Main_App_View" dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="false" style="min-width: 1100px; min-height: 600px; z-index: 0; width: 100%; height: 100%;">
 
-    <div style="width: 40%; height: 80%; z-index: 1; top: 15%; min-width: 20%; max-width: 40%; left: 5%; position: absolute;">
-       <img src="data/images/VOEIS_home.png" style="width: 100%;"></img>
-     </div>
-     <div style="border: 5px solid black; width: 575px; height: auto; background-color: #e3e3eb; top: 15%; left: 48%; position: relative;">
-       <div style="border-bottom: 1px solid black; background-color: #8aacdf; height: 80px; font-size: 100%;">
-         <div style="margin-left: 20px; font-size: 26pt; font-weight: bold;">
-           VOEIS</div>
-         <div style="margin-top: 5px; margin-left: 20px; font-size: 12pt; font-style: italic; font-weight: normal;">
-           The Virtual Observatory and Ecological Informatics System</div>
-       </div>
-       <div style="padding: 2em; font-size: 12px; font-weight: normal;">
-         
-         The Virtual Observatory and Ecological Informatics System (VOEIS, pronounced like "voice") provides a framework for data acquisition, analysis, model integration, and display of data products from completed workflows including geospatially explicit models, graphs from statistical analyses, GIS displays of classified ecological attributes on the landscape, and 3-D visualization models of waterscape and landscape processes.</div>
-       <table>
-         <tbody>
-           <tr>
-             <td style="width: 60%;">
-              <div style="border: 1px solid black; padding-right: 1em; margin-bottom: 2em; margin-left: 2em; display: inline-block; background-color: #f7f7f8;">
-                <table style="vertical-align: middle;">
-                  <tbody>
-                    <tr>
-                      <td>
-                        <img src="data/images/voeis_logo-90.png" style="height: 40px;"></img>
-                      </td>
-                      <td style="width: 90%;">
-                        <a href="about.html" target="_blank">
-                          <span style="font-size: 18px; font-weight: bold; text-decoration: underline; color: #177bd8;">About VOEIS</span>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="data/images/voeis_logo-90.png" style="height: 40px;"></img>
-                      </td>
-                      <td>
-                        <a target="_blank" href="tutorials.html">
-                          <span style="font-size: 18px; font-weight: bold; text-decoration: underline; color: #177bd8;">User Tutorial</span>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="data/images/voeis_logo-90.png" style="height: 40px;"></img>
-                      </td>
-                      <td>
-                        <a href="dev_activity.html" target="_blank">
-                          <span style="font-size: 18px; font-weight: bold; text-decoration: underline; color: #177bd8;">Recent Activity</span>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="data/images/voeis_logo-90.png" style="height: 40px;"></img>
-                      </td>
-                      <td>
-                        <a href="dev_roadmap.html" target="_blank">
-                          <span style="font-size: 18px; font-weight: bold; text-decoration: underline; color: #177bd8;">Development Roadmap</span>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="data/images/voeis_logo-90.png" style="height: 40px;"></img>
-                      </td>
-                      <td>
-                        <a href="https://voeis.msu.montana.edu/doc/yard/" target="_blank">
-                          <span style="font-size: 18px; font-weight: bold; text-decoration: underline; color: #177bd8;">For Developers...</span>
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </td>
-             <td style="vertical-align: top;">
-              <div style="border: 1px solid black; padding: 1em; border-left: 1px solid black; margin-left: 1em; margin-right: 2em; display: inline-block; background-color: #424040;">
-                <div style="border-top: 1px solid black; border-bottom: 1px solid black; margin-bottom: 2em; text-align: center;">
-                  <span style="font-size: 12pt; font-weight: bold; color: white;">Login Options:</span>
-                  </div>
-                <a href="Module_Platform.html">
-                  <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Browse Public Data in VOEIS" iconClass="dijitNoIcon"></input>
-                </a>
-                <div style="border: 1px solid white; padding: 0.5em; border-radius: 6px; -moz-border-radius: 6px; margin-top: 1em;">
-                  <div style="margin-bottom: 0.5em;"><span style="color: white; font-weight: bold;">Username:</span>
-<input type="text" dojoType="dijit.form.ValidationTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false"></input>
+
+<div dojoType="dijit.Toolbar" id="top" region="top" style="background-color: black;">
+    <div dojoType="dijit.form.DropDownButton" iconClass="user-icon-25" id="loginButton" style="color: white; font-weight: bold; float:right">
+  <span>Login</span>
+  <div dojoType="dijit.TooltipDialog">
+   <form accept-charset="UTF-8" action="/user_session" method="post">
+    <div>
+      <input name="utf8" type="hidden" value="&amp;#x2713;"></input>
+      <input name="authenticity_token" type="hidden" value="bpsjbAKzRATDNd4wUFIZT3GEA7k/+zlXtg9cgrU/j5g="> </input>
+    </div>
+    <div class="form-element">
+     <span class="label">
+      <label for="user_session_login">Username</label>
+     </span>
+     <span class="field">
+      <input dojoType="dijit.form.TextBox" id="user_session_login" name="user_session[login]" size="30" type="text"></input>
+     </span>
+    </div>
+    <div class="form-element">
+     <span class="label"><label for="user_session_password">Password</label>
+     </span>
+     <span class="field"><input dojoType="dijit.form.TextBox" id="user_session_password" name="user_session[password]" size="30" type="password"></input>
+     </span>
+    </div>
+   </form>
+  </div>
 </div>
-                  <div style="margin-bottom: 0.5em;"><span style="color: white; font-weight: bold;">Password:</span>
-<input type="text" dojoType="dijit.form.ValidationTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false"></input>
 </div>
-                  <a href="Module_Platform.html">
-                    <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Sign In" iconClass="dijitNoIcon"></input>
-                  </a>
-                </div>
-              </div>
-            </td>
-           </tr>
-         </tbody>
-       </table>
-     </div>
-   </div>
 
-<div id="Footer" dojoType="dijit.layout.ContentPane" region="bottom" text-align="center" style="width: 100%; height: 28px;">
+
+<div id="Center" dojoType="dijit.layout.ContentPane" region="center" gutters="false" style="padding: 0px; border-bottom: 3px groove white; background-color: #e3e3eb; width: 1102px; height: 610px;">
+<div style="height: 110px; overflow: visible; padding-top: 1em; padding-left: 1em; width: 100%;">
+ <img src="images/voeis_logo.png" style="padding-left: 1em; display: inline-block; height: 135px;"></img>
+ <div style="padding: 3em; float: right; display: inline-block;">
+  <a href="Module_Platform.html" style="color:black">
+ <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Start Browsing Public Data" onClick="Module_Platform.html" style="position : relative; font-size : 24px; font-weight : bold; font-family : Helvetica;"></input>
+  </a>
+</div>
+</div>
+
+
+<span dojoType="dijit.layout.TabContainer" style="font-size: 12pt; text-align: right; font-weight: bold; width: 100%; height: 100%;" controllerWidget="dijit.layout.TabController">
+
+<div id="Home" dojoType="dojox.layout.ContentPane" title="Home" class="splashElement" href="Home.html"></div>
+<div id="Overview" dojoType="dojox.layout.ContentPane" title="Overview" class="splashElement" href="Overview.html"></div>
+<div id="Features" dojoType="dojox.layout.ContentPane" title="Features" class="splashElement" href="Features.html"></div>
+<div id="Tutorials" dojoType="dojox.layout.ContentPane" title="Tutorials" class="splashElement" href="User_Tutorial.html"></div>
+<div id="Documentation" dojoType="dojox.layout.ContentPane" title="Documentation" class="splashElement"></div>
+<div id="FAQ" dojoType="dojox.layout.ContentPane" title="FAQ" class="splashElement" href="FAQ.html"></div>
+
+</span>
+
+</div>
+
+<div id="Footer" dojoType="dijit.layout.ContentPane" region="bottom" style="width: 100%; height: 25px;">
     <center>
-        <img src="data/images/FLBS_logo.gif" class="footerIcon"></img>
-        <img src="data/images/HBS_logo.jpg" class="footerIcon"></img>
-        <img src="data/images/MSU_logo.jpg" class="footerIcon"></img>
-        <img src="data/images/Murry_logo.jpg" class="footerIcon"></img>
-        <img src="data/images/UK_logo.jpg" class="footerIcon"></img>
-        <img src="data/images/UL_logo.jpg" class="footerIcon"></img>
-        <img src="data/images/UM_logo.gif" class="footerIcon"></img>
-        <img src="data/images/YERC_logo.jpg" class="footerIcon"></img>
-        <img src="data/images/YOGO_logo.png" class="footerIcon"></img>
+        <img src="images/FLBS_logo.gif" class="footerIcon"></img>
+        <img src="images/HBS_logo.jpg" class="footerIcon"></img>
+        <img src="images/MSU_logo.jpg" class="footerIcon"></img>
+        <img src="images/Murry_logo.jpg" class="footerIcon"></img>
+        <img src="images/UK_logo.jpg" class="footerIcon"></img>
+        <img src="images/UL_logo.jpg" class="footerIcon"></img>
+        <img src="images/UM_logo.gif" class="footerIcon"></img>
+        <img src="images/YERC_logo.jpg" class="footerIcon"></img>
+        <img src="images/YOGO_logo.png" class="footerIcon"></img>
     </center>
 </div>
 

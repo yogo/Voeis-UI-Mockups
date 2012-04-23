@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Loading Logger Data Streams</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<style type="text/css"><!--
+body {
+  margin: 5px 5px 5px 5px;
+  background-color: #ffffff;
+}
+/* ========== Text Styles ========== */
+hr { color: #000000}
+body, table, span.rvts0 /* Font Style */
+{
+ font-size: 12pt;
+ font-family: 'Calibri';
+ font-style: normal;
+ font-weight: normal;
+ color: #000000;
+ text-decoration: none;
+}
+span.rvts1 /* Heading */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-weight: bold;
+ color: #0000ff;
+}
+span.rvts2 /* Subheading */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-weight: bold;
+ color: #000080;
+}
+span.rvts3 /* Keywords */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ font-style: italic;
+ color: #800000;
+}
+a.rvts4, span.rvts4 /* Jump 1 */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ color: #008000;
+ text-decoration: underline;
+}
+a.rvts5, span.rvts5 /* Jump 2 */
+{
+ font-size: 10pt;
+ font-family: 'Arial', 'Helvetica', sans-serif;
+ color: #008000;
+ text-decoration: underline;
+}
+span.rvts6
+{
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts7
+{
+ font-size: 13pt;
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+}
+span.rvts8
+{
+ font-size: 13pt;
+ font-family: 'Cambria';
+ font-weight: bold;
+}
+span.rvts9
+{
+ font-family: 'Times New Roman', 'Times', serif;
+ text-decoration: underline;
+}
+span.rvts10
+{
+ font-family: 'Times New Roman', 'Times', serif;
+}
+span.rvts11
+{
+ font-family: 'Times New Roman', 'Times', serif;
+ font-weight: bold;
+}
+span.rvts12 /* Font Style */
+{
+ font-size: 20pt;
+ font-family: 'Tahoma', 'Geneva', sans-serif;
+ color: #ffffff;
+}
+span.rvts13 /* Font Style */
+{
+ font-size: 10pt;
+ font-family: 'MS Sans Serif', 'Geneva', sans-serif;
+ color: #808080;
+}
+span.rvts14 /* Font Style */
+{
+ font-size: 10pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #c0c0c0;
+}
+a.rvts15, span.rvts15 /* Font Style */
+{
+ font-size: 10pt;
+ font-family: 'Verdana', 'Geneva', sans-serif;
+ font-style: italic;
+ color: #6666ff;
+ text-decoration: underline;
+}
+/* ========== Para Styles ========== */
+p,ul,ol /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ padding: 0px 0px 0px 0px;
+ margin: 0px 0px 0px 0px;
+}
+.rvps1 /* Centered */
+{
+ text-align: center;
+}
+.rvps2
+{
+ text-align: left;
+ text-indent: 0px;
+ page-break-inside: avoid;
+ page-break-after: avoid;
+ padding: 0px 0px 0px 0px;
+ margin: 13px 0px 0px 0px;
+}
+.rvps3
+{
+ text-align: left;
+ text-indent: 0px;
+ page-break-inside: avoid;
+ page-break-after: avoid;
+ background: #d9d9d9;
+ padding: 0px 0px 0px 0px;
+ margin: 13px 0px 0px 0px;
+}
+.rvps4
+{
+ text-indent: -48px;
+ margin: 0px 0px 0px 48px;
+}
+.rvps5
+{
+ margin: 0px 0px 0px 48px;
+}
+.rvps6
+{
+ text-align: center;
+ text-indent: -48px;
+ margin: 0px 0px 0px 48px;
+}
+.rvps7 /* Paragraph Style */
+{
+ text-align: left;
+ text-indent: 0px;
+ background: #0080c0;
+ padding: 5px 5px 2px 5px;
+ margin: -5px -5px 18px -5px;
+}
+.rvps8 /* Paragraph Style */
+{
+ text-align: center;
+ background: #ebebeb;
+ margin: 20px 0px 0px 0px;
+}
+.rvps9 /* Paragraph Style */
+{
+ border-color: #c0c0c0;
+ border-style: solid;
+ border-width: 1px;
+ border-right: none;
+ border-bottom: none;
+ border-left: none;
+ background: #ffffff;
+ padding: 3px 0px 0px 0px;
+ margin: 27px 0px 0px 0px;
+}
+--></style>
+<link rel="StyleSheet" href="hnd.css" type="text/css"/>
+<script type="text/javascript">if(top.frames.length == 0) { sTopic = top.location.href.substring(top.location.href.lastIndexOf("/") + 1, top.location.href.length); top.location.href="../User_Tutorial.htm?" + sTopic; }</script>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.cookie.js"></script>
+<script type="text/javascript" src="hnd.js"></script>
+<meta name="generator" content="HelpNDoc Freeware Edition"></head>
+<body>
+<h1 class=rvps7><span class=rvts0><span class=rvts12>Loading Logger Data Streams</span></span></h1>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6>This section provides the necessary background for successfully loading logger data into VOEIS. Logger data consists of regularly collected datum measured by an instrument that is deployed in the field, in the lab, or in microcosms/mesocosms. </span></p>
+<h2 class=rvps2><span class=rvts0><span class=rvts7><br></span></span></h2>
+<h2 class=rvps3><span class=rvts0><span class=rvts8>Supported Data File Formats</span></span></h2>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6>The VOEIS workflow for loading logger data is constructed to load data from individual files. VOEIS currently supports comma delimited text files (.csv) and Campbell scientific data files (.dat). These files may have one or more header rows, but the first instance of all measured data values must occur in the same row. </span></p>
+<h2 class=rvps2><span class=rvts0><span class=rvts7><br></span></span></h2>
+<h2 class=rvps3><span class=rvts0><span class=rvts8>Creating Input Files</span></span></h2>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6>The current VOEIS workflow requires that sample data input files be site specific. A single input file must </span><span class=rvts9>not</span><span class=rvts6> contain data from more than one site. Data files must include date/time stamps, and data sample values for one or more variables. Data must be organized to include individual columns for date/time stamps, and variables such that a given row contains data values (for one or more variables) that were collected at a specific date/time. VOEIS can accept and parse numerous date/time formats, but the following format is recommended: </span><span class=rvts10>&#8216;</span><span class=rvts6>MM/DD/YYYY HH:MM</span><span class=rvts10>&#8217;</span><span class=rvts6>. A single numeric value or text string must represent all no-data values in any given column. It is a good idea to preserve metadata for each variable in the data input file as headers. </span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_43.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<h2 class=rvps3><span class=rvts0><span class=rvts8>Using the Graphical User Interface</span></span></h2>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6>After saving the data file as a .csv file, use the following steps to load data into VOEIS. </span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps4><span class=rvts6>1. </span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>Navigate to the VOEIS Data Hub using your web browser and log in.&nbsp; Then select the project you would like to add data to from the Projects dropdown as shown below.</span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_44.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6>2. </span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>In the (Project_Name) dropdown menu, select </span><span class=rvts10>&#8216;</span><span class=rvts6>Add Sample Data</span><span class=rvts10>&#8217;</span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_45.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps4><span class=rvts6>3. </span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>In Step 1 of the data upload wizard, select the site that your data will be associated with from the site list. </span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_46.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts6>You can sort the site list by clicking on the header boxes, or define a custom filter by clicking the button on the upper left with the yellow arrow in it. Clicking this button calls the pop-out window below. Custom filtering rules are described using Boolean logic and can be applied to a single column, or multiple columns.</span></p>
+<p class=rvps5><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_47.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6>4. </span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>Next, browse to the file to be loaded. Click the </span><span class=rvts10>&#8216;</span><span class=rvts6>Open</span><span class=rvts10>&#8217;</span><span class=rvts6> button.</span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_48.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps4><span class=rvts6>5. </span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>Select the row that the data sample values begin on. All rows above this row will be ignored when the data is loaded into VOEIS. </span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_49.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps4><span class=rvts6>6. </span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>You must next decide whether to define a new parsing template for parsing your data, or reuse a previously defined template. Click </span><span class=rvts10>&#8216;</span><span class=rvts6>Upload File</span><span class=rvts10>&#8217;</span><span class=rvts6>.</span></p>
+<p class=rvps4><span class=rvts6><br></span></p>
+<p class=rvps6><img border=0 alt="" hspace=1 vspace=1 src="img_50.jpg"></p>
+<p class=rvps4><span class=rvts6><br></span></p>
+<p class=rvps4><span class=rvts6><br></span></p>
+<p class=rvps4><span class=rvts6>7.</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>If you decided to parse your data with and existing template, skip to Step 9. Otherwise, you will need to name and describe the data template you are about to create. Select the appropriate Source information. </span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_51.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts6>If the appropriate source is not already contained in the dropdown box, click the green button on the left. A pop-out window will appear and allow you to describe a new data source.</span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_52.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts6>Describe the time support associated with your data file. You must identify whether your time stamps are recorded in UTC Date Time or Local Date Time. If they are recorded in Local Date Time, you need to select the UTC Offset (This is the time zone correction for the location where the measurements were collected) and identify whether or not a Daylight Savings Time adjustment needs to be applied to all timestamps in the file (e.g. the Montana UTC Offset is -7).&nbsp; </span><span class=rvts11>Note: do NOT adjust the UTC Offset to account for Daylight Savings Time AND select the Daylight Savings Time checkbox. Account for Daylight Savings Time using only one of these methods.</span><span class=rvts6> </span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_53.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts6>After all of the data descriptor dropdowns are populated, the </span><span class=rvts10>&#8216;</span><span class=rvts6>Next</span><span class=rvts10>&#8217;</span><span class=rvts6> button will be activated. Click </span><span class=rvts10>&#8216;</span><span class=rvts6>Next</span><span class=rvts10>&#8217;</span><span class=rvts6> to begin describing each of the columns in the data file.</span></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps4><span class=rvts6>8. </span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>Each column in the data file must be described using one of the options in the </span><span class=rvts10>&#8216;</span><span class=rvts6>Select Column Assignment</span><span class=rvts10>&#8217;</span><span class=rvts6> dropdown list displayed below. </span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_54.jpg"></p>
+<p class=rvps1><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts6>The </span><span class=rvts10>&#8216;</span><span class=rvts6>Assign The Timestamp To This Column</span><span class=rvts10>&#8217;</span><span class=rvts6> option may only be used once. The “Assign Vertical Offsets” option should </span><span class=rvts9>not</span><span class=rvts6> be used at this stage of the workflow. You may choose to “Ignore” as many columns as you wish.</span></p>
+<p class=rvps5><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts6>Variables can be assigned to a column of data sample values in two ways. The first method is to </span><span class=rvts10>&#8216;</span><span class=rvts6>Assign An Existing Variable</span><span class=rvts10>&#8217;</span><span class=rvts6> to the column. When this option is selected, a data table pop-out appears. This table includes all of the variables previously described in this project. You can sort results in the data table by clicking one of the column header boxes. This will sort rows alphabetically (string values) or in ascending order (numeric values) by the values contained in the selected column. Secondary filters can be applied in subsequent columns in the same manner. </span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_55.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts6>Another option for filtering the variables table is to apply custom filters. To do this, click the small button with the yellow arrow located in the upper left of the pop-out window. This button calls the pop-out window below. Custom filtering rules can be described using Boolean logic and applied to either a single column or multiple columns.</span></p>
+<p class=rvps5><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_56.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts11>If you choose to select an existing variable, be sure to check each of the columns in the table to ensure that the variable you select is associated with the appropriate meta-data.</span></p>
+<p class=rvps5><span class=rvts6><br></span></p>
+<p class=rvps5><span class=rvts6>The second means for assigning a variable to a column of data values is to select the </span><span class=rvts10>&#8216;</span><span class=rvts6>Add A New Variable</span><span class=rvts10>&#8217;</span><span class=rvts6> option from the </span><span class=rvts10>&#8216;</span><span class=rvts6>Select Column Assignment</span><span class=rvts10>&#8217;</span><span class=rvts6> dropdown list. Selecting this option calls a pop-out window like the one shown below. You can add fields to dropdown lists using the green button to the left of the dropdown list title. After all of the required dropdown lists are populated, click the </span><span class=rvts10>&#8216;</span><span class=rvts6>Create Variable</span><span class=rvts10>&#8217;</span><span class=rvts6> button. </span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_57.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps4><span class=rvts6>9. </span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>As columns in the data file are described, a summary of the parsing instructions is populated at the bottom of the page. Preview this summary to ensure that all of the data fields are defined correctly. If you spot an error in the summary table, simply scroll up to the column where the error exists and edit that column</span><span class=rvts10>&#8217;</span><span class=rvts6>s description.</span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps1><img border=0 alt="" hspace=1 vspace=1 src="img_58.jpg"></p>
+<p><span class=rvts6><br></span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps4><span class=rvts6>10.</span><span class=rvts6> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class=rvts6>When all columns are described and the summary table has been checked carefully to ensure that the data file is correctly characterized, click the </span><span class=rvts10>&#8216;</span><span class=rvts6>Save Samples</span><span class=rvts10>&#8217;</span><span class=rvts6> button.&nbsp; </span></p>
+<p><span class=rvts6><br></span></p>
+<p class=rvps8><span class=rvts13>Copyright © 2011,&nbsp;&nbsp; Montana State University</span></p>
+<p class=rvps9><span class=rvts14>Created with the Freeware Edition of HelpNDoc: </span><a class=rvts15 href="http://www.helpndoc.com" target="_blank">Free HTML Help documentation generator</a></p>
+</body></html>

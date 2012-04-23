@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Untitled</title>
+<style>@import "themes/claro/claro.css";@import "lib/dojo/dojo/resources/dojo.css";@import "app.css";
+</style>
+<script type="text/javascript" src="maqetta/maqetta.js"></script>
+<script type="text/javascript" data-dojo-config="'async':true,'parseOnLoad':true,'packages':[{'name':'clipart','location':'../../clipart'},{'name':'shapes','location':'../../shapes'},{'name':'jquery-ui','location':'../../jquery-ui'},{'name':'yui','location':'../../yui'}]" src="lib/dojo/dojo/dojo.js"></script>
+<script type="text/javascript" src="maqetta/States.js"></script>
+<script type="text/javascript">
+require(["dijit/dijit"]);
+require(["dojo/parser"]);
+require(["dijit/layout/AccordionContainer"]);
+require(["dijit/layout/ContentPane"]);</script>
+</head>
+<body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
+ <div style="padding: 1em;">
+<span dojoType="dijit.layout.AccordionContainer" style="width: 100%; height: 300px; min-width: 1em; min-height: 1em; font-size: 11pt; font-family: Tahoma;">
+<div dojoType="dijit.layout.ContentPane" title="Why should I use VOEIS?" selected="selected" style="width: 274px; height: auto"></div>
+<div dojoType="dijit.layout.ContentPane" title="How much does it cost?" style="width: 274px; height: auto"></div>
+<div dojoType="dijit.layout.ContentPane" title="How do I creatd an account?" style="width: 274px; height: auto"></div>
+<div dojoType="dijit.layout.ContentPane" title="How much data can I store in VOEIS?" style="width: 274px; height: auto"></div>
+<div dojoType="dijit.layout.ContentPane" title="Do I need special training before I can use VOEIS?" style="width: 274px; height: auto"></div>
+<div dojoType="dijit.layout.ContentPane" title="Can I have my own version of the software?" style="width: 274px; height: auto"></div>
+</span></div>
+</body>
+</html>
