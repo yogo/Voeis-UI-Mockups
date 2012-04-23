@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Untitled</title>
+<style>@import "themes/claro/claro.css";@import "app.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";@import "lib/dojo/dojox/layout/resources/FloatingPane.css";@import "lib/dojo/dojox/layout/resources/ResizeHandle.css";@import "lib/dojo/dojox/gauges/_Gauge.css";@import "lib/dojo/dojox/grid/resources/Grid.css";@import "lib/dojo/dojox/grid/resources/claroGrid.css";@import "lib/dojo/dojox/form/resources/CheckedMultiSelect.css";
+</style>
+<script type="text/javascript" djConfig="parseOnLoad: true" src="lib/dojo/dojo/dojo.js"></script>
+<script type="text/javascript" src="maqetta/maqetta.js"></script>
+<script type="text/javascript" src="maqetta/States.js"></script>
+<script type="text/javascript">
+require(["dijit/layout/BorderContainer"]);
+require(["dijit/layout/ContentPane"]);
+require(["dijit/MenuBar"]);
+require(["dijit/PopupMenuBarItem"]);
+require(["dijit/MenuItem"]);
+require(["dijit/Menu"]);
+require(["dijit/layout/TabContainer"]);
+require(["dijit/Toolbar"]);
+require(["dijit/form/Button"]);
+require(["dijit/Tooltip"]);
+require(["dojo/data/ItemFileReadStore"]);
+require(["dojox/io/xhrScriptPlugin"]);
+require(["dojox/grid/DataGrid"]);</script>
+</head>
+<body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
+<div style="height: 100%; width: 100%;">
+<span dojoType="dijit.layout.TabContainer" style="height: 100%; width: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+<div dojoType="dijit.layout.ContentPane" title="Lab Manager" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="true" style="width: 662px; height: 468px;" doLayout="false"></div>
+  <div dojoType="dijit.layout.ContentPane" title="Warehouse 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 282px; height: 252px;" doLayout="false">
+    <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" tabPosition="left">
+
+
+<div dojoType="dijit.layout.ContentPane" title="Sample Tracking">
+      <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="min-width: 1em; min-height: 1em; width: 646px; height: 523px;" nested="true"><div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 628px; height: 475px;" doLayout="false">
+        <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_1" jsId="ItemFileReadStore_1" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;sample_id&quot;:&quot;1&quot;,&quot;_collection_date:time&quot;:&quot;10-3-2009&quot;},{&quot;uniqe_id&quot;:2,&quot;sample_id&quot;:&quot;2&quot;,&quot;_collection_date:time&quot;:&quot;4-23-2003&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Sample ID&quot;,&quot;field&quot;:&quot;sample_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Collection Date:Time&quot;,&quot;field&quot;:&quot;_collection_date:time&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Site ID&quot;,&quot;field&quot;:&quot;_site_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Site Name&quot;,&quot;field&quot;:&quot;_site_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Site Code&quot;,&quot;field&quot;:&quot;_site_code&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" rowSelector="15px" selectable="false" delayScroll="false" style="height: 95%; width: auto;" store="ItemFileReadStore_1" escapeHTMLInData="true" selectionMode="single"></span>
+      </div>
+      <div dojoType="dijit.layout.ContentPane" title="Sample_1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" closable="false" splitter="false" style="width: 628px; height: 475px;" doLayout="false">
+        <span dojoType="dijit.layout.TabContainer" style="min-width: 1em; min-height: 1em; width: 100%; height: 100%;" controllerWidget="dijit.layout.TabController">
+<div dojoType="dijit.layout.ContentPane" title="Details" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 612px; height: 425px;" doLayout="false"></div>
+        <div dojoType="dijit.layout.ContentPane" title="Edit" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 612px; height: 425px;" doLayout="false"></div>
+        <div dojoType="dijit.layout.ContentPane" title="History">
+          <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="min-width: 1em; min-height: 1em; width: 612px; height: 425px;" tabPosition="left-h"><div dojoType="dijit.layout.ContentPane" title="Versions" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 594px; height: 374px;" doLayout="false"></div>
+          <div dojoType="dijit.layout.ContentPane" title="Current" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 594px; height: 374px;" doLayout="false"></div>
+          </span>
+        </div>
+        </span>
+      </div>
+      </span>
+    </div>
+    </span>
+  </div>
+  <div dojoType="dijit.layout.ContentPane" title="Warehouse 2"></div>
+  </span>
+</div>
+</body>
+</html>

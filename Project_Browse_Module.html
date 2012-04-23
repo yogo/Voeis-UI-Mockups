@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Untitled</title>
+<style>@import "themes/claro/claro.css";@import "app.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";@import "lib/dojo/dojox/layout/resources/FloatingPane.css";@import "lib/dojo/dojox/layout/resources/ResizeHandle.css";@import "lib/dojo/dojox/gauges/_Gauge.css";@import "lib/dojo/dojox/grid/resources/Grid.css";@import "lib/dojo/dojox/grid/resources/claroGrid.css";
+</style>
+<script type="text/javascript" djConfig="parseOnLoad: true" src="lib/dojo/dojo/dojo.js"></script>
+<script type="text/javascript" src="maqetta/maqetta.js"></script>
+<script type="text/javascript" src="maqetta/States.js"></script>
+<script type="text/javascript">
+require(["dijit/layout/BorderContainer"]);
+require(["dijit/layout/ContentPane"]);
+require(["dijit/MenuBar"]);
+require(["dijit/PopupMenuBarItem"]);
+require(["dijit/MenuItem"]);
+require(["dijit/Menu"]);
+require(["dijit/layout/TabContainer"]);
+require(["dojo/data/ItemFileReadStore"]);
+require(["dojox/io/xhrScriptPlugin"]);
+require(["dojox/grid/DataGrid"]);
+require(["dijit/Toolbar"]);
+require(["dijit/form/Button"]);
+require(["dijit/Tooltip"]);</script>
+</head>
+<body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="Project_Browse_Module">
+ <div style="width: 35%; display: inline-block; height: 100%;">
+   <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;">
+    <div dojoType="dijit.layout.ContentPane" title="Project Browser" closable="true" style="width: 240px; height: 423px;">
+    </div>
+    <div dojoType="dijit.layout.ContentPane" title="Projects" style="width: 240px; height: 423px;">
+     <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_1" jsId="ItemFileReadStore_1" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;project_name&quot;:&quot;Project_1&quot;},{&quot;uniqe_id&quot;:2,&quot;project_name&quot;:&quot;Project_2&quot;}]}"></span>
+     <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Project Name&quot;,&quot;field&quot;:&quot;project_name&quot;}]" style="height: 421px; width: 238px;" store="ItemFileReadStore_1"></span>
+   </div>
+   <div dojoType="dijit.layout.ContentPane" title="Project_1" extractContent="false" style="width: 240px; height: 423px;">
+     <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_2" jsId="ItemFileReadStore_2" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;site_name&quot;:&quot;Site A&quot;},{&quot;uniqe_id&quot;:2,&quot;site_name&quot;:&quot;Site B&quot;}]}"></span>
+     <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site Name&quot;,&quot;field&quot;:&quot;site_name&quot;}]" style="height: 421px; width: 238px;" store="ItemFileReadStore_2"></span>
+   </div>
+   </span>
+ </div>
+ <div style="display: inline-block; height: 100%; width: 60%;">
+ <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;">
+    <div dojoType="dijit.layout.ContentPane" title="Site Map" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="width: 351px; height: 423px;">
+     <div style="height: 100%;">
+       <iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=montana+state+university&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=46.495626,86.572266&amp;vpsrc=0&amp;ie=UTF8&amp;hq=montana+state+university&amp;ll=45.666003,-111.051162&amp;spn=0.015595,0.032015&amp;t=h&amp;output=embed" style="height: 100%; width: 100%;"></iframe>
+       <br></br>
+     </div>
+   </div>
+   <div dojoType="dijit.layout.ContentPane" title="Site A" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="true" splitter="false" style="width: 351px; height: 423px;"></div>
+   <div dojoType="dijit.layout.ContentPane" title="Site B" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="true" splitter="false" style="width: 351px; height: 423px;"></div>
+   </span>
+ </div>
+ </body>
+</html>

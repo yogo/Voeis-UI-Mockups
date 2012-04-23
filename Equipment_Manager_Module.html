@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Untitled</title>
+<style>@import "themes/claro/claro.css";@import "app.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";@import "lib/dojo/dojox/layout/resources/FloatingPane.css";@import "lib/dojo/dojox/layout/resources/ResizeHandle.css";@import "lib/dojo/dojox/gauges/_Gauge.css";@import "lib/dojo/dojox/grid/resources/Grid.css";@import "lib/dojo/dojox/grid/resources/claroGrid.css";@import "lib/dojo/dojox/form/resources/CheckedMultiSelect.css";
+</style>
+<script type="text/javascript" djConfig="parseOnLoad: true" src="lib/dojo/dojo/dojo.js"></script>
+<script type="text/javascript" src="maqetta/maqetta.js"></script>
+<script type="text/javascript" src="maqetta/States.js"></script>
+<script type="text/javascript">
+require(["dijit/layout/BorderContainer"]);
+require(["dijit/layout/ContentPane"]);
+require(["dijit/MenuBar"]);
+require(["dijit/PopupMenuBarItem"]);
+require(["dijit/MenuItem"]);
+require(["dijit/Menu"]);
+require(["dojo/data/ItemFileReadStore"]);
+require(["dijit/Tree"]);
+require(["dijit/layout/TabContainer"]);
+require(["dijit/form/Button"]);
+require(["dojox/io/xhrScriptPlugin"]);
+require(["dojox/grid/DataGrid"]);
+require(["dijit/form/TextBox"]);
+require(["dijit/form/FilteringSelect"]);
+require(["dijit/form/DateTextBox"]);
+require(["dijit/form/TimeTextBox"]);
+require(["dijit/form/Select"]);
+require(["dijit/Toolbar"]);
+require(["dijit/Tooltip"]);</script>
+</head>
+<body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" dvStates="{'_show:dijit_Dialog_19':{'origin':true},'_show:dijit_Tooltip_133':{'origin':true},'_show:dijit_Tooltip_141':{'origin':true},'_show:dijit_Tooltip_142':{'origin':true},'_show:dijit_Tooltip_143':{'origin':true},'_show:dijit_Tooltip_144':{'origin':true}}" id="myapp">
+ <div style="height: 100%; width: 100%;">
+ <span dojoType="dijit.layout.TabContainer" style="height: 100%; width: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+<div dojoType="dijit.layout.ContentPane" title="Equipment Manager" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="true" splitter="false" style="width: 755px; height: 471px;" doLayout="false"></div>
+   <div dojoType="dijit.layout.ContentPane" title="Warehouse 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 282px; height: 252px;" doLayout="false">
+     <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="height: 100%; width: 100%; min-width: 1em; min-height: 1em;" nested="false" tabposition="left"><div dojoType="dijit.layout.ContentPane" title="Equipment Inventory" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 494px;" doLayout="false">
+       <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;"><div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" closable="false" splitter="false" style="width: 615px; height: 401px;" doLayout="false">
+         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Create New Instrument Record" iconClass="dijitNoIcon"></input>
+ <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_5" jsId="ItemFileReadStore_5" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;instrument_id&quot;:&quot;101&quot;,&quot;_manufacturer&quot;:&quot;ACME&quot;,&quot;_model&quot;:&quot;undefined&quot;,&quot;_serial#&quot;:&quot;undefined&quot;,&quot;_calibration_constant&quot;:&quot;undefined&quot;,&quot;instrument_type&quot;:&quot;undefined&quot;,&quot;_date_purchased&quot;:&quot;undefined&quot;},{&quot;uniqe_id&quot;:2,&quot;instrument_id&quot;:&quot;255&quot;,&quot;_manufacturer&quot;:&quot;ACME&quot;,&quot;_model&quot;:&quot;undefined&quot;,&quot;_serial#&quot;:&quot;undefined&quot;,&quot;_calibration_constant&quot;:&quot;undefined&quot;,&quot;instrument_type&quot;:&quot;undefined&quot;,&quot;_date_purchased&quot;:&quot;undefined&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Instrument ID&quot;,&quot;field&quot;:&quot;instrument_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Manufacturer&quot;,&quot;field&quot;:&quot;_manufacturer&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Model&quot;,&quot;field&quot;:&quot;_model&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Serial#&quot;,&quot;field&quot;:&quot;_serial#&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Calibration Constant&quot;,&quot;field&quot;:&quot;_calibration_constant&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Instrument Type&quot;,&quot;field&quot;:&quot;instrument_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Date Purchased&quot;,&quot;field&quot;:&quot;_date_purchased&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="top: 10px; height: 90%; width: 100%;" store="ItemFileReadStore_5" escapeHTMLInData="true"></span>
+       </div>
+       <div dojoType="dijit.layout.ContentPane" title="Instrument 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" closable="true" splitter="false" style="width: 615px; height: 401px;" doLayout="false">
+         <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" nested="true"><div dojoType="dijit.layout.ContentPane" title="Details" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 597px; height: 349px;" doLayout="false"></div>
+         <div dojoType="dijit.layout.ContentPane" title="Edit" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 597px; height: 349px;" doLayout="false"></div>
+         <div dojoType="dijit.layout.ContentPane" title="History" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
+         </span>
+       </div>
+       <div dojoType="dijit.layout.ContentPane" title="New" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="true" splitter="false" style="width: 615px; height: 401px;">
+         <h2>
+           
+       
+    Define a new instrument:</h2>
+         <div style="margin-top: 1em;">
+           <span style="margin-right: 1em;">Instrument ID:</span>
+           <input type="text" dojoType="dijit.form.TextBox" style="left: 100px;"></input>
+         </div>
+         <div style="margin-top: 1em;">
+           <span style="margin-right: 1em;">Serial #:</span>
+           <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false"></input>
+         </div>
+         <div style="margin-top: 1em;">
+           <span style="margin-right: 1em;">Manufacturer:</span>
+           <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false"></input>
+         </div>
+         <div style="margin-top: 1em;">
+           <span style="margin-right: 1em;">Instrument Type:</span>
+           <select dojoType="dijit.form.FilteringSelect" value="Thermocouple" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+             <option dvwidget="html.option" value="Thermocouple" selected="selected">
+               
+           
+        Thermocouple</option>
+             <option dvwidget="html.option" value="Anemometer (3D Sonic)">
+               
+           
+        Anemometer (3D Sonic)</option>
+             <option dvwidget="html.option" value="Pressure Transducer">
+               
+           
+        Pressure Transducer</option>
+           </select>
+           <img src="images/add-icon.png" style="margin-left: 0.5em; vertical-align: middle; height: 15px;"></img>
+         </div>
+         <div style="margin-top: 1em;">
+           <span style="margin-right: 1em;">Date Purchased:</span>
+           <input type="text" dojoType="dijit.form.DateTextBox"></input>
+         </div>
+         <div style="margin-top: 1em;">
+           <span style="margin-right: 1em;">Calibration Constant:</span>
+           <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false"></input>
+         </div>
+         <div style="margin-top: 1em;">
+           <span style="margin-right: 1em;">Hyperlink:</span>
+           <input type="text" dojoType="dijit.form.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false"></input>
+         </div>
+         <div style="border-bottom: 1px solid black; margin-bottom: 1em; margin-top: 1em;"></div>
+         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Create Instrument Record" iconClass="dijitNoIcon"></input>
+         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
+       </div>
+       </span>
+     </div>
+     <div dojoType="dijit.layout.ContentPane" title="Deployment Tracking" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 631px; height: 452px;" doLayout="false">
+       <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_6" jsId="ItemFileReadStore_6" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;instrument_id&quot;:&quot;101&quot;,&quot;_model&quot;:&quot;Gizmo&quot;,&quot;_manufacturer&quot;:&quot;ACME&quot;,&quot;_current_deployment_location&quot;:&quot; Site 2&quot;},{&quot;uniqe_id&quot;:2,&quot;instrument_id&quot;:&quot;255&quot;,&quot;_model&quot;:&quot;Widgit&quot;,&quot;_manufacturer&quot;:&quot;ACME&quot;,&quot;_current_deployment_location&quot;:&quot; Site 55&quot;}]}"></span><span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;">
+<div dojoType="dijit.layout.ContentPane" title="Map">
+         <div style="top: 45px; height: 85%; left: 2%; position: absolute; width: 75%;">
+           <iframe src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=montana+state+university&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=46.495626,86.572266&amp;vpsrc=0&amp;ie=UTF8&amp;hq=montana+state+university&amp;ll=45.666003,-111.051162&amp;spn=0.015595,0.032015&amp;t=h&amp;output=embed" style="height: 98%; width: 98%; top: 0px; left: 0px; position: absolute;"></iframe>
+           <br class="HtmlWidget"></br>
+           <br class="HtmlWidget"></br>
+         </div>
+         <div style="top: 45px; height: 85%; width: 20%; left: 77%; position: absolute;">
+           <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_3" jsId="ItemFileReadStore_3" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;site_name&quot;:&quot;Site A&quot;}]}"></span><span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_4" jsId="ItemFileReadStore_4" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;site_name&quot;:&quot;Site A&quot;}]}"></span>
+     <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Site Name&quot;,&quot;field&quot;:&quot;site_name&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="top: 0px; left: 0px; height: 100%; width: 100%;" store="ItemFileReadStore_4" escapeHTMLInData="true"></span>
+         </div>
+       </div>
+       <div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" closable="false" style="width: 600px; height: 468px;">
+         <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_7" jsId="ItemFileReadStore_7" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;instrument_id&quot;:&quot;101&quot;,&quot;_model&quot;:&quot;Gizmo&quot;,&quot;_manufacturer&quot;:&quot;ACME&quot;,&quot;_current_deployment_location&quot;:&quot; Site 2&quot;},{&quot;uniqe_id&quot;:2,&quot;instrument_id&quot;:&quot;255&quot;,&quot;_model&quot;:&quot;Widgit&quot;,&quot;_manufacturer&quot;:&quot;ACME&quot;,&quot;_current_deployment_location&quot;:&quot; Site 55&quot;}]}"></span>
+         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="New Deployment/Retrieval" iconClass="dijitNoIcon"></input><span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_8" jsId="ItemFileReadStore_8" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;deployment_id&quot;:&quot;1&quot;,&quot;instrument_id&quot;:&quot;101&quot;,&quot;_model&quot;:&quot;Gizmo&quot;,&quot;_manufacturer&quot;:&quot;ACME&quot;,&quot;_site&quot;:&quot; Site 2&quot;,&quot;_begin_date&quot;:&quot;12-4-2002&quot;,&quot;_end_date&quot;:&quot;3-14-2005&quot;},{&quot;uniqe_id&quot;:2,&quot;deployment_id&quot;:&quot;2&quot;,&quot;instrument_id&quot;:&quot;255&quot;,&quot;_model&quot;:&quot;Widgit&quot;,&quot;_manufacturer&quot;:&quot;ACME&quot;,&quot;_site&quot;:&quot; Site 55&quot;,&quot;_begin_date&quot;:&quot;5-5-2009&quot;,&quot;_end_date&quot;:&quot; Deployed&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Deployment ID&quot;,&quot;field&quot;:&quot;deployment_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Instrument ID&quot;,&quot;field&quot;:&quot;instrument_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Model&quot;,&quot;field&quot;:&quot;_model&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Manufacturer&quot;,&quot;field&quot;:&quot;_manufacturer&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;  Site&quot;,&quot;field&quot;:&quot;_site&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Begin Date&quot;,&quot;field&quot;:&quot;_begin_date&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; End Date&quot;,&quot;field&quot;:&quot;_end_date&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="top: 10px; height: 401px;" store="ItemFileReadStore_8" escapeHTMLInData="true"></span>
+       </div>
+       <div dojoType="dijit.layout.ContentPane" title="Deployment 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="selected" closable="true" style="width: 600px; height: 468px;">
+         <span dojoType="dijit.layout.TabContainer" nested="true" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 600px; height: 468px; min-width: 1em; min-height: 1em;"><div dojoType="dijit.layout.ContentPane" title="Details" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="selected" closable="false" style="width: 584px; height: 420px;"></div>
+         <div dojoType="dijit.layout.ContentPane" title="Edit" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" closable="false" style="width: 584px; height: 420px;"></div>
+         <div dojoType="dijit.layout.ContentPane" title="History" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" closable="false" style="width: 584px; height: 420px;">
+           <span dojoType="dijit.layout.TabContainer" tabPosition="left" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 584px; height: 420px; min-width: 1em; min-height: 1em;"><div dojoType="dijit.layout.ContentPane" title="Versions" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="false" style="width: 500px; height: 402px;" doLayout="false"></div>
+           <div dojoType="dijit.layout.ContentPane" title="Current" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="false" style="width: 564px; height: 370px;" doLayout="false"></div>
+           </span>
+         </div>
+         </span>
+       </div>
+       <div dojoType="dijit.layout.ContentPane" title="New" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" closable="true" style="width: 600px; height: 468px;">
+         <h2>
+           
+       
+  Define a new instrument deployment or retrieval:</h2>
+         <div style="border: 1px solid gray; background-color: #d9dadd; width: 650px; margin-bottom: 1em; margin-top: 1em;">
+           <table style="padding: 5px;">
+             <tbody>
+               <tr>
+                 <td style="width: 15px;"></td>
+                 <td style="width: 120px; text-align: center; font-weight: bold;">
+                   
+               
+              
+         Instrument ID</td>
+                 <td style="font-weight: bold; text-align: center; width: 200px;">
+                   
+               
+              
+         Date/Time</td>
+                 <td style="text-align: center; font-weight: bold; width: 220px;">
+                   
+               
+              
+	 Site</td>
+                 <td style="width: 100px; text-align: center; font-weight: bold;">
+                   
+               
+            
+         Action</td>
+               </tr>
+               <tr>
+                 <td>
+                   <img src="images/Delete-icon.png" style="width: 10px;"></img>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                     <option dvwidget="html.option" value="Instrument_1" selected="selected">
+                       
+                   
+                  
+            Instrument_1</option>
+                     <option dvwidget="html.option" value="Instrument_2">
+                       
+                   
+                  
+            Instrument_2</option>
+                     <option dvwidget="html.option" value="Instrument_3">
+                       
+                   
+                  
+            Instrument_3</option>
+                   </select>
+                 </td>
+                 <td>
+                   <input type="text" dojoType="dijit.form.DateTextBox" style="width: 50%;"></input>
+                   <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                     <option dvwidget="html.option" value="Site 1" selected="selected">
+                       
+                   
+                  
+	    Site 1</option>
+                     <option dvwidget="html.option" value="Site 2">
+                       
+                   
+                  
+	    Site 2</option>
+                     <option dvwidget="html.option" value="Site 3">
+                       
+                   
+                  
+	    Site 3</option>
+                   </select>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.Select" type="text" value="Deployed" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
+                     <option dvwidget="html.option" value="Deployed" selected="selected">
+                       
+                   
+                  
+      Deployed</option>
+                     <option dvwidget="html.option" value="Retrieved">
+                       
+                   
+                  
+      Retrieved</option>
+                   </select>
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   <img src="images/Delete-icon.png" style="width: 10px;"></img>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                     <option dvwidget="html.option" value="Instrument_1">
+                       
+                   
+                  
+            Instrument_1</option>
+                     <option dvwidget="html.option" value="Instrument_2">
+                       
+                   
+                  
+            Instrument_2</option>
+                     <option dvwidget="html.option" value="Instrument_3">
+                       
+                   
+                  
+            Instrument_3</option>
+                   </select>
+                 </td>
+                 <td>
+                   <input type="text" dojoType="dijit.form.DateTextBox" style="width: 50%;"></input>
+                   <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                     <option dvwidget="html.option" value="Site 1" selected="selected">
+                       
+                   
+                  
+	    Site 1</option>
+                     <option dvwidget="html.option" value="Site 2">
+                       
+                   
+                  
+	    Site 2</option>
+                     <option dvwidget="html.option" value="Site 3">
+                       
+                   
+                  
+	    Site 3</option>
+                   </select>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.Select" type="text" value="Deployed" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
+                     <option dvwidget="html.option" value="Deployed">
+                       
+                   
+                  
+      Deployed</option>
+                     <option dvwidget="html.option" value="Retrieved">
+                       
+                   
+                  
+      Retrieved</option>
+                   </select>
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   <img src="images/Delete-icon.png" style="width: 10px;"></img>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                     <option dvwidget="html.option" value="Instrument_1">
+                       
+                   
+                  
+            Instrument_1</option>
+                     <option dvwidget="html.option" value="Instrument_2">
+                       
+                   
+                  
+            Instrument_2</option>
+                     <option dvwidget="html.option" value="Instrument_3">
+                       
+                   
+                  
+            Instrument_3</option>
+                   </select>
+                 </td>
+                 <td>
+                   <input type="text" dojoType="dijit.form.DateTextBox" style="width: 50%;"></input>
+                   <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                     <option dvwidget="html.option" value="Site 1" selected="selected">
+                       
+                   
+                  
+	    Site 1</option>
+                     <option dvwidget="html.option" value="Site 2">
+                       
+                   
+                  
+	    Site 2</option>
+                     <option dvwidget="html.option" value="Site 3">
+                       
+                   
+                  
+	    Site 3</option>
+                   </select>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.Select" type="text" value="Deployed" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
+                     <option dvwidget="html.option" value="Deployed">
+                       
+                   
+                  
+      Deployed</option>
+                     <option dvwidget="html.option" value="Retrieved">
+                       
+                   
+                  
+      Retrieved</option>
+                   </select>
+                 </td>
+               </tr>
+             </tbody>
+           </table>
+           <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Add Row" iconClass="dijitNoIcon"></input>
+         </div>
+         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Save Deployment or Retrieval" iconClass="dijitNoIcon"></input>
+         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
+       </div>
+       </span>
+     </div>
+     <div dojoType="dijit.layout.ContentPane" title="Maintenance" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 631px; height: 452px;" doLayout="false">
+       <span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
+<div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="false" style="width: 600px; height: 468px;" doLayout="false">
+         <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_1" jsId="ItemFileReadStore_1" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;maintenance_id&quot;:&quot;1&quot;,&quot;_type&quot;:&quot;Cleaning&quot;,&quot;_instrument_id&quot;:&quot; MW_255&quot;,&quot;_date&quot;:&quot; 12-14-209&quot;,&quot;_description&quot;:&quot; Scrubbed with distilled water&quot;},{&quot;uniqe_id&quot;:2,&quot;maintenance_id&quot;:&quot;2&quot;,&quot;_type&quot;:&quot;Calibration&quot;,&quot;_instrument_id&quot;:&quot; F237&quot;,&quot;_date&quot;:&quot; 2-24-2008&quot;,&quot;_description&quot;:&quot; Returned to manufacturer&quot;}]}"></span>
+         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Create New Maintenance Record(s)" iconClass="dijitNoIcon"></input>
+<span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Maintenance ID&quot;,&quot;field&quot;:&quot;maintenance_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Instrument ID&quot;,&quot;field&quot;:&quot;_instrument_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Date&quot;,&quot;field&quot;:&quot;_date&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="top: 15px; height: 95%; width: 100%;" store="ItemFileReadStore_1" escapeHTMLInData="true"></span>
+       </div>
+       <div dojoType="dijit.layout.ContentPane" title="Maintenance 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="true" style="width: 600px; height: 468px;" doLayout="false">
+         <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" nested="true"><div dojoType="dijit.layout.ContentPane" title="Details" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 565px; height: 381px;" doLayout="false"></div>
+         <div dojoType="dijit.layout.ContentPane" title="Edit" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 565px; height: 381px;" doLayout="false"></div>
+         <div dojoType="dijit.layout.ContentPane" title="History" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false">
+           <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 567px; height: 382px; min-width: 1em; min-height: 1em;" tabPosition="left"><div dojoType="dijit.layout.ContentPane" title="Versions" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 549px; height: 330px;" doLayout="false"></div>
+           <div dojoType="dijit.layout.ContentPane" title="Current" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 549px; height: 330px;" doLayout="false"></div>
+           </span>
+         </div>
+         </span>
+       </div>
+       <div dojoType="dijit.layout.ContentPane" title="New" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" splitter="false" selected="selected" closable="true" style="width: 600px; height: 468px;">
+         <h2>
+           
+       
+  
+  Define new maintenance action(s):</h2>
+         <div style="border: 1px solid gray; background-color: #d9dadd; width: 650px; margin-bottom: 1em; margin-top: 1em;">
+           <table style="padding: 5px;">
+             <tbody>
+               <tr>
+                 <td style="width: 15px;"></td>
+                 <td style="width: 120px; text-align: center; font-weight: bold;">
+                   
+               
+              
+         Instrument ID</td>
+                 <td style="font-weight: bold; text-align: center; width: 200px;">
+                   
+               
+              
+         Date/Time</td>
+                 <td style="text-align: center; font-weight: bold; width: 220px;">
+                   
+               
+            Type</td>
+                 <td style="width: 100px; text-align: center; font-weight: bold;">
+                   
+               
+              Description</td>
+               </tr>
+               <tr>
+                 <td>
+                   <img src="images/Delete-icon.png" style="width: 10px;"></img>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                     <option dvwidget="html.option" value="Instrument_1" selected="selected">
+                       
+                   
+                  
+            Instrument_1</option>
+                     <option dvwidget="html.option" value="Instrument_2">
+                       
+                   
+                  
+            Instrument_2</option>
+                     <option dvwidget="html.option" value="Instrument_3">
+                       
+                   
+                  
+            Instrument_3</option>
+                   </select>
+                 </td>
+                 <td>
+                   <input type="text" dojoType="dijit.form.DateTextBox" style="width: 50%;"></input>
+                   <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Cleaning" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                     <option dvwidget="html.option" value="Cleaning" selected="selected">
+                       
+                   
+                 Cleaning</option>
+                     <option dvwidget="html.option" value="Calibration">
+                       
+                   
+                 Calibration</option>
+                     <option dvwidget="html.option" value="Functional Test">
+                       
+                   
+                 Functional Test</option>
+                   </select>
+                 </td>
+                 <td>
+                   <input type="text" dojoType="dijit.form.TextBox"></input>
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   <img src="images/Delete-icon.png" style="width: 10px;"></img>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                     <option dvwidget="html.option" value="Instrument_1">
+                       
+                   
+                  
+            Instrument_1</option>
+                     <option dvwidget="html.option" value="Instrument_2">
+                       
+                   
+                  
+            Instrument_2</option>
+                     <option dvwidget="html.option" value="Instrument_3">
+                       
+                   
+                  
+            Instrument_3</option>
+                   </select>
+                 </td>
+                 <td>
+                   <input type="text" dojoType="dijit.form.DateTextBox" style="width: 50%;"></input>
+                   <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Cleaning" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                     <option dvwidget="html.option" value="Cleaning" selected="selected">
+                       
+                   
+                 Cleaning</option>
+                     <option dvwidget="html.option" value="Calibration">
+                       
+                   
+                 Calibration</option>
+                     <option dvwidget="html.option" value="Functional Test">
+                       
+                   
+                 Functional Test</option>
+                   </select>
+                 </td>
+                 <td>
+                   <input type="text" dojoType="dijit.form.TextBox"></input>
+                 </td>
+               </tr>
+               <tr>
+                 <td>
+                   <img src="images/Delete-icon.png" style="width: 10px;"></img>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                     <option dvwidget="html.option" value="Instrument_1">
+                       
+                   
+                  
+            Instrument_1</option>
+                     <option dvwidget="html.option" value="Instrument_2">
+                       
+                   
+                  
+            Instrument_2</option>
+                     <option dvwidget="html.option" value="Instrument_3">
+                       
+                   
+                  
+            Instrument_3</option>
+                   </select>
+                 </td>
+                 <td>
+                   <input type="text" dojoType="dijit.form.DateTextBox" style="width: 50%;"></input>
+                   <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
+                 </td>
+                 <td>
+                   <select dojoType="dijit.form.FilteringSelect" value="Cleaning" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                     <option dvwidget="html.option" value="Cleaning" selected="selected">
+                       
+                   
+                 Cleaning</option>
+                     <option dvwidget="html.option" value="Calibration">
+                       
+                   
+                 Calibration</option>
+                     <option dvwidget="html.option" value="Functional Test">
+                       
+                   
+                 Functional Test</option>
+                   </select>
+                 </td>
+                 <td>
+                   <input type="text" dojoType="dijit.form.TextBox"></input>
+                 </td>
+               </tr>
+             </tbody>
+           </table>
+           <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Add Row" iconClass="dijitNoIcon"></input>
+         </div>
+         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Record Maintenance" iconClass="dijitNoIcon"></input>
+         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Cancel" iconClass="dijitNoIcon"></input>
+       </div>
+       </span>
+     </div>
+     </span>
+   </div>
+   <div dojoType="dijit.layout.ContentPane" title="Warehouse 2"></div>
+   </span>
+ </div>
+ </body>
+</html>

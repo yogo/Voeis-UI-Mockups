@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Untitled</title>
+<style>@import "themes/claro/claro.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/jquery-ui/css/smoothness/jquery-ui-1.8.11.custom.css";@import "app.css";
+</style>
+<script type="text/javascript" src="maqetta/maqetta.js"></script>
+<script type="text/javascript" data-dojo-config="'async':true,'parseOnLoad':true,'packages':[{'name':'clipart','location':'../../clipart'},{'name':'shapes','location':'../../shapes'},{'name':'jquery-ui','location':'../../jquery-ui'},{'name':'yui','location':'../../yui'}]" src="lib/dojo/dojo/dojo.js"></script>
+<script type="text/javascript" src="lib/jquery-ui/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="lib/jquery-ui/jquery-ui-1.8.11.custom.min.js"></script>
+<script type="text/javascript" src="maqetta/States.js"></script>
+<script type="text/javascript">
+require(["dijit/dijit"]);
+require(["dojo/parser"]);
+require(["dijit/layout/BorderContainer"]);
+require(["dijit/layout/ContentPane"]);
+require(["dojox/layout/ContentPane"]);
+require(["dijit/MenuItem"]);
+require(["dijit/Menu"]);
+require(["dijit/PopupMenuBarItem"]);
+require(["dijit/MenuBar"]);
+require(["dijit/layout/TabContainer"]);
+require(["dijit/form/Button"]);
+require(["dijit/Toolbar"]);
+require(["dijit/form/DropDownButton"]);</script>
+<style type="text/css">
+    .footerIcon {
+    margin-right : 1em;
+    margin-left : 1em;
+    height : 30px;
+}
+
+    .moduleIcon {
+    background-repeat : no-repeat;
+    height : 73px;
+    width : 78px;
+}
+
+    .projectBrowse {
+    background-image : url('images/project_browse.png');
+}
+
+    .dataUpload {
+    background-image : url('images/data_loader.png');
+}
+
+    .projectManager {
+    background-image : url('images/project_manager.png');
+}
+
+    .dataToolkit {
+    background-image : url('images/data_toolkit.png');
+}
+
+    .labManager {
+    background-image : url('images/lab_manager.png');
+}
+
+    .equipmentManager {
+    background-image : url('images/equipment_manager.png');
+}
+
+    .simulationManager {
+    background-image : url('images/simulation_manager.png');
+}
+
+</style>
+</head>
+
+<body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
+<div id="Main_App_View" dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="false" style="min-width: 1100px; min-height: 600px; z-index: 0; width: 100%; height: 100%;">
+
+
+<div dojoType="dijit.Toolbar" id="top" region="top" style="background-color: black;">
+    <div dojoType="dijit.form.DropDownButton" iconClass="datahub-icon-25" id="datahubButton" style="color: white; font-weight: bold;">
+  <span>VOEIS Data Hub</span>
+  <div dojoType="dijit.Menu">
+   <div onClick="location.href='VOEIS_Splash_Page.html'" dojoType="dijit.MenuItem">Data Hub Home</div>
+   <div dojoType="dijit.MenuItem">Help</div>
+  </div>
+ </div>
+ <div dojoType="dijit.form.DropDownButton" iconClass="user-icon-25" id="loginButton" style="color: white; font-weight: bold; float:right">
+    <span>User</span>
+    <div dojoType="dijit.Menu">
+   <div dojoType="dijit.MenuItem">Settings</div>
+   <div dojoType="dijit.MenuItem">Logout</div>
+  </div>
+ </div>
+</div>
+
+<div id="Center" dojoType="dijit.layout.ContentPane" region="center" gutters="false" style="padding: 1em; border-bottom: 3px groove white; background-color: #e3e3eb; width: 1078px; height: 588px;">
+    <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%;" tabPosition="left-h">
+
+        <div id="Project_Browser" href="Project_Browse_Module.html" parseOnLoad="true" refreshOnShow="true" selected="selected" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon projectBrowse"></div>
+        <div id="Data_Loader" href="Data_Upload_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon dataUpload"></div>
+        <div id="Project_Manager" href="Project_Manager_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon projectManager"></div>
+        <div id="Data_Toolkit" href="Data_Toolkit_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon dataToolkit"></div>
+        <div id="Equipment_Manager" href="Equipment_Manager_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon equipmentManager"></div>
+        <div id="Lab_Manager" href="Lab_Manager_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon labManager"></div>
+        <div id="Simulation_Manager" href="Simulation_Manager_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon simulationManager"></div>
+
+    </span>
+</div>
+
+<div id="Footer" dojoType="dijit.layout.ContentPane" region="bottom" style="width: 100%; height: 25px;">
+    <center>
+        <img src="images/FLBS_logo.gif" class="footerIcon"></img>
+        <img src="images/HBS_logo.jpg" class="footerIcon"></img>
+        <img src="images/MSU_logo.jpg" class="footerIcon"></img>
+        <img src="images/Murry_logo.jpg" class="footerIcon"></img>
+        <img src="images/UK_logo.jpg" class="footerIcon"></img>
+        <img src="images/UL_logo.jpg" class="footerIcon"></img>
+        <img src="images/UM_logo.gif" class="footerIcon"></img>
+        <img src="images/YERC_logo.jpg" class="footerIcon"></img>
+        <img src="images/YOGO_logo.png" class="footerIcon"></img>
+    </center>
+</div>
+
+</div>
+
+</body>
+</html>
