@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Cucumber - Initial Features</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style>
+body { font:80% Verdana,Tahoma,Arial,sans-serif; }
+h1, h2, h3, h4 {  font-family: "Trebuchet MS",Georgia,"Times New Roman",serif; }
+ul.toc { padding: 4px; margin-left: 0; }
+ul.toc li { list-style-type:none; }
+ul.toc li.heading2 { margin-left: 1em; }
+ul.toc li.heading3 { margin-left: 2em; }
+</style>
+</head>
+<body>
+<h1 id="Cucumber-Initial-Features">Cucumber - Initial Features<a href="#Cucumber-Initial-Features" class="wiki-anchor">&para;</a></h1>
+
+
+	<ol>
+	<li>Use Cases</li>
+	</ol>
+
+
+	<p>#Modeling Data Use Case:<br />
+Feature:  User Uploads Historical Data<br />
+  In order to add data to an existing project<br />
+  As a User<br />
+  I want my data formatted with the correct default meta-data
+
+	<p>Scenario:  Add historical data<br />
+  Given I am logged in<br />
+  And I am in the Project<br />
+  And I have chosen to upload the Historical Data Type<br />
+  When I have selected or created a site<br />
+  Then I should be able to upload my file<br />
+  And be taken to the data parsing page to categorize/tag my data</p>
+</p>
+
+
+	<p>Feature:  User Uploads Historical Data<br />
+  In order to perform offline analysis of my data<br />
+  As a User<br />
+  I want to download my data</p>
+
+
+	<pre><code>Scenario: Select data to download<br />
+  Given that I am logged in<br />
+  And that I am viewing the Project Data page<br />
+  When I select a set of data in the table (or graph)<br />
+  Then I should be able to select a format to export<br />
+  And download the data in that format</code></pre>
+
+
+	<p>Feature:  User Uploads Derived Model Data<br />
+  In order to add new model derived data to an existing project<br />
+  As a User <br />
+  I want to add new model derived data</p>
+
+
+	<pre><code>Scenario:  Add Derived Data<br />
+  Given I am logged in <br />
+  And that I'm in the Project<br />
+  Then I should be able to upload the new data <br />
+  And link it to existing data for association<br />
+  Then I should be taken to the Edit-Data URL</code></pre>
+
+
+	<ol>
+	<li>User Uploading Data</li>
+	</ol>
+
+
+	<p>Feature: User Selects Geographic Region<br />
+  In order to add data to an existing project<br />
+  As a User<br />
+  I want to specify the Geographic Region to associate the data with</p>
+
+
+	<pre><code>Scenario:  There is a hierarchical organization of regions to be selected to drill down to the site and these all exist – take user to select region url<br />
+  Given I am logged in<br />
+  And I am on the Select Geography page<br />
+  When I select a region<br />
+  Then I should be shown the sites or regions that branch from my selection<br />
+  And I should be able to select a region or site to review its information<br />
+  When I select to continue I should be taken to the proper next page</code></pre>
+
+
+	<pre><code>Scenario:  There is a hierarchical organization of regions to be added to drill down to the site and these don’t exist – take user to add region url<br />
+  Given I am logged in<br />
+  And I am on the Select Geography page<br />
+  When I select a region<br />
+  Then I should be shown the sites or regions that branch from my selection<br />
+  And I should be able to select a region or site to review its information<br />
+  When I select the region to create a new site in<br />
+  Then I should be taken to the site creation url</code></pre>
+
+
+	<p>Feature: User Selects Data Type to Upload<br />
+  In order to add data to an existing project<br />
+  As a User<br />
+  I want to be able to select the type of data being added</p>
+
+
+	<pre><code>Scenario:  New Data is Chemistry Data (i.e. Nitrate concentration) <br />
+  Given I am logged in<br />
+  And I am viewing the Project<br />
+  When I have selected the Add Chemistry Option<br />
+  Then I should be taken to the Add Chemistry Data URL</code></pre>
+
+
+	<pre><code>Scenario:  New Data is Biological Data (i.e. Insect Specimen Data) <br />
+  Given I am logged in<br />
+  And I am viewing the Project<br />
+  When I have selected the Add Biological Data Option<br />
+  Then I should be taken to the Add Biological Data URL</code></pre>
+
+
+	<pre><code>Scenario:  New Data is Time Series Data (i.e. Stream Sensor Data) <br />
+  Given I am logged in<br />
+  And I am viewing the Project<br />
+  When I have selected the Add Time Series Data Option<br />
+  Then I should be taken to the Add Time Series Data URL</code></pre>
+
+
+	<pre><code>Scenario:  New Data is Spatial Series Data (i.e. Tracer Data) <br />
+  Given I am logged in<br />
+  And I am viewing the Project<br />
+  When I have selected the Add Spatial Series Data Option<br />
+  Then I should be taken to the Add Spatial Series Data URL</code></pre>
+
+
+	<pre><code>Scenario:  New Data is Eddy Covariance Data (i.e. TCEF tower data) <br />
+  Given I am logged in<br />
+  And I am viewing the Project<br />
+  When I have selected the Add Eddy Covariance Data Option<br />
+  Then I should be taken to the Add Eddy Covariance Data URL</code></pre>
+
+
+	<pre><code>Scenario:  New Data is Historical Data (i.e. model data inputs)<br />
+  Given I am logged in<br />
+  And I am viewing the Project<br />
+  When I have selected the Add Historical Data Option<br />
+  Then I should be taken to the Add Historical Data URL</code></pre>
+
+
+	<p>Feature:  User Uploads Chemistry Data<br />
+  In order to add data to an existing project<br />
+  As a User<br />
+  I want to upload my data with the correct default meta-data</p>
+
+
+	<pre><code>Scenario:  Data is Raw Output from machine support in VOEIS- calculate curve equation and calculate concentrations, store raw and derived concentrations<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have selected an existing site<br />
+  When I select a machine type<br />
+  Then I should be able to upload the output file from that machine<br />
+  Then the raw values should be stored<br />
+  And if a concentration curve needs to be made it should be calculated<br />
+  Then the concentration values should be calculated from the raw data and stored<br />
+  And those values should be correctly tagged with the correct Meta-Data<br />
+  And I should be taken to the Edit-Data URL</code></pre>
+
+
+	<pre><code>Scenario:  All Data is the same type of measurement (i.e. Nitrate from different grabs) at the same site. <br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have selected an existing site<br />
+  When I select a same measurement from same site type<br />
+  Then I should be able to upload the data file<br />
+  And the data-values should be stored in the data-store<br />
+  Then I should be able to select the measurement<br />
+  And those values should be correctly tagged with the correct Meta-Data<br />
+  And I should be taken to the Edit-Data URL</code></pre>
+
+
+	<pre><code>Scenario:  All Data is the same type of measurement (i.e. Nitrate from different grabs) at different sites <br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  When I select a same measurement different sites type<br />
+  Then I should be able to upload the data file<br />
+  And the data-values should be stored in the data-store<br />
+  Then I should be able to select the measurement<br />
+  Then I should be able to select a site for each value<br />
+  And those values should be correctly tagged with the correct Meta-Data<br />
+  And I should be taken to the Edit-Data URL</code></pre>
+
+
+	<pre><code>Scenario:  Data is different measurements (i.e. TOC, Nitrate, Nitrite etc) from same site.<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have selected an existing site<br />
+  When I select a different measurement same site type<br />
+  Then I should be able to upload the data file<br />
+  And the data-values should be stored in the data-store<br />
+  Then I should be able to select the measurement individually for each value<br />
+  And those values should be correctly tagged with the correct Meta-Data<br />
+  And I should be taken to the Edit-Data URL</code></pre>
+
+
+	<pre><code>Scenario:  Data is different measurements (i.e. TOC, Nitrate, Nitrite etc) from different sites<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  When I select a different measurement different sites type<br />
+  Then I should be able to upload the data file<br />
+  And the data-values should be stored in the data-store<br />
+  Then I should be able to select the measurements individually for each value<br />
+  Then I should be able to select a site for each value<br />
+  And those values should be correctly tagged with the correct Meta-Data<br />
+  And I should be taken to the Edit-Data URL</code></pre>
+
+
+	<p>Feature:  User Adds Ecology Data<br />
+  In order to add data to an existing project<br />
+  As a User<br />
+  I want to enter ecology data</p>
+
+
+	<pre><code>Scenario:  My data needs to be uploaded from a csv file..<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have selected a site<br />
+  When I have selected to upload a CSV<br />
+  And I can choose how to parse each column<br />
+  And I can choose which meta-data to associate with each value<br />
+  And I should be able to specify a Eco-System Function Category for each datum<br />
+  Then I should be taken to the Edit-Data URL</code></pre>
+
+
+	<pre><code>Scenario:  My data needs to be manually entered.<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have selected a site<br />
+  When I have selected to manually enter data<br />
+  Then I can select a data template or add a new one<br />
+  Then I can input the data value(s)<br />
+  And I can choose which meta-data to associate with each value<br />
+  And I should be able to specify a Eco-System Function Category for each datum<br />
+  Then I should be taken to the Edit-Data URL</code></pre>
+
+
+	<pre><code>Scenario:  I want to have taxonomy information associated with my data<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have selected a site<br />
+  When I add a biological specimen datum<br />
+  Then I should be able to select a taxa from a taxonomy tree<br />
+  Then the datum should be associated with that taxa object</code></pre>
+
+
+	<p>Feature:  User Uploads Time Series Data<br />
+  In order to add data to an existing project<br />
+  At an existing site<br />
+  As a User<br />
+  I want my data formatted with the correct default meta-data</p>
+
+
+	<pre><code>Scenario:  Data is Raw Logger Output<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  When I have selected to upload a Raw Logger File<br />
+  Then I can choose which logger-type it is<br />
+  Then I can choose how to parse each column<br />
+  And I can choose which meta-data to associate with each value<br />
+  Then I should be taken to the Edit-Data URL</code></pre>
+
+
+	<pre><code>Scenario:  Data is spreadsheet CSV<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  When I have selected to upload a CSV<br />
+  And I can choose how to parse each column<br />
+  And I can choose which meta-data to associate with each value<br />
+  Then I should be taken to the Edit-Data URL</code></pre>
+
+
+	<pre><code>Scenario:  There is more than one Logger Table in this file<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  When I have selected to upload a multiple table logger file<br />
+  Then I can choose how the tables are designated<br />
+  And I can choose how to parse each table<br />
+  And I can choose which meta-data to associate with each value<br />
+  Then I should be taken to the Edit-Data URL</code></pre>
+
+
+	<p>Feature:  User Uploads Spatial Series Data<br />
+  In order to add data to an existing project<br />
+  As a User<br />
+  I want to upload a file with spatial series data </p>
+
+
+	<pre><code>Scenario:  I want to upload spatial data<br />
+  Given I am logged in<br />
+  And I have chosen an existing geographic region<br />
+  When I upload a file<br />
+  Then the values should be stored<br />
+  And I should be able to define my reach and sites for the individual values</code></pre>
+
+
+	<p>Feature:  User Uploads Eddy Covariance Data<br />
+  In order to add data to an existing project<br />
+  As a User<br />
+  I want to upload a file with Eddy Covariance data and have it processed</p>
+
+
+	<pre><code>Scenario:  User upload Eddy Covariance Data File<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have selected a site<br />
+  When I upload my eddy covariance data file<br />
+  Then the raw data-values should be stored<br />
+  Then the values should be exported to matlab filtering scripts<br />
+  Then those return values should be stored<br />
+  And they should have default eddy covariance meta-tags<br />
+  Then I should be taken to the Edit-Data URL</code></pre>
+
+
+	<p>Feature:  Alert<br />
+  In order to identify problem in streaming data<br />
+  As a Admin, Data Manger, PI or User<br />
+  I want to specify alert thresholds for sensor data values</p>
+
+
+	<pre><code>Scenario:  Add Alert Threshold<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have selected a site<br />
+  When I have selected a sensor value type<br />
+  Then I should be able to enter a threshold value <br />
+  And that value should be associated with every data-value in that series</code></pre>
+
+
+	<pre><code>Scenario: Check for Alert<br />
+  Given an alert has been set for a sensor type<br />
+  Then every time a new value is stored from a stream it should be compared to the previous value<br />
+  And if that difference is greater than the threshold<br />
+  Then the user who added the Alert should be notified by email<br />
+  And the Alert flag for that sensor type should be changed to On</code></pre>
+
+
+	<p>Feature: Manage User Permissions<br />
+  In order to control data access<br />
+  As a Admin, PI or Data Manager<br />
+  I want to specify user permissions to data</p>
+
+
+	<pre><code>Scenario:  Add User To Project<br />
+  Given I am logged<br />
+  And I am on the Project Permissions Dashboard<br />
+  Then I should be able to Select a Project<br />
+  And Then Select the Users in the system that can have access</code></pre>
+
+
+	<pre><code>Scenario:  Add User To Project-Site<br />
+  Given I am logged<br />
+  And I am on the Project Permissions Dashboard<br />
+  Then I should be able to Select a Project<br />
+  Then select a Site<br />
+  And Then Select the Users in the system that can have access to just that Site data</code></pre>
+
+
+	<p>Feature: Manage Data Provenance<br />
+  In order to maintain data integrity<br />
+  As a User<br />
+  I want to be able to manage data provenance</p>
+
+
+	<pre><code>Scenario: Update Data<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have just updated existing Data<br />
+  Then I should be prompted to enter a comment describing the update</code></pre>
+
+
+	<pre><code>Scenario:  View Data Provenance<br />
+  Given I am logged in<br />
+  And I am in a Project<br />
+  And I have selected Data<br />
+  When I click the "view provenance" button<br />
+  Then I should see the provenance comments for each data-value</code></pre>
+
+
+	<p>Feature:  Sync Data With Kentucky Server<br />
+  In order to keep data authoritative<br />
+  As a Administrator<br />
+  I want to sync the VOEIS data system with the Kentucky System</p>
+
+
+	<pre><code>Scenario:  A Change Is Made In VOEIS<br />
+  Given a change to the database is made<br />
+  And the audit log has been updated<br />
+  Then the new changes should be pushed with the audit log to the Kentucky DB</code></pre>
+
+
+	<pre><code>Scenario:  A Change Is Made In The KentuckyDB<br />
+  Given a change to the database is made<br />
+  And the audit log has been updated<br />
+  Then the new changes should be pushed with the audit log to the VOEIS</code></pre>
+
+
+	<p>Feature: Manage Lab Equipment<br />
+  In order to save my sanity<br />
+  As a PI<br />
+  I want to track my lab equipment and sensors</p>
+
+
+	<pre><code>Scenario:  Add Lab Equipment<br />
+  Given I am logged in<br />
+  When I select to add new equipment to my lab<br />
+  Then I should be taken to the add equipment form<br />
+  And I should be able to arbitrarily add meta-tags</code></pre>
+
+
+	<pre><code>Scenario: View Lab Equipment<br />
+  Given I am logged in<br />
+  When I select to View my Lab Equipment<br />
+  Then I should be taken to a list of the lab equipment<br />
+  And I should be able to click on an item and be taken to all the information</code></pre>
+
+
+	<p>Feature: Manage Control Vocabularies<br />
+  In order to keep meta information consistent for publishing and sharing<br />
+  As a PI, Data Manger or Admin<br />
+  I want to be able to manage controlled vocabularies and map terms </p>
+
+
+	<pre><code>Scenario: Add New Controlled Vocabulary Item For Publication<br />
+  Given I am logged in<br />
+  When I choose to add a new controlled vocabulary item for publication<br />
+  Then I should be taken to the add controlled vocabulary form <br />
+  Then I should be taken to a request approval of new controlled vocabulary form <br />
+  Then the new controlled vocab should be saved with a pending status</code></pre>
+
+
+	<pre><code>Scenario:  Map Meta-Tag to Controlled Vocabulary<br />
+  Given I am logged in<br />
+  And I have selected a Meta-Tag<br />
+  When I select to map a meta-tag to a controlled vocabulary<br />
+  Then I should be taken to a mapping form that lists the controlled vocabulary to select<br />
+  Then the mapping should be saved in the VOEIS data-store</code></pre>
+</body>
+</html>

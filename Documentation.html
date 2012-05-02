@@ -3,22 +3,102 @@
 <head>
 <meta charset="utf-8"/>
 <title>Untitled</title>
-<style>@import "themes/claro/claro.css";@import "app.css";
+<style>@import "themes/claro/claro.css";@import "lib/dojo/dojo/resources/dojo.css";@import "app.css";
 </style>
 <script type="text/javascript" src="maqetta/maqetta.js"></script>
+<script type="text/javascript" data-dojo-config="'async':true,'parseOnLoad':true,'packages':[{'name':'clipart','location':'../../clipart'},{'name':'shapes','location':'../../shapes'},{'name':'jquery-ui','location':'../../jquery-ui'},{'name':'yui','location':'../../yui'}]" src="lib/dojo/dojo/dojo.js"></script>
 <script type="text/javascript" src="maqetta/States.js"></script>
+<script type="text/javascript">
+require(["dijit/dijit"]);
+require(["dojo/parser"]);
+require(["dijit/layout/TabContainer"]);
+require(["dijit/layout/ContentPane"]);</script>
 </head>
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
  <div class="splashDiv">
-  <div style="font-family: Tahoma; line-height: 1.5; font-weight: bold; font-size: 14pt;">
-   <span style="font-size: 18pt;">Documentation</span><br></br>
-<div style="border-bottom: 2px groove white; margin-bottom: 1em;">
-<img src="images/YOGO_logo.png" style="width: 120px;"></img>
+  <div style="font-family: Tahoma; line-height: 1.5;">
+   <span style="font-size: 18pt; font-weight:bold">Documentation</span><br></br>
+<div style="border-bottom: 2px groove white; font-size: 11pt; margin-bottom: 1em; height: 150px;">
+<img src="images/YOGO_logo.png" style="float: left; margin-right: 1em; width: 120px;"></img>
+<span style="font-weight: bold; font-size: 14pt;">
+  YOGO</span>
+<div style="margin-top: 1em;">
+  VOEIS is a YOGO Data Management Framework (YDMF) application. The YOGO framework is a set of software tools developed at Montana State University for rapid assembly of data management applications. The framework is database agnostic, and supports data versioning and evolving schemas. As an added bonus, it's completely open source! Users interested in learning more should check out the YOGO website: <a href="http://yogo.msu.montana.edu/" target="_blank">http://yogo.msu.montana.edu</a></div>
 </div>
-<div>
-<img></img>
-<img src="images/voeis_logo_small.png" style="width: 120px;"></img>
+<div style="height: 850px; font-size: 11pt;">
+<img src="images/voeis_logo_small.png" style="margin-top: 1em; margin-bottom: 1em; float: left; margin-right: 1em; width: 120px;"></img>
+<span style="font-weight: bold; font-size: 14pt;">VOEIS</span>
+<div style="margin-bottom: 1em; margin-top: 1em;">
+  The Virtual Observatory and Ecological Informatics System (VOEIS) provides a framework for data acquisition, analysis, model integration, and display of data products from completed workflows including geo-spatially explicit models, graphs from statistical analyses, GIS displays of classified ecological attributes on the landscape, and 3-D visualization models of waterscape and landscape processes. VOEIS is a an operating system independent web application built with <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> on a <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> backend. At the core of the VOEIS is the VOEIS Data Hub, an application to enable coherent data management for data collected from streaming sensor networks, generated from laboratory experiments on samples taken in the field, and recorded from direct field observations. The VOEIS Data Hub is implemented using the YDMF, which contributed significantly in three specific ways: 1) rigorous authentication and authorization requirements, 2) static data models, and 3) importing and exporting data to external data sources.
 </div>
+<span data-dojo-type="dijit.layout.TabContainer" style="height: 600px; min-width: 1em; min-height: 1em; width: 100%;" controllerWidget="dijit.layout.TabController">
+<div data-dojo-type="dijit.layout.ContentPane" title="Goals and Vision" selected="selected">
+<br></br>
+<b>Vision: </b> To develop and deploy an integrated sensor based ecological informatics system through extensive collaborative research efforts between a consortium of academic entities in the states of Montana and Kentucky. An integral part of our vision is understanding the greater concepts and processes that govern the underlying informatics infrastructure and software.<br></br>
+<h3>Important Guiding Concepts</h3>
+<li>Data is a collection of typed values and associated meta-data.
+</li><li>Data is organized according to a schema which determines relationships and multiplicities.
+</li><li>Raw data may come in many formats depending on the sensor equipment that is used.
+</li><li>Raw data can be parsed in order to get it into some format that implements a schema. Depending on the schema, loss of fidelity and semantics is possible.
+</li><li>After parsing, data and its associated meta-data becomes part of the main trunk.
+</li><li>A user can then work in a private sandbox. A private sandbox is in essence a branch of the main trunk with a private copy of the data.
+</li><li>Inside a sandbox, a user can tag the data by effecting changes to it.  Changes can be as simple as manual datum changes to as complex as running low pass or high pass filters. Each change (filter) adds its own tag.
+</li><li>Tagged data can be merged back into the main trunk.
+</li><li>QA and QC is the process of overseeing that changes made to the main trunk (merged) are valid.
+</li><li>QA and QC processes can be manual or automated.
+</li><li>Tags can be kept in the metadata
+</li><li>Changes deemed invalid can be rolled back because they are tagged.
+</li><li>A data HUB is part of VOEIS. It is comprised of the tools that parse input sensor data (real time or manual) and the software that houses the data itself (HIS or otherwise).</li>
+<br></br>
+In this section we capture descriptions of the requirements that guided the development of VOEIS in plain english. These requirements were obtained from multiple sources, including interviews with stakeholders, technical documents, etc. Note that some of these requirements are very high level and multiple task decompositions are needed to refine and understand them better.
+<h3>Stakeholder Requirements</h3>
+<li>GUI: Ability to see a map of a project
+</li><li>Ability to construct simple and complex queries to obtain earth science data at a given point in time and space
+</li><li>Ability to add information such as photos, links to other data, on-site physically collected data, monthly samples, etc. Basically, the ability to group data and to annotate individual datum or entire data sets with additional information that is not temporally or spatially located.
+</li><li>Support the generation of simple project activity and/or data reports
+</li>
+<h3>Development guidance from various documents</h3>
+<li>Scripting capabilities for QAQC
+</li><li>Ability to organize data for efficient dissemination
+</li><li>Interface for simulation models
+</li><li>Web based secured access to sensors and high performance visualization and simulation engines
+</li><li>APIs to tie into high performance computing
+</li><li>Data paths to facilitate routing of data to publication gateway(s)
+</li><li>Robust validation module for quality control. During QC, errors are corrected, data is annotated, and metadata is created
+</li><li>A robust data provenance module
+</li><li>A common format for storage and access via local, regional and global hubs. This is basically an interoperability requirement
+</li><li>Develop or leverage existing software to facilitate the transfer of data from field sensor arrays, data loggers and analytical equipment into central data servers
+</li><li>Develop or leverage software modules to allow access to data, manage data, provide authentication, etc. 
+</li>
+
+</div>
+<div data-dojo-type="dijit.layout.ContentPane" title="Workflows and Use Cases">
+<br></br>
+Original Conceptualizations
+<li><a href="documents/VOEIS-05062010.pptx" target="_blank"> Workflows and Use Cases</a></li>
+<li><a href="documents/Cucumber_Initial_Features.html" target="_blank">Applications Features</a> (as <a href="http://cukes.info/" target="_blank">Cucumber BDD</a> text)</li>
+</div>
+<div data-dojo-type="dijit.layout.ContentPane" title="Design Specifications">
+<br></br>
+<a href="documents/VOEIS_Tables.png" target="_blank" style="float:right"><img src="documents/VOEIS_Tables.png" style="border: 1px solid black; width: 400px;"></img></a>
+The VOEIS data model is loosely based on the <a href="http://his.cuahsi.org/odmdatabases.html" target="_blank"> CUAHSI HIS Observation Data Model (ODM)</a>. In fact, the original data model used in VOEIS was the ODM. However, as the diversity of users and use-case needs expanded in VOEIS, it became necessary to adjust the data model to accommodate a broader array of data types. The resulting data model should be familiar to users of the ODM, but boasts some unique characteristics that improve its extensibility to incorporate new data types and provide a mechanism for robust sample tracking, lab personnel tracking, and field sensor deployment tracking/management.
+<br></br>
+<li><a href="documents/VOEIS_Tables.png" target="_blank">VOEIS Data Model Entity Relationship Diagram</a></li>
+</div>
+<div data-dojo-type="dijit.layout.ContentPane" title="Versions">
+
+</div>
+<div data-dojo-type="dijit.layout.ContentPane" title="HIS Publication Gateway">
+
+</div>
+<div data-dojo-type="dijit.layout.ContentPane" title="For Developers...">
+<br></br>
+<li><a href="https://github.com/yogo/VOEIS" target="_blank">VOEIS Source Code</a></li>
+<li><a href="https://voeis.msu.montana.edu/doc/yard/_index.html" target="_blank">YARD Documentation</a></li>
+<li><a href="https://voeis.msu.montana.edu/doc/yard/Voeis/ApivsController.html" target="_blank">List of avaialble APIs</a></li>
+<li><a href="https://github.com/yogo/HISgw" target="_blank">HIS Gateway Source Code</a></li>
+</div>
+</span></div>
 </div>
  </div>
 </body>
