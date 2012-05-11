@@ -11,8 +11,8 @@
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
  <div class="splashDiv" style="font-size: 11pt;">
 <div>
- <div style="border-bottom: 1px groove white; margin-bottom: 1em; font-size: 12pt; font-family: Tahoma,Geneva,sans-serif; padding-left: 1em; padding-bottom: 1em; line-height: 1.5; font-weight: bold;">
-   <img src="images/features.png" style="padding: 0.5em; margin-right: 2em; float: left; height: 300px;"></img>
+ <div style="border-bottom: 1px solid gray; margin-bottom: 1em; font-size: 12pt; font-family: Tahoma,Geneva,sans-serif; padding-left: 1em; padding-bottom: 1em; line-height: 1.5; font-weight: bold;">
+   <img src="images/features.png" style="padding: 0.5em; margin-right: 3em; float: left; height: 300px;"></img>
    <span style="font-size: 18pt;">Features</span><br></br>
    <li><a href="#F1">
       Project Based Data Storage and Management</a></li>
@@ -38,54 +38,54 @@
       APIs</a></li>
  </div>
 </div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; padding-bottom: 2em; margin-bottom: 1em;">
   <b><a name="F1">
      Project Based Data Storage and Management</a></b>
 <br></br>Data values stored in the VOEIS system are housed in individual databases called “Projects.” Each Project has unique user permissions and may contain a unique set of controlled vocabularies (e.g. variables names, QAQC levels, etc.). Separating data into many different databases in this way allows each user to tailor VOEIS to better suite his or her particular use-case needs.</div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; margin-bottom: 1em; padding-bottom: 2em;">
   <img src="images/lock.png" style="margin-right: 1em; float: left; height: 100px;"></img>
   <b><a name="F2">
      Highly-Granular User Access Controls</a></b>
 <br></br>A primary concern of researchers and data mangers is data control. VOEIS provides highly granular user access controls that allow PIs to grant varying degrees of read and/or write permissions to any registered VOEIS user.</div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; margin-bottom: 1em; padding-bottom: 2em;">
   <b><a name="F3">
      Simple Data Upload Template Creation</a></b>
 <br></br>Uploading data to a database can be a complex and/or time intensive process that frequently presents a significant barrier to entry for would-be database users. VOEIS simplifies the data upload process by allowing users to create data templates that can be reused to upload data files that exhibit the same format. This can significantly reduce the amount of time a user spends uploading data that was collected by a datalogger or recorded in an electronic data entry sheet.</div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; margin-bottom: 1em; padding-bottom: 2em;">
   <img src="images/qaqc.png" style="margin-left: 1em; float: right; height: 130px;"></img>
   <b><a name="F4">
      QAQC Tools</a></b>
 <br></br>Data must undergo quality assurance and quality control procedures before users can use it confidently for analysis or site characterization. Many data archiving systems require users to complete QAQC procedures prior to data upload. This separate step forces users to utilize separate pieces of software for data editing and storage. VOEIS provides a more parsimonious solution. VOEIS users with the appropriate permissions are able to query data and edit individual values along with their associated metadata. VOEIS also provides batch-edit capabilities for users comfortable with scripting in R.</div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; margin-bottom: 1em; padding-bottom: 2em;">
   <img src="images/provenance.png" style="height: 110px; margin-right: 1em; float: left;"></img>
   <b><a name="F5">
      Provenance Tracking</a></b>
 <br></br>Provenance information is recorded for all objects in the VOEIS data model. Any changes made to the data model (e.g. data upload, variable creation) are identified with a timestamp and the user associated with the change. This provides data managers with a tool for tracking the activities of lab members.</div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; margin-bottom: 1em; padding-bottom: 2em;">
   <b><a name="F6">
      Data Versioning and Rollback</a></b>
 <br></br>VOEIS is built with state-of-the-art data versioning and rollback features. The software stores a full record of changes made to each object in the data model and the user interfaces allow data managers to view these changes as a series of versions. Any version can be selected as the current version, allowing users to rollback to previous versions if a faulty edit is identified.</div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; margin-bottom: 1em; padding-bottom: 2em;">
   <img src="images/coord_plot.png" style="border: 1px solid gray; margin-right: 1em; float: left; width: 300px; height: 130px;"></img>
   <b><a name="F7">
      Complex Data Visualization</a></b>
 <br></br>In addition to plotting queried data as simple line graphs, users may also view several data series that represent multiple variables collected at one or more locations on a parallel coordinates plot. This visualization tool provides researchers with a means for exploring spatio-temporal relationships in their data without the need to first export it to another software program like Excel.</div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; margin-bottom: 1em; padding-bottom: 2em;">
   <img src="images/publication_gateway.png" style="margin-left: 1em; float: right; height: 100px;"></img>
   <b><a name="F8">
      Data Publication</a></b>
 <br></br>Data stored in VOEIS can currently be published in two ways. Users may publish data on VOEIS Data Hub by making a Project “Public”. This allows non-registered VOEIS users to query and export all of the data contained in that Project. Additionally, Users may select to publish certain data sets within a Project to the CUAHSI HIS via the HIS Gateway.</div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; margin-bottom: 1em; padding-bottom: 2em;">
   <b><a name="F9">
      Simulation Model Support</a></b>
 <br></br>The VOEIS framework is designed to allow data resources to be accessed by a wide variety of simulation models. VOEIS can feed input or boundary condition data to the simulation and the new data and metadata produced by simulations can subsequently be added to the data resource library. Users who wish to use this feature simply integrate one or more pre-built APIs into their simulation model.</div>
-<div style="border-bottom: 1px groove white; margin-bottom: 1em; padding-bottom: 2em;">
+<div style="border-bottom: 1px solid gray; padding-top: 1em; margin-bottom: 1em; padding-bottom: 2em;">
 <img src="images/REST.png" style="margin-left: 1em; float: right; height: 150px;"></img>
  <b><a name="F10">
    RESTful Web Service</a></b>
 <br></br>REST is a popular software architecture style that simplifies the sharing of data on the web. REST methods make data available over the internet by mapping site URLs to data. VOEIS provides a full set of REST methods (RETRIEVE, REPLACE, CREATE, and DESTROY) for each database object. This allows users to easily create new tools, user-interfaces, or applications that work with the data stored in the VOEIS server. 
 </div>
-<div style="padding-bottom: 2em;">
+<div style="padding-top: 1em; padding-bottom: 2em;">
   <b><a name="F11">
      APIs</a></b>
 <br></br>VOEIS provides a number of appliction programming interface (API) calls to users who wish to develop custom user interfaces that interact with the VOEIS server. Additionally, the APIs can be used within existing scientific workflows to facilitate data upload, data download, QAQC, or visualization tasks. The suite of API calls currently available for use with VOEIS is located <a href="https://voeis.msu.montana.edu/doc/yard/Voeis/ApivsController.html" target="_blank"> here</a>.</div>

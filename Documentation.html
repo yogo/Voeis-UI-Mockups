@@ -24,42 +24,71 @@ require(["dijit/form/Button"]);</script>
 <span style="font-weight: bold; font-size: 14pt;">
   YOGO</span>
 <div style="margin-top: 1em;">
-  VOEIS is a YOGO Data Management Framework (YDMF) application. The YOGO framework is a set of software tools developed at Montana State University for rapid assembly of data management applications. The framework is database agnostic, and supports data versioning and evolving schemas. As an added bonus, it's completely open source! Users interested in learning more should check out the YOGO website: <a href="http://yogo.msu.montana.edu/" target="_blank">http://yogo.msu.montana.edu</a></div>
+  VOEIS is a YOGO Data Management Framework (YDMF) application. The YOGO framework is a 
+set of software tools developed at Montana State University for rapid assembly of data 
+management applications. The framework is database agnostic, and supports data versioning 
+and evolving schemas. As an added bonus, it's completely open source! Users interested in 
+learning more should check out the YOGO website: 
+<a href="http://yogo.msu.montana.edu/" target="_blank">http://yogo.msu.montana.edu</a>
+</div>
 </div>
 <div style="height: 875px; font-size: 11pt;">
 <img src="images/voeis_logo_small.png" style="margin-top: 1em; margin-bottom: 1em; float: left; margin-right: 1em; width: 120px;"></img>
 <span style="font-weight: bold; font-size: 14pt;">VOEIS</span>
 <div style="margin-bottom: 2em; margin-top: 1em;">
-  The Virtual Observatory and Ecological Informatics System (VOEIS) provides a framework for data acquisition, analysis, model integration, and display of data products from completed workflows including geo-spatially explicit models, graphs from statistical analyses, GIS displays of classified ecological attributes on the landscape, and 3-D visualization models of waterscape and landscape processes. VOEIS is a an operating system independent web application built with <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> on a <a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> backend. At the core of the VOEIS is the VOEIS Data Hub, an application to enable coherent data management for data collected from streaming sensor networks, generated from laboratory experiments on samples taken in the field, and recorded from direct field observations. The VOEIS Data Hub is implemented using the YDMF, which contributes significantly to the software in three specific ways: 1) rigorous authentication and authorization requirements, 2) static data model support, and 3) import and export of data to external data sources.
+  The Virtual Observatory and Ecological Informatics System (VOEIS) provides a framework for data 
+acquisition, analysis, model integration, and display of data products from completed workflows 
+including geo-spatially explicit models, graphs from statistical analyses, GIS displays of classified 
+ecological attributes on the landscape, and 3-D visualization models of waterscape and landscape 
+processes. VOEIS is a an operating system independent web application built with 
+<a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> on a 
+<a href="http://www.postgresql.org/" target="_blank">PostgreSQL</a> backend. At the core of the 
+VOEIS is the VOEIS Data Hub, an application to enable coherent data management for data collected 
+from streaming sensor networks, generated from laboratory experiments on samples taken in the field, 
+and recorded from direct field observations. The VOEIS Data Hub is implemented using the YDMF, which 
+contributes significantly to the software in three specific ways: 1) rigorous authentication and 
+authorization requirements, 2) static data model support, and 3) import and export of data to external 
+data sources.
 <input type="button" data-dojo-type="dijit.form.Button" label="Download VOEIS User Manual" style="float: right; font-weight: bold; margin:2em;"></input>
-</div>
+</div><br></br>
 <span data-dojo-type="dijit.layout.TabContainer" style="height: 600px; min-width: 1em; min-height: 1em; width: 100%;" controllerWidget="dijit.layout.TabController">
 <div data-dojo-type="dijit.layout.ContentPane" title="Goals and Vision" selected="selected">
 <br></br>
-<b>Vision: </b> To develop and deploy an integrated sensor based ecological informatics system through extensive collaborative research efforts between a consortium of academic entities in the states of Montana and Kentucky. An integral part of our vision is understanding the greater concepts and processes that govern the underlying informatics infrastructure and software.<br></br>
-<h3>Important Guiding Concepts</h3>
-<li>Data is a collection of typed values and associated meta-data.
-</li><li>Data is organized according to a schema which determines relationships and multiplicities.
-</li><li>Raw data may come in many formats depending on the sensor equipment that is used.
-</li><li>Raw data can be parsed in order to get it into some format that implements a schema. Depending on the schema, loss of fidelity and semantics is possible.
-</li><li>After parsing, data and its associated meta-data becomes part of the main trunk.
-</li><li>A user can then work in a private sandbox. A private sandbox is in essence a branch of the main trunk with a private copy of the data.
-</li><li>Inside a sandbox, a user can tag the data by effecting changes to it.  Changes can be as simple as manual datum changes to as complex as running low pass or high pass filters. Each change (filter) adds its own tag.
-</li><li>Tagged data can be merged back into the main trunk.
-</li><li>QA and QC is the process of overseeing that changes made to the main trunk (merged) are valid.
-</li><li>QA and QC processes can be manual or automated.
-</li><li>Tags can be kept in the metadata
-</li><li>Changes deemed invalid can be rolled back because they are tagged.
-</li><li>A data HUB is part of VOEIS. It is comprised of the tools that parse input sensor data (real time or manual) and the software that houses the data itself (HIS or otherwise).</li>
+<b>Vision: </b> To develop and deploy an integrated sensor based ecological informatics system 
+through extensive collaborative research efforts between a consortium of academic entities in the 
+states of Montana and Kentucky. An integral part of our vision is understanding the greater concepts 
+and processes that govern the underlying informatics infrastructure and software.
 <br></br>
-In this section we capture descriptions of the requirements that guided the development of VOEIS in plain english. These requirements were obtained from multiple sources, including interviews with stakeholders, technical documents, etc. Note that some of these requirements are very high level and multiple task decompositions are needed to refine and understand them better.
+<h3>Important Guiding Concepts</h3>
+<ul>
+<li>Data is a collection of typed values and associated meta-data</li>
+<li>Data is organized according to a schema which determines relationships and multiplicities.</li>
+<li>Raw data may come in many formats depending on the sensor equipment that is used.</li>
+<li>Raw data can be parsed in order to get it into some format that implements a schema. Depending on the schema, loss of fidelity and semantics is possible.</li>
+<li>After parsing, data and its associated meta-data becomes part of the main trunk.</li>
+<li>A user can then work in a private sandbox. A private sandbox is in essence a branch of the main trunk with a private copy of the data.</li>
+<li>Inside a sandbox, a user can tag the data by effecting changes to it.  Changes can be as simple as manual datum changes to as complex as running low pass or high pass filters. Each change (filter) adds its own tag.</li>
+<li>Tagged data can be merged back into the main trunk.</li>
+<li>QA and QC is the process of overseeing that changes made to the main trunk (merged) are valid.</li>
+<li>QA and QC processes can be manual or automated.</li>
+<li>Tags can be kept in the metadata</li>
+<li>Changes deemed invalid can be rolled back because they are tagged.</li>
+<li>A data HUB is part of VOEIS. It is comprised of the tools that parse input sensor data (real time or manual) and the software that houses the data itself (HIS or otherwise).</li>
+</ul>
+<br></br>
+In this section we capture descriptions of the requirements that guided the development of 
+VOEIS in plain english. These requirements were obtained from multiple sources, including 
+interviews with stakeholders, technical documents, etc. Note that some of these requirements 
+are very high level and multiple task decompositions are needed to refine and understand them better.
 <h3>Stakeholder Requirements</h3>
-<li>GUI: Ability to see a map of a project
-</li><li>Ability to construct simple and complex queries to obtain earth science data at a given point in time and space
-</li><li>Ability to add information such as photos, links to other data, on-site physically collected data, monthly samples, etc. Basically, the ability to group data and to annotate individual datum or entire data sets with additional information that is not temporally or spatially located.
-</li><li>Support the generation of simple project activity and/or data reports
-</li>
+<ul>
+<li>GUI: Ability to see a map of a project</li>
+<li>Ability to construct simple and complex queries to obtain earth science data at a given point in time and space</li>
+<li>Ability to add information such as photos, links to other data, on-site physically collected data, monthly samples, etc. Basically, the ability to group data and to annotate individual datum or entire data sets with additional information that is not temporally or spatially located.</li>
+<li>Support the generation of simple project activity and/or data reports</li>
+</ul>
 <h3>Development guidance from various documents</h3>
+<ul>
 <li>Scripting capabilities for QAQC
 </li><li>Ability to organize data for efficient dissemination
 </li><li>Interface for simulation models
@@ -72,28 +101,126 @@ In this section we capture descriptions of the requirements that guided the deve
 </li><li>Develop or leverage existing software to facilitate the transfer of data from field sensor arrays, data loggers and analytical equipment into central data servers
 </li><li>Develop or leverage software modules to allow access to data, manage data, provide authentication, etc. 
 </li>
-
+</ul>
 </div>
 <div data-dojo-type="dijit.layout.ContentPane" title="Workflows and Use Cases">
 <br></br>
+<figure style="margin: 2em; float: right; text-align: center;">
+<a href="https://kepler-project.org/" target="_blank"><img src="images/Kepler.jpg" style="width:500px"></img></a>
+<figcaption>The Kepler Project</figcaption>
+</figure>
+<b>Significance:</b>
+<br></br>
+Researchers collect and analyze a wide variety of environmental data types, each with
+unique formatting, preprocessing, and metadata requirements. This diversity often
+creates a significant barrier to adoption of simple data management solutions. Effective 
+data management is critical to the success of any research project and the 
+<a href="http://www.nsf.gov/bfa/dias/policy/dmp.jsp" target="_blank"> National Science Foundation (NSF)</a> 
+now requires funded researchers to implement data management plans. VOEIS fills 
+this need, stadardizing data formatting and providing a breadth of data management features 
+for storage, quality control, visualization, and publication for multiple
+environmental data types. Intuitive and simple user interfaces greatly reduce the training time
+required of researchers and lab group members for effective use of the
+software. As an added bonus, users can integrate VOEIS into existing data-management workflows by 
+utilizing the suite of available <a href="https://voeis.msu.montana.edu/doc/yard/Voeis/ApivsController.html" target="_blank">APIs.</a> 
+These APIs also offer a convenient mechanism for using VOEIS with third-party scientific workflow 
+software like <a href="https://kepler-project.org/" target="_blank">Kepler.</a>
+<br></br>
 <b>Original Conceptualizations:</b>
+<ul>
 <li><a href="documents/VOEIS-05062010.pptx" target="_blank"> Workflow Driven Analysis for VOEIS Data Management</a></li>
 <li><a href="documents/Cucumber_Initial_Features.html" target="_blank">Application Features</a> (as <a href="http://cukes.info/" target="_blank">Cucumber BDD</a> text)</li>
+</ul>
+<br></br>
+<b>Use Cases Considered During Development of VOEIS:</b>
+<ul>
+<li>Manually Collected Field Observations</li>
+<li>Volumetric Sample Management and Tracking</li>
+<li>Laboratory Sample Measurements</li>
+<li>Automated Data Collection Telemetry Networks</li>
+<li>Vertical Lake/Marine Profiles</li>
+<li>Instrument Deployment Tracking</li>
+<li>Experimental Data Collection</li>
+<li>Stream Tracer Data Management</li>
+<li>Field Personnel and Activity Management and Tracking</li>
+<li>Model Simulation Integration</li>
+</ul>
 </div>
 <div data-dojo-type="dijit.layout.ContentPane" title="Design Specifications">
 <br></br>
+<b>High Level Architecture</b>
+<br></br>
+VOEIS is implemented using the Yogo Framework with Ruby on Rails to take advantage of
+the data management tools providing flexible schema management, RQL API, Role Based Access Controls (RBAC),
+versioning, and support of multiple database back-ends making it platform independent. Currently the system uses
+PostgreSQL as the backend storage system. Data processing has been optimized for PostgreSQL; however
+generic implementations can make use of any DataMapper ORM supported backend such as MySQL, SQLite3,
+Persevere, MongoDB, etc.
+<ul>
+<li>VOEIS Discussion Paper 2</li>
+<li><a href="documents/VOEIS_Tables.png" target="_blank">VOEIS 2.0 Data Model (Entity Relationship Diagram)</a></li>
+</ul>
 <figure style="float:right; text-align: center; margin: 1em;"><a href="documents/VOEIS_Tables.png" target="_blank">
   <img src="documents/VOEIS_Tables.png" style="border: 1px solid black; width: 400px;"></img></a>
   <figcaption>VOEIS 2.0 Data Model</figcaption>
 </figure>
 <b>Data Model</b>
-<br></br>The VOEIS data model is loosely based on the <a href="http://his.cuahsi.org/odmdatabases.html" target="_blank"> CUAHSI HIS Observation Data Model (ODM)</a>. In fact, the original data model used in VOEIS was the ODM. However, as the number and diversity of users expanded in VOEIS, it became necessary to adjust the data model to accommodate a broader array of data types and use case needs. Many of these unique user needs were expressed in the structure of the <a href="documents/FDM.pdf" target="_blank">Field Data Model (FDM)</a>, a data model created by Geoffrey Poole and Clemente Izurieta at Montana State University. Thus began an effort to meld the utility and simplicity of the ODM with the more expansive functionality required by the FDM. The resulting data model should be familiar to users of the ODM, but boasts some unique characteristics that improve its extensibility to incorporate new data types and provide a mechanism for robust sample tracking, lab personnel tracking, and field sensor deployment tracking/management.
+<br></br>The VOEIS data model is a relational data model loosely based on the 
+<a href="http://his.cuahsi.org/odmdatabases.html" target="_blank"> 
+CUAHSI HIS Observation Data Model (ODM)</a>. In fact, the original data model used in VOEIS 
+was the ODM. However, as the number and diversity of users expanded in VOEIS, it became 
+necessary to adjust the data model to accommodate a broader array of data types and use case 
+needs. Many of these unique user needs were expressed in the structure of the 
+<a href="documents/FDM.pdf" target="_blank">Field Data Model (FDM)</a>, a data model created 
+by Geoffrey Poole and Clemente Izurieta at Montana State University. Thus began an effort to 
+meld the utility and simplicity of the ODM with the more expansive functionality required by 
+the FDM. The resulting data model should be familiar to users of the ODM, but boasts some unique 
+characteristics that improve its extensibility to incorporate new data types and provide a mechanism 
+for robust sample tracking, lab personnel tracking, and field sensor deployment tracking/management.
 <br></br>
-<li><a href="documents/VOEIS_Tables.png" target="_blank">VOEIS 2.0 Data Model (Entity Relationship Diagram)</a></li>
-<li>VOEIS Discussion Paper</li>
+<ul>
+<li><a href="documents/VOEIS_Paper_1.pdf" target="_blank">VOEIS Discussion Paper 1</a></li>
+</ul>
+<b>Standards</b>
+<br></br>
+The importance of standard data formats during data publication is increasingly recognized. 
+Self-describing data formats like Water Markup Language (WaterML), Ecological Metadata Languange (EML), 
+and many others reduce errors in data interpretation by providing end-users with a recognizable data 
+format that includes the minimum amount and type of metadata deemed necessary to described a set of 
+data values. Data stored in VOEIS can be exported in .json or .xml formats. VOEIS users who want to publish data 
+in WaterML format must first publish thier data set to HydroServer using the HIS Gateway. The VOEIS
+development team is currently working on proof of concept features for direct exports of data stored in VOEIS 
+using the WaterML and EML standards. 
 <br></br>
 <b>Controlled Vocabularies</b>
 <br></br>
+Semantic heterogeneity occurs when data generaters within a single scientific domain use differnet terms 
+to descibe the same type of data. Adoption of recognized controlled vocabularies or domain ontologies 
+eliminates the ambiguity this behavior ultimately produces. VOEIS uses the 
+<a href="http://his.cuahsi.org/mastercvreg.html" target="_blank">controlled vocabularies</a> developed 
+by the CUAHSI HIS as the default setting for data projects. Users needing to alter these vocabularies 
+to satisfy their specific domain requirements may adjust these vocabularies on a project-by-
+project basis. This increases the number of use-cases and scientific domains where VOEIS is applicable. 
+<br></br>
+<b>Programming Interface</b>
+<br></br>
+The VOEIS Data Hub is designed to offer developers
+programmatic access to data via RESTful APIs. The APIs
+provide significant flexibility for users to create personalized
+tools and views to interact with the data stored in
+VOEIS. Access to API methods is role based and is
+implemented using API keys that are linked to user accounts.
+Thus, API access is managed in the same manner that regular
+user access is handled. Further, the implementation of a
+Resource Query Language (RQL) REST interface allows
+dynamic data querying API functionality resembling SQL
+database queries without the security risks and complication
+inherent in exposing an SQL interface for a complex database
+schema.
+<br></br>
+<ul>
+<li><a href="https://voeis.msu.montana.edu/doc/yard/Voeis/ApivsController.html" target="_blank">List of avaialble APIs</a></li>
+</ul>
 </div>
 <div data-dojo-type="dijit.layout.ContentPane" title="Versions">
 <br></br>
@@ -101,14 +228,17 @@ In this section we capture descriptions of the requirements that guided the deve
 05/31/2012
 <br></br>
 <u>Development Activity:</u>
+<ul>
 <li>Feature #15309: Refactor Site Variable data browsing to provide 10 data points OR 24 hrs of data (the greater)
 </li><li>Development #15491: update new search
 </li>
+</ul>
 <br></br>
 <b>Version 1.3: </b>
 01/11/2012
 <br></br>
 <u>New Features Summary:</u>
+<ul>
 <li>History/Version/Provenance
 </li><li>Full tracking of edits with custom and generated provenance comments
 </li><li>Rollback to previous version for Site, Variables and Data
@@ -121,8 +251,10 @@ In this section we capture descriptions of the requirements that guided the deve
 </li><li>Foundational Data Set support.
 </li><li>Cleaned up and improved user interface.
 </li>
+</ul>
 <br></br>
 <u>Development Activity:</u>
+<ul>
 <li>Feature #15174: Advanced Search/Browse
 </li><li>Feature #15175: Aggregate functions added to API calls
 </li><li>Feature #15223: Simple DataValue edit interface for single QA/QC
@@ -133,11 +265,13 @@ In this section we capture descriptions of the requirements that guided the deve
 </li><li>Development #15331: Add a "Small Data" option to API GET functions
 </li><li>Development #15332: After a new project is created indexes should be created for it
 </li>
+</ul>
 <br></br>
 <b>Version 1.2: </b>
 09/28/2011
 <br></br>
 <u>Development Activity:</u>
+<ul>
 <li>Feature #15222: Site Version/Provenance/History View
 </li><li>Feature #15224: DataSet creation
 </li><li>Feature #15253: Sample Drill Down
@@ -145,11 +279,13 @@ In this section we capture descriptions of the requirements that guided the deve
 </li><li>Development #15248: Speed up data search and API search
 </li><li>Development #15249: Change API update_site from PUT to POST
 </li>
+</ul>
 <br></br>
 <b>Version 1.1: </b>
 08/04/2011
 <br></br>
 <u>Development Activity:</u>
+<ul>
 <li>Bug #15125: Project Browse-- close project tab doesn't deselect project
 </li><li>Feature #15352: Add Data Catalog API Call
 </li><li>Appearance #15027: Update the Project Show page
@@ -190,18 +326,38 @@ In this section we capture descriptions of the requirements that guided the deve
 </li><li>Development #15120: remove the campaign menu for now
 </li><li>Development #15161: Project Show: cleanup any depricated menu items
 </li>
+</ul>
 </div>
 <div data-dojo-type="dijit.layout.ContentPane" title="HIS Publication Gateway">
-
+<br></br>
+<b>HIS Gateway</b>
+<img src="images/publication_gateway.png" style="margin: 2em; float: right; height: 180px;"></img>
+<br></br>
+A specific goal of the VOEIS project is to integrate with the CUAHSI HIS through HydroServer. 
+In order for VOEIS to leverage the power of the CUAHSI HydroServer and its corresponding suite of 
+tools, a fully functional REST interface that allows for the pulling and pushing of data objects 
+was needed. We have constructed a HIS gateway using Ruby, Sinatra and the DataMapper ORM to provide 
+the necessary REST functionality. Associated requirements for the HIS gateway include a simple 
+authorization system to prevent malicious access, and the ability to serve up JSON and XML results 
+from simple URL style queries that can behave like full APIs to the ODM data-store. The initial 
+implementation of the VOEIS HIS gateway is currently available for use as a standalone JRuby server 
+application that can be deployed on any platform.
+<br></br>
+<li><a href="https://github.com/yogo/HISgw" target="_blank">HIS Gateway Source Code</a></li>
 </div>
 <div data-dojo-type="dijit.layout.ContentPane" title="For Developers...">
 <br></br>
-The VOEIS software is still under development, but interested individuals are invited to explore the source code and play around with the application. Feel free to fork your own version of the VOEIS software and modify it to fit your particular use case needs. 
+The VOEIS software is still under development, but interested individuals are invited to explore 
+the source code and play around with the application. Feel free to fork your own version of the 
+VOEIS source code and modify it to fit your particular use case needs or use the APIs to build 
+custom applications and user interfaces to interact with the VOEIS Data Hub. 
 <br></br>
+<ul>
 <li><a href="https://github.com/yogo/VOEIS" target="_blank">VOEIS Source Code</a></li>
 <li><a href="https://voeis.msu.montana.edu/doc/yard/_index.html" target="_blank">YARD Documentation</a></li>
 <li><a href="https://voeis.msu.montana.edu/doc/yard/Voeis/ApivsController.html" target="_blank">List of avaialble APIs</a></li>
 <li><a href="https://github.com/yogo/HISgw" target="_blank">HIS Gateway Source Code</a></li>
+</ul>
 </div>
 </span></div>
 </div>
