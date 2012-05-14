@@ -36,6 +36,25 @@ require(["dijit/layout/TabContainer"]);</script>
     font-size : 12pt;
 }
 
+    .startButton {
+    cursor : pointer;
+    color : white !important;
+    font-size : 24px !important;
+    font-weight : bold !important;
+    font-family : Helvetica !important;
+    border-radius : 6px !important;
+    padding : 0.5em !important;
+    background-image : background-image: -webkit-gradient(linear, left top, left bottom, from(gray), to(black)) background-image: -o-linear-gradient(white, black);
+    background-image : -ms-linear-gradient(gray, black);
+    background-image : -moz-linear-gradient(gray, black);
+    background-image : -webkit-linear-gradient(gray, black);
+    background-image : linear-gradient(gray, black) !important;
+}
+
+    .startButton:hover {
+    color : #7eaeec !important;
+}
+
 </style>
 </head>
 
@@ -74,12 +93,10 @@ require(["dijit/layout/TabContainer"]);</script>
 
 
 <div id="Center" dojoType="dijit.layout.ContentPane" region="center" gutters="false" style="border-bottom: 3px groove white; padding: 0px; background-color: #d3d9df; width: 1100px; height: 595px;">
-<div style="height: 110px; overflow: visible; padding-top: 1em; padding-left: 1em; width: 100%;">
+<div style="overflow: visible; padding-top: 1em; padding-left: 1em; width: 100%; height: 110px;">
  <img src="images/voeis_logo.png" style="padding-left: 1em; display: inline-block; height: 135px;"></img>
- <div style="padding: 3em; float: right; display: inline-block;">
- <a href="Module_Platform.html" style="color: black">
-   <input type="button" dojoType="dijit.form.Button" label="Start Browsing Public Data" style="position : relative; font-size : 24px; font-weight : bold; font-family : Helvetica;"></input>
- </a>
+ <div style="padding: 2em; float: right; display: inline-block;">
+   <button onClick="location.href='Module_Platform.html'" class="startButton">Start Browsing Public Data</button>
 </div>
 </div>
 

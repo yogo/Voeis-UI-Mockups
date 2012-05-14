@@ -24,3 +24,11 @@ body {
 	width: 1075px;
 	box-shadow: 10px 10px 5px #888888;
 }
+
+.grayDiv {
+	border: 1px solid gray; 
+	border-radius: 6px; 
+	-moz-border-radius: 6px; 
+	margin-bottom: 2em; 
+	background-color: #e8ebf1;
+}

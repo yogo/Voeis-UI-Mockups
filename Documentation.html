@@ -49,7 +49,7 @@ and recorded from direct field observations. The VOEIS Data Hub is implemented u
 contributes significantly to the software in three specific ways: 1) rigorous authentication and 
 authorization requirements, 2) static data model support, and 3) import and export of data to external 
 data sources.
-<input type="button" data-dojo-type="dijit.form.Button" label="Download VOEIS User Manual" style="float: right; font-weight: bold; margin:2em;"></input>
+<input type="button" data-dojo-type="dijit.form.Button" disabled="disabled" intermediateChanges="false" label="Download VOEIS User Manual" iconClass="dijitNoIcon" style="float: right; font-weight: bold; margin: 2em;"></input>
 </div><br></br>
 <span data-dojo-type="dijit.layout.TabContainer" style="height: 600px; min-width: 1em; min-height: 1em; width: 100%;" controllerWidget="dijit.layout.TabController">
 <div data-dojo-type="dijit.layout.ContentPane" title="Goals and Vision" selected="selected">
@@ -177,7 +177,6 @@ meld the utility and simplicity of the ODM with the more expansive functionality
 the FDM. The resulting data model should be familiar to users of the ODM, but boasts some unique 
 characteristics that improve its extensibility to incorporate new data types and provide a mechanism 
 for robust sample tracking, lab personnel tracking, and field sensor deployment tracking/management.
-<br></br>
 <ul>
 <li><a href="documents/VOEIS_Tables.png" target="_blank">VOEIS 2.0 Data Model (Entity Relationship Diagram)</a></li>
 </ul>
@@ -217,7 +216,6 @@ dynamic data querying API functionality resembling SQL
 database queries without the security risks and complication
 inherent in exposing an SQL interface for a complex database
 schema.
-<br></br>
 <ul>
 <li><a href="https://voeis.msu.montana.edu/doc/yard/Voeis/ApivsController.html" target="_blank">List of avaialble APIs</a></li>
 </ul>
