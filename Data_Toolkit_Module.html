@@ -47,7 +47,7 @@ require(["dijit/Calendar"]);</script>
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
  <div style="height: 100%; width: 100%; position: absolute;">
  <span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
-<div dojoType="dijit.layout.ContentPane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="true" splitter="false" style="width: 779px; height: 515px;" doLayout="false"></div>
+<div dojoType="dijit.layout.ContentPane" title="Data Toolkit" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="true" splitter="false" style="width: 779px; height: 515px;" doLayout="false"></div>
    <div dojoType="dijit.layout.ContentPane" title="Project 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 282px; height: 252px;" doLayout="false">
      <span dojoType="dijit.layout.TabContainer" tabPosition="left" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;">
 <div dojoType="dijit.layout.ContentPane" title="Query and Export" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="false" splitter="false" style="width: 442px; height: 446px;">
@@ -117,7 +117,7 @@ Select a Data Origin:</div>
              <div>
                <input type="checkbox" dojoType="dijit.form.CheckBox" style="margin-left: 1em;"></input>
 <span style="font-weight: bold; vertical-align: middle; margin-left: 1em; margin-right: 1em;">Refine interval to only include data collected between:</span>
-               <select dojoType="dijit.form.FilteringSelect" value="Jan" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 60px;">
+               <select dojoType="dijit.form.FilteringSelect" value="Jan" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 60px;">
                  <option dvwidget="html.option" value="Jan" selected="selected">
                    
                
@@ -168,7 +168,7 @@ Select a Data Origin:</div>
   Dec</option>
                </select>
 <span style="font-weight: bold; vertical-align: middle; margin-left: 1em; margin-right: 1em;">and:</span>
-               <select dojoType="dijit.form.FilteringSelect" value="Dec" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 60px;">
+               <select dojoType="dijit.form.FilteringSelect" value="Dec" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 60px;">
                  <option dvwidget="html.option" value="Jan">
                    
                
@@ -455,7 +455,7 @@ My Saved Searches...</h2>
            </div>
            <div style="margin-top: 1em;">
              <span style="margin-right: 0.5em; vertical-align: middle; font-weight: bold;">Data Set Type:</span>
-             <select dojoType="dijit.form.Select" type="text" value="Observational Data" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
+             <select dojoType="dijit.form.Select" type="text" value="Observational Data" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" scrollOnFocus="true" autoWidth="true">
                <option dvwidget="html.option" value="Observational Data">
                  
              
@@ -552,12 +552,12 @@ My Saved Searches...</h2>
            </div>
            <div style="margin-top: 1em; margin-bottom: 1em;">
              <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle; margin-left: 1em;">Collected After:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 130px;"></input><span style="font-weight: bold; vertical-align: middle; margin-right: 0.5em; margin-left: 1em;">Collected Before:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 130px;"></input>
+             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" style="width: 130px;"></input><span style="font-weight: bold; vertical-align: middle; margin-right: 0.5em; margin-left: 1em;">Collected Before:</span>
+             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" style="width: 130px;"></input>
            </div>
            <div>
              <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 1em;"></input><span style="font-weight: bold; vertical-align: middle; margin-left: 1em; margin-right: 1em;">Refine interval to only include data collected between:</span>
-             <select dojoType="dijit.form.FilteringSelect" value="Jan" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 60px;">
+             <select dojoType="dijit.form.FilteringSelect" value="Jan" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 60px;">
                <option dvwidget="html.option" value="Jan">
                  
              
@@ -607,7 +607,7 @@ My Saved Searches...</h2>
              
          Dec</option>
              </select><span style="font-weight: bold; vertical-align: middle; margin-left: 1em; margin-right: 1em;">and:</span>
-             <select dojoType="dijit.form.FilteringSelect" value="Dec" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 60px;">
+             <select dojoType="dijit.form.FilteringSelect" value="Dec" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 60px;">
                <option dvwidget="html.option" value="Jan">
                  
              
@@ -842,7 +842,7 @@ Select a date range:</div>
            </div>
            <div style="border: 1px solid gray; padding: 0.5em; margin: 1em; border-radius: 6px; -moz-border-radius: 6px;">
              <span style="vertical-align: middle; margin-right: 0.5em; font-weight: bold;">QAQC Level:</span>
-             <select dojoType="dijit.form.Select" type="text" value="0" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+             <select dojoType="dijit.form.Select" type="text" value="0" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" scrollOnFocus="true" autoWidth="true">
                <option dvwidget="html.option" value="0" selected="selected">
                  
              
@@ -867,7 +867,7 @@ Select a date range:</div>
            </div>
            <div style="border: 1px solid gray; padding: 0.5em; margin: 1em; border-radius: 6px; -moz-border-radius: 6px;">
              <span style="vertical-align: middle; margin-right: 0.5em; font-weight: bold;">Offset Type:</span>
-             <select dojoType="dijit.form.Select" type="text" value="None" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" required="false" scrollOnFocus="true" autoWidth="true">
+             <select dojoType="dijit.form.Select" type="text" value="None" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;#160;" scrollOnFocus="true" autoWidth="true">
                <option dvwidget="html.option" value="None" selected="selected">
                  
              
@@ -909,300 +909,6 @@ Select a date range:</div>
        </span>
      </div>
      <div dojoType="dijit.layout.ContentPane" title="Derive Values" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
-     <div dojoType="dijit.layout.ContentPane" title="Visualization Tools">
-       <span dojoType="dijit.layout.TabContainer" nested="true" style="min-width: 1em; min-height: 1em; width: 100%; height: 100%;" controllerWidget="dijit.layout.TabController">
-<div dojoType="dijit.layout.ContentPane" title="Data Search" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 647px; height: 511px;" doLayout="false">
-         <h2>
-           
-       
-   Search for Data to Visualize</h2>
-         <div style="border: 1px solid gray; padding: 3px; border-radius: 6px; -moz-border-radius: 6px; margin-top: 1em;">
-           <div>
-             <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Site" iconClass="dijitCheckBoxIcon"></input>
-           </div>
-           <div style="margin-top: 1em; margin-bottom: 1em;"></div>
-         </div>
-         <div style="border: 1px solid gray; padding: 3px; border-radius: 6px; -moz-border-radius: 6px; margin-top: 1em;">
-           <div>
-             <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Data Origin" iconClass="dijitCheckBoxIcon"></input>
-           </div>
-           <div style="margin-top: 1em; margin-bottom: 1em;"></div>
-         </div>
-         <div style="border: 1px solid gray; padding: 3px; border-radius: 6px; -moz-border-radius: 6px; margin-top: 1em;">
-           <div>
-             <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Data Set" iconClass="dijitCheckBoxIcon"></input>
-           </div>
-           <div style="margin-top: 1em; margin-bottom: 1em;">
- </div>
-         </div>
-         <div style="border: 1px solid gray; padding: 3px; border-radius: 6px; -moz-border-radius: 6px; margin-top: 1em;">
-           <div>
-             <input type="button" dojoType="dijit.form.ToggleButton" intermediateChanges="false" label="Date Range" iconClass="dijitCheckBoxIcon"></input>
-           </div>
-           <div style="margin-top: 1em; margin-bottom: 1em;">
-             <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle; margin-left: 1em;">Collected After:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 130px;"></input><span style="font-weight: bold; vertical-align: middle; margin-right: 0.5em; margin-left: 1em;">Collected Before:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 130px;"></input>
-           </div>
-           <div>
-             <input type="checkbox" dojoType="dijit.form.CheckBox" intermediateChanges="false" iconClass="dijitNoIcon" style="margin-left: 1em;"></input><span style="font-weight: bold; vertical-align: middle; margin-left: 1em; margin-right: 1em;">Refine interval to only include data collected between:</span>
-             <select dojoType="dijit.form.FilteringSelect" value="Jan" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 60px;">
-               <option dvwidget="html.option" value="Jan">
-                 
-             
-         Jan</option>
-               <option dvwidget="html.option" value="Feb">
-                 
-             
-         Feb</option>
-               <option dvwidget="html.option" value="March">
-                 
-             
-         March</option>
-               <option dvwidget="html.option" value="April">
-                 
-             
-         April</option>
-               <option dvwidget="html.option" value="May">
-                 
-             
-         May</option>
-               <option dvwidget="html.option" value="June">
-                 
-             
-         June</option>
-               <option dvwidget="html.option" value="July">
-                 
-             
-         July</option>
-               <option dvwidget="html.option" value="Aug">
-                 
-             
-         Aug</option>
-               <option dvwidget="html.option" value="Sept">
-                 
-             
-         Sept</option>
-               <option dvwidget="html.option" value="Oct">
-                 
-             
-         Oct</option>
-               <option dvwidget="html.option" value="Nov">
-                 
-             
-         Nov</option>
-               <option dvwidget="html.option" value="Dec">
-                 
-             
-         Dec</option>
-             </select><span style="font-weight: bold; vertical-align: middle; margin-left: 1em; margin-right: 1em;">and:</span>
-             <select dojoType="dijit.form.FilteringSelect" value="Dec" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 60px;">
-               <option dvwidget="html.option" value="Jan">
-                 
-             
-         Jan</option>
-               <option dvwidget="html.option" value="Feb">
-                 
-             
-         Feb</option>
-               <option dvwidget="html.option" value="March">
-                 
-             
-         March</option>
-               <option dvwidget="html.option" value="April">
-                 
-             
-         April</option>
-               <option dvwidget="html.option" value="May">
-                 
-             
-         May</option>
-               <option dvwidget="html.option" value="June">
-                 
-             
-         June</option>
-               <option dvwidget="html.option" value="July">
-                 
-             
-         July</option>
-               <option dvwidget="html.option" value="Aug">
-                 
-             
-         Aug</option>
-               <option dvwidget="html.option" value="Sept">
-                 
-             
-         Sept</option>
-               <option dvwidget="html.option" value="Oct">
-                 
-             
-         Oct</option>
-               <option dvwidget="html.option" value="Nov">
-                 
-             
-         Nov</option>
-               <option dvwidget="html.option" value="Dec">
-                 
-             
-         Dec</option>
-             </select>
-           </div>
-         </div>
-         <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
-         <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Search" iconClass="dijitNoIcon"></input>
-       </div>
-       <div dojoType="dijit.layout.ContentPane" title="Search_1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 647px; height: 511px;" doLayout="false">
-         <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" nested="false">
-<div dojoType="dijit.layout.ContentPane" title="Time Series" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" closable="false" style="width: 564px; height: 454px;">
-           <div style="border: 2px solid black; margin: 1em; height: 250px; background-color: #ededf0;">
-             <div style="border: 1px solid black; margin: 1em; height: 200px; background-color: white;">
-               <h3 style="text-align: center;">
-                 
-             
-         Provotis Scatter/Line Plot</h3>
-             </div>
-           </div>
-  <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_8" jsId="ItemFileReadStore_8" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;site&quot;:&quot;Site 1&quot;,&quot;variable_name&quot;:&quot;Variable 1&quot;},{&quot;uniqe_id&quot;:2,&quot;site&quot;:&quot;Site 2&quot;,&quot;variable_name&quot;:&quot;Variable 2&quot;}]}"></span>
-           <div style="margin-top: 1em;">
-             <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Select A Single Data Series to Plot:</span><span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_12" jsId="ItemFileReadStore_12" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;origin_id&quot;:&quot;1&quot;,&quot;origin_type&quot;:&quot;Field Observation&quot;,&quot;_variable_name&quot;:&quot; Temperature&quot;,&quot;_units&quot;:&quot; Celcius&quot;,&quot;_source&quot;:&quot; ...&quot;,&quot;_site_name&quot;:&quot;...&quot;},{&quot;uniqe_id&quot;:2,&quot;origin_id&quot;:&quot;2&quot;,&quot;origin_type&quot;:&quot;Sample&quot;,&quot;_variable_name&quot;:&quot; Nitrate&quot;,&quot;_units&quot;:&quot; mg/L&quot;,&quot;_source&quot;:&quot; ...&quot;,&quot;_site_name&quot;:&quot;...&quot;}]}"></span><span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Origin ID&quot;,&quot;field&quot;:&quot;origin_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Origin Type&quot;,&quot;field&quot;:&quot;origin_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Variable Name&quot;,&quot;field&quot;:&quot;_variable_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Units&quot;,&quot;field&quot;:&quot;_units&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Source&quot;,&quot;field&quot;:&quot;_source&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Site Name&quot;,&quot;field&quot;:&quot;_site_name&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; &quot;,&quot;field&quot;:&quot;_&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" rowSelector="true" selectable="false" delayScroll="false" style="height: 100px;" store="ItemFileReadStore_12" escapeHTMLInData="true"></span>
-           </div>
-           <div style="margin-top: 2em;">
-             <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Data Collected After:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 126px;"></input><span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle; margin-left: 1em;">Collected Before:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 134px;"></input>
-           </div>
-           <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
-           <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Update Plot" iconClass="dijitNoIcon"></input>
-         </div>
-         <div dojoType="dijit.layout.ContentPane" title="Summary Stats" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 564px; height: 454px;">
-           <div style="border: 2px solid black; margin: 1em; height: 300px; overflow: visible; background-color: #ededf0;">
-             <div style="border: 1px solid black; margin: 1em; background-color: white; height: 200px; display: inline-block; width: 45%;">
-               <h3 style="text-align: center;">
-                 
-             
-         Provotis Histogram Plot</h3>
-             </div>
-             <div style="border: 1px solid black; margin: 1em; background-color: white; height: 200px; display: inline-block; width: 45%;">
-               <h3 style="text-align: center;">
-                 
-             
-         Provotis Q-Q Plot</h3>
-             </div>
-             <div style="margin: 0.5em; display: inline-block; width: 45%;">
-               <span style="font-weight: bold;"># Observations:</span>
-             </div>
-             <div style="margin: 0.5em; display: inline-block; width: 45%;">
-               <span style="font-weight: bold;">Minimum Value:</span>
-             </div>
-             <div style="margin: 0.5em; display: inline-block; width: 45%;">
-               <span style="font-weight: bold;">Arithmetic Mean:</span>
-             </div>
-             <div style="margin: 0.5em; display: inline-block; width: 45%;">
-               <span style="font-weight: bold;">Maximum Value:</span>
-             </div>
-             <div style="margin: 0.5em; display: inline-block; width: 45%;">
-               <span style="font-weight: bold;">Coefficient of Variation:</span>
-             </div>
-             <div style="margin: 0.5em; display: inline-block; width: 45%;">
-               <span style="font-weight: bold;">Standard Deviation:</span>
-             </div>
-           </div>
-           <div>
-             <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Select a Single Data Series to Plot:</span>
-           </div>
-           <div style="margin-top: 2em;">
-             <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Data Collected After:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 126px;"></input><span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle; margin-left: 1em;">Collected Before:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 134px;"></input>
-           </div>
-           <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
-           <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Update Plot" iconClass="dijitNoIcon"></input>
-         </div>
-         <div dojoType="dijit.layout.ContentPane" title="Box/Whisker" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" style="width: 564px; height: 454px;">
-           <span dojoType="dijit.layout.TabContainer" style="min-width: 1em; min-height: 1em; width: 584px; height: 442px;" controllerWidget="dijit.layout.TabController">
-<div dojoType="dijit.layout.ContentPane" title="Time Plot" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 566px; height: 391px;" doLayout="false">
-             <h3>
-               
-           
-    Examine Data From a Single Site Through Time</h3>
-             <div style="border: 2px solid black; margin: 1em; height: 250px; background-color: #ededf0;">
-               <div style="border: 1px solid black; margin: 1em; height: 200px; background-color: white;">
-                 <h3 style="text-align: center;">
-                   
-               
-        Provotis Box and Whisker Plot</h3>
-               </div>
-               <div style="margin: 1em;">
-                 <span style="vertical-align: middle; margin-right: 2em; font-weight: bold;">Plot Type:</span>
-                 <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton" intermediateChanges="false" iconClass="dijitNoIcon"></input>
-  <span style="vertical-align: middle; margin-right: 2em;">Yearly</span>
-                 <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
-<span style="vertical-align: middle; margin-right: 2em;">Monthly</span>
-                 <input showlabel="true" type="radio" dojoType="dijit.form.RadioButton"></input>
-<span style="vertical-align: middle;">Weekly</span>
-               </div>
-             </div>
-             <div>
-               <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Select a Single Data Series to Plot:</span>
-             </div>
-             <div style="margin-top: 2em;">
-               <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Data Collected After:</span>
-               <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 126px;"></input><span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle; margin-left: 1em;">Collected Before:</span>
-               <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 134px;"></input>
-             </div>
-             <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
-             <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Update Plot" iconClass="dijitNoIcon"></input>
-           </div>
-           <div dojoType="dijit.layout.ContentPane" title="Site Plot" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 566px; height: 391px;" doLayout="false">
-             <h3>
-               
-           
-Compare Values From Multiple Sites</h3>
-             <div style="border: 2px solid black; margin: 1em; height: 250px; background-color: #ededf0;">
-               <div style="border: 1px solid black; margin: 1em; height: 200px; background-color: white;">
-                 <h3 style="text-align: center;">
-                   
-               
-Provotis Box and Whisker Plot</h3>
-               </div>
-             </div>
-             <div>
-               <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Select Data Series From Multiple Sites With Matching Origin IDs to Plot:</span>
-             </div>
-             <div style="margin-top: 2em;">
-               <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Data Collected After:</span>
-               <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 126px;"></input><span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle; margin-left: 1em;">Collected Before:</span>
-               <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 134px;"></input>
-             </div>
-             <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
-             <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Update Plot" iconClass="dijitNoIcon"></input>
-           </div>
-           </span>
-         </div>
-         <div dojoType="dijit.layout.ContentPane" title="Parallel Coordinates" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false">
-           <div style="border: 2px solid black; margin: 1em; height: 250px; background-color: #ededf0;">
-             <div style="border: 1px solid black; margin: 1em; height: 200px; background-color: white;">
-               <h3 style="text-align: center;">
-                 
-             
-         Provotis Parallel Coordinates Plot</h3>
-             </div>
-           </div>
-           <div style="margin-bottom: 1em; margin-top: 2em;">
-             <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Data Collected After:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 126px;"></input><span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle; margin-left: 1em;">Collected Before:</span>
-             <input type="text" dojoType="dijit.form.DateTextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="false" style="width: 134px;"></input>
-           </div>
-           <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Update Plot" iconClass="dijitNoIcon"></input>
-           <div style="border-bottom: 1px solid gray; margin-bottom: 1em; margin-top: 1em;"></div>
-           <div>
-             <span style="margin-right: 0.5em; font-weight: bold; vertical-align: middle;">Data Series:</span>
-           </div>
-         </div>
-         </span>
-       </div>
-       </span>
-     </div>
      </span>
    </div>
    <div dojoType="dijit.layout.ContentPane" title="Project 2"></div>
