@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>Untitled</title>
+<title>VOEIS Data Hub</title>
 <style>@import "themes/claro/claro.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/jquery-ui/css/smoothness/jquery-ui-1.8.11.custom.css";@import "app.css";
 </style>
 <script type="text/javascript" src="maqetta/maqetta.js"></script>
@@ -54,14 +54,16 @@ require(["dojox/form/CheckedMultiSelect"])</script>
     .footerIcon {
     margin-right : 1em;
     margin-left : 1em;
-    height : 30px;
 }
 
     .moduleIcon {
     background-repeat : no-repeat;
-    height : 75px;
-    width : 80px;
-    margin : 2px;
+    height : 70px;
+    width : 70px;
+}
+
+    .userDashboard {
+    background-image : url('images/dashboard.png');
 }
 
     .projectBrowse {
@@ -93,11 +95,20 @@ require(["dojox/form/CheckedMultiSelect"])</script>
 }
 
 </style>
+<script type="text/javascript" src="maqetta/States.js"></script>
+<script type="text/javascript">
+require(["dijit/layout/BorderContainer"]);
+require(["dijit/Toolbar"]);
+require(["dijit/form/DropDownButton"]);
+require(["dijit/Menu"]);
+require(["dijit/MenuItem"]);
+require(["dijit/layout/ContentPane"]);
+require(["dijit/layout/TabContainer"]);
+require(["dijit/form/Button"]);</script>
 </head>
 
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
-<div id="Main_App_View" dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="false" style="min-width: 1100px; min-height: 600px; z-index: 0; width: 100%; height: 100%;">
-
+<div id="Main_App_View" dojoType="dijit.layout.BorderContainer" design="sidebar" gutters="false" style="min-width: 1100px; min-height: 750px; z-index: 0; width: 100%; height: 100%;">
 
 <div dojoType="dijit.Toolbar" id="top" region="top" style="background-color: black;">
     <div dojoType="dijit.form.DropDownButton" iconClass="datahub-icon-25" id="datahubButton" style="color: white; font-weight: bold;">
@@ -116,32 +127,55 @@ require(["dojox/form/CheckedMultiSelect"])</script>
  </div>
 </div>
 
-<div id="Center" dojoType="dijit.layout.ContentPane" region="center" gutters="false" style="padding: 1em; border-bottom: 3px groove white; background-color: #e3e3eb; width: 1078px; height: 588px;">
-    <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%;" tabPosition="left-h">
 
-        <div id="Project_Browser" href="Project_Browse_Module.html" parseOnLoad="true" refreshOnShow="true" selected="selected" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon projectBrowse"></div>
+<div id="Center" dojoType="dijit.layout.ContentPane" region="center" style="padding: 1em; background-color: #e3e3eb; width: 1078px; height: 588px; border-bottom: 4px groove white">
+    <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" useSlider="true" style="width: 98%; height: 100%;" tabPosition="left-h">
+  <div id="Dashboard" href="User_Dashboard.html" parseOnLoad="true" refreshOnShow="true" selected="selected" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon userDashboard"></div>
+        <div id="Project_Browser" href="Project_Browse_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon projectBrowse"></div>
         <div id="Data_Loader" href="Data_Upload_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon dataUpload"></div>
         <div id="Project_Manager" href="Project_Manager_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon projectManager"></div>
         <div id="Data_Toolkit" href="Data_Toolkit_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon dataToolkit"></div>
         <div id="Equipment_Manager" href="Equipment_Manager_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon equipmentManager"></div>
         <div id="Lab_Manager" href="Lab_Manager_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon labManager"></div>
         <div id="Simulation_Manager" href="Simulation_Manager_Module.html" parseOnLoad="true" refreshOnShow="true" dojoType="dojox.layout.ContentPane" iconClass="moduleIcon simulationManager"></div>
-
     </span>
 </div>
 
-<div id="Footer" dojoType="dijit.layout.ContentPane" region="bottom" style="width: 100%; height: 25px;">
-    <center>
-        <img src="images/FLBS_logo.gif" class="footerIcon"></img>
-        <img src="images/HBS_logo.jpg" class="footerIcon"></img>
-        <img src="images/MSU_logo.jpg" class="footerIcon"></img>
-        <img src="images/Murry_logo.jpg" class="footerIcon"></img>
-        <img src="images/UK_logo.jpg" class="footerIcon"></img>
-        <img src="images/UL_logo.jpg" class="footerIcon"></img>
-        <img src="images/UM_logo.gif" class="footerIcon"></img>
-        <img src="images/YERC_logo.jpg" class="footerIcon"></img>
-        <img src="images/YOGO_logo.png" class="footerIcon"></img>
-    </center>
+
+<div id="Footer" dojoType="dijit.layout.ContentPane" region="bottom" style="height: 25px;">
+ <div align="center">
+ <a href="http://yogo.msu.montana.edu/ " target="_blank">
+    <img src="images/footer/YOGO_footer.png" class="footerIcon" style="float:left"></img></a>
+ <a href="http://www2.umt.edu/flbs/" target="_blank">
+    <img src="images/footer/FLBS_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.murraystate.edu/qacd/cos/hbs/hbs.htm" target="_blank">
+        <img src="images/footer/HBS_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.montana.edu/" target="_blank">
+        <img src="images/footer/MSU_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.murraystate.edu/" target="_blank">
+        <img src="images/footer/MURRAY_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.uky.edu/" target="_blank">
+        <img src="images/footer/UK_footer.png" class="footerIcon"></img></a>
+ <a href="http://louisville.edu/" target="_blank">
+        <img src="images/footer/UL_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.umt.edu/" target="_blank">
+        <img src="images/footer/UM_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.yellowstoneresearch.org/" target="_blank">
+        <img src="images/footer/YERC_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.eku.edu/" target="_blank">
+      <img src="images/footer/EKU_footer.png" class="footerIcon"></img></a>
+
+  <div style="float: right;">
+       <a href="http://www.mozilla.com/en-US/firefox/fx/" target="_blank">
+  <img src="images/footer/firefox_footer.png" class="footerIcon"></img></a>
+       <a href="http://www.google.com/chrome/" target="_blank">
+  <img src="images/footer/chrome_footer.png" class="footerIcon"></img></a>
+       <a href="http://www.apple.com/safari/" target="_blank">
+  <img src="images/footer/safari_footer.png" class="footerIcon"></img></a>
+       <a href="http://www.opera.com/" target="_blank">
+  <img src="images/footer/opera_footer.png" class="footerIcon"></img></a>
+  </div>
+ </div>
 </div>
 
 </div>

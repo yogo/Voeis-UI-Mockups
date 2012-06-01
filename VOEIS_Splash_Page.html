@@ -2,10 +2,8 @@
 <html>
 <head>
 <meta charset="utf-8"/>
-<title>DataHub Home</title>
-<style>@import "themes/claro/claro.css";@import "app.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";
-@import "lib/dojo/dojox/layout/resources/FloatingPane.css";@import "lib/dojo/dojox/layout/resources/ResizeHandle.css";@import "lib/dojo/dojox/gauges/_Gauge.css";
-@import "lib/dojo/dojox/grid/resources/Grid.css";@import "lib/dojo/dojox/grid/resources/claroGrid.css";
+<title>VOEIS DataHub: Home</title>
+<style>@import "themes/claro/claro.css";@import "app.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";@import "lib/dojo/dojox/layout/resources/FloatingPane.css";@import "lib/dojo/dojox/layout/resources/ResizeHandle.css";@import "lib/dojo/dojox/gauges/_Gauge.css";@import "lib/dojo/dojox/grid/resources/Grid.css";@import "lib/dojo/dojox/grid/resources/claroGrid.css";
 </style>
 <script type="text/javascript" djConfig="parseOnLoad:true" src="lib/dojo/dojo/dojo.js"></script>
 <script type="text/javascript">
@@ -27,7 +25,6 @@ require(["dijit/layout/TabContainer"]);</script>
     .footerIcon {
     margin-right : 1em;
     margin-left : 1em;
-    height : 30px;
 }
 
     .splashElement {
@@ -55,7 +52,33 @@ require(["dijit/layout/TabContainer"]);</script>
     color : #7eaeec !important;
 }
 
+    .splashDiv {
+    margin : 1.5em;
+    padding : 1em;
+    border : 1px solid gray;
+    border-radius : 6px;
+    -moz-border-radius : 6px;
+    margin-left : auto;
+    margin-right : auto;
+    background-color : white;
+    width : 1075px;
+    box-shadow : 10px 10px 5px #888888;
+}
+
 </style>
+<script type="text/javascript" src="maqetta/maqetta.js"></script>
+<script type="text/javascript" src="maqetta/States.js"></script>
+<script type="text/javascript">
+require(["dijit/layout/BorderContainer"]);
+require(["dijit/Toolbar"]);
+require(["dijit/form/DropDownButton"]);
+require(["dijit/Menu"]);
+require(["dijit/MenuItem"]);
+require(["dijit/Dialog"]);
+require(["dijit/form/TextBox"]);
+require(["dijit/layout/ContentPane"]);
+require(["dojox/layout/ContentPane"]);
+require(["dijit/layout/TabContainer"]);</script>
 </head>
 
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
@@ -92,16 +115,16 @@ require(["dijit/layout/TabContainer"]);</script>
 </div>
 
 
-<div id="Center" dojoType="dijit.layout.ContentPane" region="center" gutters="false" style="border-bottom: 3px groove white; padding: 0px; background-color: #d3d9df; width: 1100px; height: 595px;">
-<div style="overflow: visible; padding-top: 1em; padding-left: 1em; width: 100%; height: 110px;">
- <img src="images/voeis_logo.png" style="padding-left: 1em; display: inline-block; height: 135px;"></img>
+<div id="Center" dojoType="dijit.layout.ContentPane" region="center" gutters="false" style="border-bottom: 4px groove white; padding: 0px; background-color: #d3d9df; width: 1100px; height: 595px;">
+<div style="width: auto; overflow: visible; padding-top: 1em; padding-left: 1em; height: 80px;">
+ <img src="images/voeis_logo.png" style="margin-left: 2em; padding-left: 1em; display: inline-block;"></img>
  <div style="padding: 2em; float: right; display: inline-block;">
    <button onClick="location.href='Module_Platform.html'" class="startButton">Start Browsing Public Data</button>
 </div>
 </div>
 
 
-<span dojoType="dijit.layout.TabContainer" style="font-size: 12pt; text-align: right; font-weight: bold; width: 100%; height: 100%;" controllerWidget="dijit.layout.TabController">
+<span dojoType="dijit.layout.TabContainer" doLayout="false" style="width: 100%; font-size: 12pt; text-align: right; font-weight: bold;" controllerWidget="dijit.layout.TabController">
 
 <div id="Home" dojoType="dojox.layout.ContentPane" selected="selected" title="Home" class="splashElement" href="Home.html" style=" background-color: #f5f6f8;"></div>
 <div id="Overview" dojoType="dojox.layout.ContentPane" title="Overview" class="splashElement" href="Overview.html" style="background-color: #f5f6f8;"></div>
@@ -114,18 +137,40 @@ require(["dijit/layout/TabContainer"]);</script>
 
 </div>
 
-<div id="Footer" dojoType="dijit.layout.ContentPane" region="bottom" style="width: 100%; height: 25px;">
-    <center>
-        <img src="images/FLBS_logo.gif" class="footerIcon"></img>
-        <img src="images/HBS_logo.jpg" class="footerIcon"></img>
-        <img src="images/MSU_logo.jpg" class="footerIcon"></img>
-        <img src="images/Murry_logo.jpg" class="footerIcon"></img>
-        <img src="images/UK_logo.jpg" class="footerIcon"></img>
-        <img src="images/UL_logo.jpg" class="footerIcon"></img>
-        <img src="images/UM_logo.gif" class="footerIcon"></img>
-        <img src="images/YERC_logo.jpg" class="footerIcon"></img>
-        <img src="images/YOGO_logo.png" class="footerIcon"></img>
-    </center>
+<div id="Footer" dojoType="dijit.layout.ContentPane" region="bottom" style="height: 25px;">
+ <div align="center">
+ <a href="http://yogo.msu.montana.edu/ " target="_blank">
+    <img src="images/footer/YOGO_footer.png" class="footerIcon" style="float:left"></img></a>
+ <a href="http://www2.umt.edu/flbs/" target="_blank">
+    <img src="images/footer/FLBS_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.murraystate.edu/qacd/cos/hbs/hbs.htm" target="_blank">
+        <img src="images/footer/HBS_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.montana.edu/" target="_blank">
+        <img src="images/footer/MSU_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.murraystate.edu/" target="_blank">
+        <img src="images/footer/MURRAY_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.uky.edu/" target="_blank">
+        <img src="images/footer/UK_footer.png" class="footerIcon"></img></a>
+ <a href="http://louisville.edu/" target="_blank">
+        <img src="images/footer/UL_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.umt.edu/" target="_blank">
+        <img src="images/footer/UM_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.yellowstoneresearch.org/" target="_blank">
+        <img src="images/footer/YERC_footer.png" class="footerIcon"></img></a>
+ <a href="http://www.eku.edu/" target="_blank">
+      <img src="images/footer/EKU_footer.png" class="footerIcon"></img></a>
+
+  <div style="float: right;">
+       <a href="http://www.mozilla.com/en-US/firefox/fx/" target="_blank">
+  <img src="images/footer/firefox_footer.png" class="footerIcon"></img></a>
+       <a href="http://www.google.com/chrome/" target="_blank">
+  <img src="images/footer/chrome_footer.png" class="footerIcon"></img></a>
+       <a href="http://www.apple.com/safari/" target="_blank">
+  <img src="images/footer/safari_footer.png" class="footerIcon"></img></a>
+       <a href="http://www.opera.com/" target="_blank">
+  <img src="images/footer/opera_footer.png" class="footerIcon"></img></a>
+  </div>
+ </div>
 </div>
 
 </div>

@@ -20,7 +20,7 @@ require(["dijit/form/Button"]);</script>
   <div style="font-family: Tahoma; line-height: 1.5;">
    <span style="font-size: 18pt; font-weight:bold">Documentation</span><br></br>
 <div style="border-bottom: 2px groove white; font-size: 11pt; margin-bottom: 1em; height: 150px;">
-<img src="images/YOGO_logo.png" style="float: left; margin-right: 1em; width: 120px;"></img>
+<img src="images/YOGO.png" style="float: left; margin-right: 1em;"></img>
 <span style="font-weight: bold; font-size: 14pt;">
   YOGO</span>
 <div style="margin-top: 1em;">
@@ -32,8 +32,8 @@ learning more should check out the YOGO website:
 <a href="http://yogo.msu.montana.edu/" target="_blank">http://yogo.msu.montana.edu</a>
 </div>
 </div>
-<div style="height: 875px; font-size: 11pt;">
-<img src="images/voeis_logo_small.png" style="margin-top: 1em; margin-bottom: 1em; float: left; margin-right: 1em; width: 120px;"></img>
+<div doLayout="false" style="font-size: 11pt;">
+<img src="images/voeis_logo_small.png" style="margin-top: 1em; margin-bottom: 1em; float: left; margin-right: 1em;"></img>
 <span style="font-weight: bold; font-size: 14pt;">VOEIS</span>
 <div style="margin-bottom: 2em; margin-top: 1em;">
   The Virtual Observatory and Ecological Informatics System (VOEIS) provides a framework for data 
@@ -51,7 +51,7 @@ authorization requirements, 2) static data model support, and 3) import and expo
 data sources.
 <input type="button" data-dojo-type="dijit.form.Button" disabled="disabled" intermediateChanges="false" label="Download VOEIS User Manual" iconClass="dijitNoIcon" style="float: right; font-weight: bold; margin: 2em;"></input>
 </div><br></br>
-<span data-dojo-type="dijit.layout.TabContainer" style="height: 600px; min-width: 1em; min-height: 1em; width: 100%;" controllerWidget="dijit.layout.TabController">
+<span data-dojo-type="dijit.layout.TabContainer" doLayout="false" style="width: 100%;" controllerWidget="dijit.layout.TabController">
 <div data-dojo-type="dijit.layout.ContentPane" title="Goals and Vision" selected="selected">
 <br></br>
 <b>Vision: </b> To develop and deploy an integrated sensor based ecological informatics system 
@@ -106,7 +106,7 @@ are very high level and multiple task decompositions are needed to refine and un
 <div data-dojo-type="dijit.layout.ContentPane" title="Workflows and Use Cases">
 <br></br>
 <figure style="margin: 2em; float: right; text-align: center;">
-<a href="https://kepler-project.org/" target="_blank"><img src="images/Kepler.jpg" style="width:500px"></img></a>
+<a href="https://kepler-project.org/" target="_blank"><img src="images/Kepler.png"></img></a>
 <figcaption>The Kepler Project</figcaption>
 </figure>
 <b>Significance:</b>
@@ -161,7 +161,7 @@ Persevere, MongoDB, etc.
 <li>VOEIS Discussion Paper 2</li>
 </ul>
 <figure style="float:right; text-align: center; margin: 1em;"><a href="documents/VOEIS_Tables.png" target="_blank">
-  <img src="documents/VOEIS_Tables.png" style="border: 1px solid black; width: 400px;"></img></a>
+  <img src="images/schema.png" style="border: 1px solid black;"></img></a>
   <figcaption>VOEIS 2.0 Data Model</figcaption>
 </figure>
 <b>Data Model</b>
@@ -329,7 +329,7 @@ schema.
 <div data-dojo-type="dijit.layout.ContentPane" title="HIS Publication Gateway">
 <br></br>
 <b>HIS Gateway</b>
-<img src="images/publication_gateway.png" style="margin: 2em; float: right; height: 180px;"></img>
+<img src="images/publication_gateway_large.png" style="margin: 2em; float: right; height: 180px;"></img>
 <br></br>
 A specific goal of the VOEIS project is to integrate with the CUAHSI HIS through HydroServer. 
 In order for VOEIS to leverage the power of the CUAHSI HydroServer and its corresponding suite of 
@@ -342,6 +342,7 @@ implementation of the VOEIS HIS gateway is currently available for use as a stan
 application that can be deployed on any platform.
 <br></br>
 <li><a href="https://github.com/yogo/HISgw" target="_blank">HIS Gateway Source Code</a></li>
+<br></br>
 </div>
 <div data-dojo-type="dijit.layout.ContentPane" title="For Developers...">
 <br></br>
