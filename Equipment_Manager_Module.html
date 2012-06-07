@@ -32,7 +32,27 @@ require(["dijit/Tooltip"]);</script>
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" dvStates="{'_show:dijit_Dialog_19':{'origin':true},'_show:dijit_Tooltip_133':{'origin':true},'_show:dijit_Tooltip_141':{'origin':true},'_show:dijit_Tooltip_142':{'origin':true},'_show:dijit_Tooltip_143':{'origin':true},'_show:dijit_Tooltip_144':{'origin':true}}" id="myapp">
  <div style="height: 100%; width: 100%;">
  <span dojoType="dijit.layout.TabContainer" style="height: 100%; width: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
-<div dojoType="dijit.layout.ContentPane" title="Equipment Manager" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="true" splitter="false" style="width: 755px; height: 471px;" doLayout="false"></div>
+<div dojoType="dijit.layout.ContentPane" title="About" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="true" splitter="false" style="width: 755px; height: 471px;" doLayout="false">
+<img src="images/equipment_large.png" style="float: right;"></img>
+ <h1 style="font-weight: bold;">
+Equipment Manager</h1>
+ <div style="margin-top: 2em;">
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra enim nec elit adipiscing vel lacinia justo porta. Cras vestibulum ullamcorper vulputate. Suspendisse tempus, 
+lorem eu tristique commodo, enim quam condimentum lectus, vel mattis diam nisl vitae lacus. Aliquam adipiscing scelerisque orci nec venenatis. Nulla iaculis quam vitae elit rutrum a volutpat sem ornare. 
+Integer tristique lacus iaculis nibh posuere viverra lobortis lectus mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eu eros id ante 
+aliquet dapibus non vel lorem. Donec ligula mauris, ornare ac aliquet ut, bibendum vitae sapien. Quisque ornare elit non leo tincidunt accumsan. Donec quis ante ante, in molestie ante. 
+Curabitur sit amet sapien erat, id pulvinar magna. 
+<br></br>
+Integer ut nulla id ipsum mattis consequat ac at magna. Duis nec eleifend augue.Fusce accumsan porta leo sed molestie. Praesent congue vestibulum lorem, eget eleifend lectus consectetur a. 
+Fusce ornare diam eget enim vulputate rutrum. Vestibulum nisi purus, porta a malesuada et, tempor vel lectus. Nunc congue dui vel urna iaculis venenatis. Sed vitae felis quam, eu varius leo. 
+<br></br>
+Vivamus sed mi enim, in iaculis tortor. Praesent est odio, adipiscing vitae semper at, fermentum ut risus. Etiam non lacinia arcu. Sed nec augue viverra diam dignissim facilisis. Maecenas ac orci sed 
+tellus tempus malesuada id id dui. Donec sem lacus, fringilla non bibendum quis, porttitor ac nunc. Ut vel felis orci.Suspendisse id massa et lorem feugiat 
+aliquam sagittis id eros. Integer scelerisque libero nec est volutpat vel ultrices sapien euismod. Sed sit amet convallis dui. Integer ultricies mollis massa, nec egestas nisl tincidunt ac. 
+Phasellus luctus ligula eu erat tempus at accumsan odio convallis. In hac habitasse platea dictumst. Fusce sed velit tortor. Mauris nec augue tortor, ac condimentum justo. Vestibulum nec congue neque. 
+Mauris lorem ante, laoreet non viverra at, gravida a magna. Nullam sit amet turpis neque, id rhoncus sapien. Phasellus urna nunc, imperdiet dictum feugiat a, egestas quis sem. Aliquam id metus ante, ut mattis sem. Nulla facilisi.
+</div>
+</div>
    <div dojoType="dijit.layout.ContentPane" title="Warehouse 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 282px; height: 252px;" doLayout="false">
      <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="height: 100%; width: 100%; min-width: 1em; min-height: 1em;" nested="false" tabposition="left"><div dojoType="dijit.layout.ContentPane" title="Equipment Inventory" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 494px;" doLayout="false">
        <span dojoType="dijit.layout.TabContainer" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;"><div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" closable="false" splitter="false" style="width: 615px; height: 401px;" doLayout="false">
@@ -45,7 +65,7 @@ require(["dijit/Tooltip"]);</script>
          <div dojoType="dijit.layout.ContentPane" title="History" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false"></div>
          </span>
        </div>
-       <div dojoType="dijit.layout.ContentPane" title="New" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="selected" closable="true" splitter="false" style="width: 615px; height: 401px;">
+       <div dojoType="dijit.layout.ContentPane" title="New" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="true" splitter="false" style="width: 615px; height: 401px;">
          <h2>
            
        
@@ -64,7 +84,7 @@ require(["dijit/Tooltip"]);</script>
          </div>
          <div style="margin-top: 1em;">
            <span style="margin-right: 1em;">Instrument Type:</span>
-           <select dojoType="dijit.form.FilteringSelect" value="Thermocouple" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+           <select dojoType="dijit.form.FilteringSelect" value="Thermocouple" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required">
              <option dvwidget="html.option" value="Thermocouple" selected="selected">
                
            
@@ -161,7 +181,7 @@ require(["dijit/Tooltip"]);</script>
                    <img src="images/Delete-icon.png" style="width: 10px;"></img>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 95%;">
                      <option dvwidget="html.option" value="Instrument_1" selected="selected">
                        
                    
@@ -184,7 +204,7 @@ require(["dijit/Tooltip"]);</script>
                    <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                   <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required">
                      <option dvwidget="html.option" value="Site 1" selected="selected">
                        
                    
@@ -203,7 +223,7 @@ require(["dijit/Tooltip"]);</script>
                    </select>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.Select" type="text" value="Deployed" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
+                   <select dojoType="dijit.form.Select" type="text" value="Deployed" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" scrollOnFocus="true" autoWidth="true">
                      <option dvwidget="html.option" value="Deployed" selected="selected">
                        
                    
@@ -222,7 +242,7 @@ require(["dijit/Tooltip"]);</script>
                    <img src="images/Delete-icon.png" style="width: 10px;"></img>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 95%;">
                      <option dvwidget="html.option" value="Instrument_1">
                        
                    
@@ -245,7 +265,7 @@ require(["dijit/Tooltip"]);</script>
                    <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                   <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required">
                      <option dvwidget="html.option" value="Site 1" selected="selected">
                        
                    
@@ -264,7 +284,7 @@ require(["dijit/Tooltip"]);</script>
                    </select>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.Select" type="text" value="Deployed" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
+                   <select dojoType="dijit.form.Select" type="text" value="Deployed" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" scrollOnFocus="true" autoWidth="true">
                      <option dvwidget="html.option" value="Deployed">
                        
                    
@@ -283,7 +303,7 @@ require(["dijit/Tooltip"]);</script>
                    <img src="images/Delete-icon.png" style="width: 10px;"></img>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 95%;">
                      <option dvwidget="html.option" value="Instrument_1">
                        
                    
@@ -306,7 +326,7 @@ require(["dijit/Tooltip"]);</script>
                    <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                   <select dojoType="dijit.form.FilteringSelect" value="Site 1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required">
                      <option dvwidget="html.option" value="Site 1" selected="selected">
                        
                    
@@ -325,7 +345,7 @@ require(["dijit/Tooltip"]);</script>
                    </select>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.Select" type="text" value="Deployed" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" required="false" scrollOnFocus="true" autoWidth="true">
+                   <select dojoType="dijit.form.Select" type="text" value="Deployed" intermediateChanges="false" iconClass="dijitNoIcon" emptyLabel="&amp;nbsp;" scrollOnFocus="true" autoWidth="true">
                      <option dvwidget="html.option" value="Deployed">
                        
                    
@@ -351,9 +371,9 @@ require(["dijit/Tooltip"]);</script>
      <div dojoType="dijit.layout.ContentPane" title="Maintenance" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" splitter="false" style="width: 631px; height: 452px;" doLayout="false">
        <span dojoType="dijit.layout.TabContainer" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" controllerWidget="dijit.layout.TabController">
 <div dojoType="dijit.layout.ContentPane" title="Summary" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="false" style="width: 600px; height: 468px;" doLayout="false">
-         <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_1" jsId="ItemFileReadStore_1" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;maintenance_id&quot;:&quot;1&quot;,&quot;_type&quot;:&quot;Cleaning&quot;,&quot;_instrument_id&quot;:&quot; MW_255&quot;,&quot;_date&quot;:&quot; 12-14-209&quot;,&quot;_description&quot;:&quot; Scrubbed with distilled water&quot;},{&quot;uniqe_id&quot;:2,&quot;maintenance_id&quot;:&quot;2&quot;,&quot;_type&quot;:&quot;Calibration&quot;,&quot;_instrument_id&quot;:&quot; F237&quot;,&quot;_date&quot;:&quot; 2-24-2008&quot;,&quot;_description&quot;:&quot; Returned to manufacturer&quot;}]}"></span>
          <input type="button" dojoType="dijit.form.Button" intermediateChanges="false" label="Create New Maintenance Record(s)" iconClass="dijitNoIcon"></input>
-<span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Maintenance ID&quot;,&quot;field&quot;:&quot;maintenance_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Instrument ID&quot;,&quot;field&quot;:&quot;_instrument_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Date&quot;,&quot;field&quot;:&quot;_date&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="top: 15px; height: 95%; width: 100%;" store="ItemFileReadStore_1" escapeHTMLInData="true"></span>
+<span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_1" jsId="ItemFileReadStore_1" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;maintenance_id&quot;:&quot;1&quot;,&quot;_type&quot;:&quot;Cleaning&quot;,&quot;_instrument_id&quot;:&quot; MW_255&quot;,&quot;_date&quot;:&quot; 12-14-209&quot;,&quot;_description&quot;:&quot; Scrubbed with distilled water&quot;},{&quot;uniqe_id&quot;:2,&quot;maintenance_id&quot;:&quot;2&quot;,&quot;_type&quot;:&quot;Calibration&quot;,&quot;_instrument_id&quot;:&quot; F237&quot;,&quot;_date&quot;:&quot; 2-24-2008&quot;,&quot;_description&quot;:&quot; Returned to manufacturer&quot;}]}"></span>
+         <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Maintenance ID&quot;,&quot;field&quot;:&quot;maintenance_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Instrument ID&quot;,&quot;field&quot;:&quot;_instrument_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Date&quot;,&quot;field&quot;:&quot;_date&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Description&quot;,&quot;field&quot;:&quot;_description&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="top: 15px; height: 95%; width: 100%;" store="ItemFileReadStore_1" escapeHTMLInData="true"></span>
        </div>
        <div dojoType="dijit.layout.ContentPane" title="Maintenance 1" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" splitter="false" selected="selected" closable="true" style="width: 600px; height: 468px;" doLayout="false">
          <span dojoType="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="width: 100%; height: 100%; min-width: 1em; min-height: 1em;" nested="true"><div dojoType="dijit.layout.ContentPane" title="Details" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="selected" closable="false" style="width: 565px; height: 381px;" doLayout="false"></div>
@@ -400,7 +420,7 @@ require(["dijit/Tooltip"]);</script>
                    <img src="images/Delete-icon.png" style="width: 10px;"></img>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 95%;">
                      <option dvwidget="html.option" value="Instrument_1" selected="selected">
                        
                    
@@ -423,7 +443,7 @@ require(["dijit/Tooltip"]);</script>
                    <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Cleaning" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                   <select dojoType="dijit.form.FilteringSelect" value="Cleaning" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required">
                      <option dvwidget="html.option" value="Cleaning" selected="selected">
                        
                    
@@ -447,7 +467,7 @@ require(["dijit/Tooltip"]);</script>
                    <img src="images/Delete-icon.png" style="width: 10px;"></img>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 95%;">
                      <option dvwidget="html.option" value="Instrument_1">
                        
                    
@@ -470,7 +490,7 @@ require(["dijit/Tooltip"]);</script>
                    <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Cleaning" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                   <select dojoType="dijit.form.FilteringSelect" value="Cleaning" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required">
                      <option dvwidget="html.option" value="Cleaning" selected="selected">
                        
                    
@@ -494,7 +514,7 @@ require(["dijit/Tooltip"]);</script>
                    <img src="images/Delete-icon.png" style="width: 10px;"></img>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true" style="width: 95%;">
+                   <select dojoType="dijit.form.FilteringSelect" value="Instrument_1" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required" style="width: 95%;">
                      <option dvwidget="html.option" value="Instrument_1">
                        
                    
@@ -517,7 +537,7 @@ require(["dijit/Tooltip"]);</script>
                    <input type="text" dojoType="dijit.form.TimeTextBox" style="width: 45%;"></input>
                  </td>
                  <td>
-                   <select dojoType="dijit.form.FilteringSelect" value="Cleaning" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="true">
+                   <select dojoType="dijit.form.FilteringSelect" value="Cleaning" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" required="required">
                      <option dvwidget="html.option" value="Cleaning" selected="selected">
                        
                    

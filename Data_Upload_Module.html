@@ -50,7 +50,26 @@ require(["dijit/ProgressBar"]);</script>
 <div style="width: 100%; height: 100%;">
 <span dojoType="dijit.layout.TabContainer" title="Project Selection" tabStrip="true" persist="false" controllerWidget="dijit.layout.TabController" style="height: 100%; width: 100%; min-width: 1em; min-height: 1em;">
 
-<div dojoType="dijit.layout.ContentPane" title="Data Upload" extractContent="false" preventCache="false" preload="true" refreshOnShow="true" doLayout="true" selected="selected" closable="true">
+<div dojoType="dijit.layout.ContentPane" title="About" extractContent="false" preventCache="false" preload="true" refreshOnShow="true" doLayout="true" selected="selected" closable="true">
+<img src="images/upload_large.png" style="float: right;"></img>
+ <h1 style="font-weight: bold;">
+Data Upload</h1>
+ <div style="margin-top: 2em;">
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra enim nec elit adipiscing vel lacinia justo porta. Cras vestibulum ullamcorper vulputate. Suspendisse tempus, 
+lorem eu tristique commodo, enim quam condimentum lectus, vel mattis diam nisl vitae lacus. Aliquam adipiscing scelerisque orci nec venenatis. Nulla iaculis quam vitae elit rutrum a volutpat sem ornare. 
+Integer tristique lacus iaculis nibh posuere viverra lobortis lectus mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eu eros id ante 
+aliquet dapibus non vel lorem. Donec ligula mauris, ornare ac aliquet ut, bibendum vitae sapien. Quisque ornare elit non leo tincidunt accumsan. Donec quis ante ante, in molestie ante. 
+Curabitur sit amet sapien erat, id pulvinar magna. 
+<br></br>
+Integer ut nulla id ipsum mattis consequat ac at magna. Duis nec eleifend augue.Fusce accumsan porta leo sed molestie. Praesent congue vestibulum lorem, eget eleifend lectus consectetur a. 
+Fusce ornare diam eget enim vulputate rutrum. Vestibulum nisi purus, porta a malesuada et, tempor vel lectus. Nunc congue dui vel urna iaculis venenatis. Sed vitae felis quam, eu varius leo. 
+<br></br>
+Vivamus sed mi enim, in iaculis tortor. Praesent est odio, adipiscing vitae semper at, fermentum ut risus. Etiam non lacinia arcu. Sed nec augue viverra diam dignissim facilisis. Maecenas ac orci sed 
+tellus tempus malesuada id id dui. Donec sem lacus, fringilla non bibendum quis, porttitor ac nunc. Ut vel felis orci.Suspendisse id massa et lorem feugiat 
+aliquam sagittis id eros. Integer scelerisque libero nec est volutpat vel ultrices sapien euismod. Sed sit amet convallis dui. Integer ultricies mollis massa, nec egestas nisl tincidunt ac. 
+Phasellus luctus ligula eu erat tempus at accumsan odio convallis. In hac habitasse platea dictumst. Fusce sed velit tortor. Mauris nec augue tortor, ac condimentum justo. Vestibulum nec congue neque. 
+Mauris lorem ante, laoreet non viverra at, gravida a magna. Nullam sit amet turpis neque, id rhoncus sapien. Phasellus urna nunc, imperdiet dictum feugiat a, egestas quis sem. Aliquam id metus ante, ut mattis sem. Nulla facilisi.
+</div>
 </div>
   <div dojoType="dijit.layout.ContentPane" title="Project 1" extractContent="false" preventCache="false" preload="true" refreshOnShow="true" closable="false" style="width: 282px; height: 252px;" doLayout="false">
     <span dojoType="dijit.layout.TabContainer" tabPosition="left" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="height: 100%; width: 100%; min-width: 1em; min-height: 1em;">
@@ -2062,8 +2081,8 @@ require(["dijit/ProgressBar"]);</script>
     </div>
     <div dojoType="dijit.layout.ContentPane" title="Job Que" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" splitter="false" style="width: 442px; height: 446px;">
       <div style="border: 1px solid gray; margin-bottom: 1em; background-color: #c9dff3;">
-        <img src="images/job_que.png" style="margin: 0.5em; width: 3%; display: inline-block;"></img>
-                        <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">Job Que: Lists the status of all recent file uploads.</span>
+        <img src="images/job_queue.png" style="margin: 0.5em; display: inline-block; width: 3%;"></img>
+        <span style="margin: 1em; width: 85%; font-weight: bold; display: inline-block; vertical-align: top;">Job Que: Lists the status of all recent file uploads.</span>
       </div>
                     <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_5" jsId="ItemFileReadStore_5" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;job_id&quot;:&quot;1&quot;,&quot;_type&quot;:&quot;Time Series&quot;,&quot;_project&quot;:&quot; Project_1&quot;,&quot;_time_submitted&quot;:&quot; 12-31-11 13:23&quot;,&quot;_user&quot;:&quot; User 1&quot;,&quot;_status&quot;:&quot;75%&quot;},{&quot;uniqe_id&quot;:2,&quot;job_id&quot;:&quot;2&quot;,&quot;_type&quot;:&quot;Lab Sample&quot;,&quot;_project&quot;:&quot; Project_2&quot;,&quot;_time_submitted&quot;:&quot; 12-22-09 11:50&quot;,&quot;_user&quot;:&quot; User 1&quot;,&quot;_status&quot;:&quot; 90%&quot;}]}"></span>
                     <span dojoType="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Job ID&quot;,&quot;field&quot;:&quot;job_id&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Type&quot;,&quot;field&quot;:&quot;_type&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Project&quot;,&quot;field&quot;:&quot;_project&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Time Submitted&quot;,&quot;field&quot;:&quot;_time_submitted&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; User&quot;,&quot;field&quot;:&quot;_user&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Status&quot;,&quot;field&quot;:&quot;_status&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" store="ItemFileReadStore_5" escapeHTMLInData="true" style="width: auto; height: 80%;"></span>

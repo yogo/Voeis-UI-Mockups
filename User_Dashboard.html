@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Untitled</title>
-<style>@import "themes/claro/claro.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/ScrollPane.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";@import "lib/jquery-ui/css/smoothness/jquery-ui-1.8.11.custom.css";@import "app.css";
+<style>@import "themes/claro/claro.css";@import "lib/dojo/dojo/resources/dojo.css";@import "lib/dojo/dojox/layout/resources/ScrollPane.css";@import "lib/dojo/dojox/layout/resources/RadioGroup.css";@import "lib/jquery-ui/css/smoothness/jquery-ui-1.8.11.custom.css";@import "lib/dojo/dojox/grid/resources/Grid.css";@import "lib/dojo/dojox/grid/resources/claroGrid.css";@import "app.css";
 </style>
 <script type="text/javascript" src="maqetta/maqetta.js"></script>
 <script type="text/javascript" data-dojo-config="'async':true,'parseOnLoad':true,'packages':[{'name':'clipart','location':'../../clipart'},{'name':'shapes','location':'../../shapes'},{'name':'jquery-ui','location':'../../jquery-ui'},{'name':'yui','location':'../../yui'}]" src="lib/dojo/dojo/dojo.js"></script>
@@ -13,11 +13,42 @@
 <script type="text/javascript">
 require(["dijit/dijit"]);
 require(["dojo/parser"]);
-</script>
+
+require(["dijit/form/Select"]);
+require(["dijit/form/Button"]);
+require(["dojo/data/ItemFileReadStore"]);
+require(["dojox/io/xhrScriptPlugin"]);
+require(["dojox/grid/DataGrid"]);</script>
 </head>
 <body class="claro" dvFlowLayout="true" data-davinci-ws="collapse" id="myapp">
- <div>
-   This feature is currently unavailable.</div>
-
-</body>
-</html>
+  <div style="height: 100%; width: 100%;">
+<img src="images/dashboard_large.png" style="float: right;"></img>
+ <h1 style="margin-left: 1em; font-weight: bold;">
+User Dashboard</h1>
+ <div style="border-bottom: 1px solid gray; margin: 1em; padding-bottom: 1em;">
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra enim nec elit adipiscing vel lacinia justo porta. Cras vestibulum ullamcorper vulputate. Suspendisse tempus, 
+lorem eu tristique commodo, enim quam condimentum lectus, vel mattis diam nisl vitae lacus. Aliquam adipiscing scelerisque orci nec venenatis. Nulla iaculis quam vitae elit rutrum a volutpat sem ornare. 
+<br></br>
+Integer tristique lacus iaculis nibh posuere viverra lobortis lectus mollis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque eu eros id ante 
+aliquet dapibus non vel lorem. Donec ligula mauris, ornare ac aliquet ut, bibendum vitae sapien. Quisque ornare elit non leo tincidunt accumsan. Donec quis ante ante, in molestie ante. 
+Curabitur sit amet sapien erat, id pulvinar magna. 
+</div>
+ <div style="margin: 1em;">
+<h2>
+  Recent Project Activity</h2>
+<span>Select a Project:</span>
+<select data-dojo-type="dijit.form.Select" type="text" value="Project 1" intermediateChanges="false" emptyLabel="&amp;#160;" scrollOnFocus="true" autoWidth="true" style="margin: 1em;">
+  <option value="Project 1" selected="selected">
+      Project 1</option>
+    <option value="Project 2">
+      Project 2</option>
+    <option value="Project 3">
+      Project 3</option>
+  </select>
+  <input type="button" data-dojo-type="dijit.form.Button" intermediateChanges="false" label="Print Activity Report" iconClass="dijitNoIcon"></input>
+  </div>
+ <div style="margin: 1em;">
+  <span dojoType="dojo.data.ItemFileReadStore" id="ItemFileReadStore_1" jsId="ItemFileReadStore_1" data="{&quot;identifier&quot;:&quot;uniqe_id&quot;,&quot;items&quot;:[{&quot;uniqe_id&quot;:1,&quot;date&quot;:&quot;1-1-2012&quot;,&quot;_activity&quot;:&quot;Data Download&quot;,&quot;user&quot;:&quot; User 1&quot;},{&quot;uniqe_id&quot;:2,&quot;date&quot;:&quot;2-15-1012&quot;,&quot;_activity&quot;:&quot; QAQC&quot;,&quot;user&quot;:&quot;User 2&quot;},{&quot;uniqe_id&quot;:3,&quot;date&quot;:&quot;2-22-2012&quot;,&quot;_activity&quot;:&quot; Data Upload&quot;,&quot;user&quot;:&quot; User 1&quot;}]}"></span><span data-dojo-type="dojox.grid.DataGrid" structure="[{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;Date&quot;,&quot;field&quot;:&quot;date&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot; Activity&quot;,&quot;field&quot;:&quot;_activity&quot;},{&quot;width&quot;:&quot;auto&quot;,&quot;name&quot;:&quot;User&quot;,&quot;field&quot;:&quot;user&quot;}]" autoWidth="false" autoHeight="false" singleClickEdit="false" columnReordering="false" selectable="false" delayScroll="false" style="width: 55%; display: inline-block; height: 300px;" store="ItemFileReadStore_1" escapeHTMLInData="true"></span><img src="images/timeline_chart.png" style="width: 40%; float: right;"></img>
+</div>
+ </div>
+</body></html>
